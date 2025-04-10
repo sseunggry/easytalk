@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <title>Guide</title>
+        <!-- css -->
+        <link href="../../assets/css/common.css" type="text/css" rel="stylesheet" />
+        <link href="../../assets/css/style.css" type="text/css" rel="stylesheet" />
+        <!-- script -->
+        <script defer src="../../assets/js/jquery-2.2.4.min.js"></script>
+        <script defer src="../../assets/js/common.js"></script>
+        <style>
+            .guide{padding: 4rem;}
+            .guide .section + .section{margin-top: 6rem;}
+            .guide .group + .group{margin-top: 3rem;}
+
+            .guide [class*="tit"]{font-weight: 700; color: #000;}
+            .guide .tit-xl{margin-bottom: 4rem;}
+            .guide .tit-xxs{margin-bottom: 2rem;}
+        </style>
+    </head>
+    <body>
+        <div class="wrap guide">
+            <!-- 컨테이너 영역 -->
+            <div id="container">
+				<section class="section">
+                    <h1 class="tit-xl">Button</h1>
+
+                    <div class="group">
+                        <p class="tit-xxs">xsmall - h: 34px, fz: 13px</p>
+                        <div class="btn-wrap">
+                            <button type="button" class="btn xsmall line">맞춤 처방 진료 예약하기</button>
+                            <button type="button" class="btn xsmall black">맞춤 처방 진료 예약하기</button>
+                            <button type="button" class="btn xsmall primary">맞춤 처방 진료 예약하기</button>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <p class="tit-xxs">small - h: 36px, fz: 14px</p>
+                        <button type="button" class="btn small black">재전송</button>
+                    </div>
+
+                    <div class="group">
+                        <p class="tit-xxs">medium - h: 48px, fz: 16px</p>
+                        <button type="button" class="btn medium black">이지톡 구매하기 <i class="ico arrow"></i></button>
+                    </div>
+
+                    <div class="group">
+                        <p class="tit-xxs">large - h: 56px, fz: 16px</p>
+                        <div class="btn-wrap">
+                            <button type="button" class="btn large secondary">비활성화</button>
+                            <button type="button" class="btn large primary">활성화</button>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <p class="tit-xxs">flex-wrap - gap: 12px 8px</p>
+                        <div class="btn-wrap flex-wrap">
+                            <button type="button" class="btn medium secondary">장바구니</button>
+                            <button type="button" class="btn medium primary">구매하기</button>
+                            <button type="button" class="btn medium black">상담 신청하기</button>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <p class="tit-xxs">flex-column - gap: 8px</p>
+                        <div class="btn-wrap flex-column">
+                            <button type="button" class="btn large kakao">카카오로 시작하기</button>
+                            <button type="button" class="btn large naver">네이버로 시작하기</button>
+                            <button type="button" class="btn large line gray">휴대폰 번호로 시작하기</button>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <p class="tit-xxs">disabled</p>
+                        <div class="btn-wrap">
+                            <button type="button" class="btn large gray">이전</button>
+                            <button type="button" class="btn large" disabled>다음</button>
+                        </div>
+                    </div>
+				</section>
+
+                <section class="section">
+                    <h1 class="tit-xl">Input</h1>
+                    <div class="group">
+                        <div class="form-list">
+                            <div class="input-wrap">
+                                <label for="inpNum" class="label-txt">인증 번호</label>
+                                <div class="input">
+                                    <input type="text" id="inpNum" placeholder="6자리 숫자">
+                                    <span class="timer">2:24</span>
+                                    <button type="button" class="btn small black">재전송</button>
+                                </div>
+                            </div>
+                            <div class="input-wrap">
+                                <label for="inpPhone" class="label-txt">휴대폰 번호</label>
+                                <div class="input">
+                                    <input type="tel" id="inpPhone" placeholder="" value="010-0000-0000">
+                                </div>
+                            </div>
+                            <div class="input-wrap">
+                                <label for="inp1" class="label-txt">통신사</label>
+                                <div class="select">
+                                    <select name="" id="">
+                                        <option value="lg">LG U+</option>
+                                        <option value="kt">KT</option>
+                                        <option value="sk">SKT</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="input-wrap">
+                                <label for="inpPersonNum" class="label-txt">주민등록번호 (7자리)</label>
+                                <div class="input">
+                                    <input type="tel" id="inpPersonNum" placeholder="" value="950000">
+                                    <span>-</span>
+                                    <input type="tel" id="inpPersonNum" placeholder="" value="2*****">
+                                </div>
+                            </div>
+                            <div class="input-wrap error">
+                                <label for="inpName" class="label-txt">이름</label>
+                                <div class="input">
+                                    <input type="text" id="inpName" placeholder="" value="홍길동">
+                                </div>
+                                <p class="error-msg">에러 메세지 입니다.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h1 class="tit-xl">Radio</h1>
+                    <div class="group">
+                        <p class="tit-xxs">기본 - 세로형</p>
+                        <div class="form-list gap-lg">
+                            <div class="input-wrap">
+                                <p class="label-txt">최근 1년 사이 체중변화</p>
+                                <div class="radio">
+                                    <input type="radio" id="radio1-1" name="radio1">
+                                    <label for="radio1-1">
+                                        <span>5kg 이상 증가</span>
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="radio1-2" name="radio1">
+                                    <label for="radio1-2">
+                                        <span>10kg 이상 증가</span>
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="radio1-3" name="radio1">
+                                    <label for="radio1-3">
+                                        <span>비슷하게 유지중</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <p class="tit-xxs">column - 가로형</p>
+                        <div class="form-list gap-lg">
+                            <div class="input-wrap column">
+                                <p class="label-txt">운동 및 식이조절 경험</p>
+                                <div class="radio">
+                                    <input type="radio" id="radio2-1" name="radio2">
+                                    <label for="radio2-1">
+                                        <span>있다</span>
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="radio2-2" name="radio2">
+                                    <label for="radio2-2">
+                                        <span>없다</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <p class="tit-xxs">type2</p>
+                        <div class="form-list gap-lg">
+                            <div class="input-wrap type2">
+                                <div class="radio">
+                                    <input type="radio" id="radio3-1" name="radio3">
+                                    <label for="radio3-1">
+                                        <span>SKT</span>
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="radio3-2" name="radio3">
+                                    <label for="radio3-2">
+                                        <span>KT</span>
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="radio3-3" name="radio3">
+                                    <label for="radio3-3">
+                                        <span>LG U+</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h1 class="tit-xl">Check</h1>
+                    <div class="group">
+                        <p class="tit-xxs">기본 - 세로형</p>
+                        <div class="form-list gap-lg">
+                            <div class="input-wrap">
+                                <p class="label-txt">현재 복용중인 약이 있나요?</p>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="chk1-1" name="chk1">
+                                    <label for="chk1-1">
+                                        <span>없음</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="chk1-2" name="chk1">
+                                    <label for="chk1-2">
+                                        <span>소염진통제</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="chk1-3" name="chk1">
+                                    <label for="chk1-3">
+                                        <span>여성 호르몬제</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="chk1-4" name="chk1">
+                                    <label for="chk1-4">
+                                        <span>갑상선 호르몬제</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="chk1-5" name="chk1">
+                                    <label for="chk1-5">
+                                        <span>당뇨약</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="chk1-6" name="chk1">
+                                    <label for="chk1-6">
+                                        <span>혈압약</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="chk1-7" name="chk1">
+                                    <label for="chk1-7">
+                                        <span>기타</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <p class="tit-xxs">column - 가로형</p>
+                        <div class="form-list gap-lg">
+                            <div class="input-wrap column">
+                                <p class="label-txt">현재 복용중인 약이 있나요?</p>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="chk2-1" name="chk2">
+                                    <label for="chk2-1">
+                                        <span>없음</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="chk2-2" name="chk2">
+                                    <label for="chk2-2">
+                                        <span>소염진통제</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="chk2-3" name="chk2">
+                                    <label for="chk2-3">
+                                        <span>당뇨약</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="chk2-4" name="chk2">
+                                    <label for="chk2-4">
+                                        <span>기타</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <p class="tit-xxs">type2</p>
+                        <div class="form-list gap-lg">
+                            <div class="input-wrap type2">
+                                <p class="label-txt">현재 복용중인 약이 있나요?</p>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="chk3-1" name="chk3">
+                                    <label for="chk3-1">
+                                        <span>없음</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="chk3-2" name="chk3">
+                                    <label for="chk3-2">
+                                        <span>소염진통제</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="chk3-3" name="chk3">
+                                    <label for="chk3-3">
+                                        <span>당뇨약</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="chk3-4" name="chk3">
+                                    <label for="chk3-4">
+                                        <span>기타</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h1 class="tit-xl">Progress-bar</h1>
+                    <div class="group">
+                        <div class="progress">
+                            <span class="bar active"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!--// 컨테이너 영역 -->
+        </div>
+    </body>
+</html>

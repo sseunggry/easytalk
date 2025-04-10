@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+:root {
+    //default 변수
+    //color
+    --color-gray-0: #FFFFFF;
+    --color-gray-1: #F7F7F7;
+    --color-gray-2: #F2F2F2;
+    --color-gray-3: #E6E6E6;
+    --color-gray-4: #999999;
+    --color-gray-5: #808080;
+    --color-gray-6: #666666;
+    --color-gray-7: #4D4D4D;
+    --color-gray-8: #333333;
+    --color-gray-9: #262626;
+    --color-gray-10: #1A1A1A;
+    --color-gray-11: #000000;
+    
+    //용도에 따른 값
+    --color-black: var(--color-gray-11);
+    --color-white: var(--color-gray-0);
+    --color-yellow-0: #FFFDEF;
+    --color-yellow-1: #FFF9DE;
+    --color-yellow-2: #FFF7CE;
+    --color-yellow-3: #FFE25A;
+    --color-green-0: #EEFAF7;
+    --color-green-1: #51C8AF;
+    --color-red: #FF6955;
+
+    //text
+    --text-title-xxlarge: 6.4rem;
+    --text-title-xlarge: 4.8rem;
+    --text-title-large: 4.6rem;
+    --text-title-medium: 4rem;
+    --text-title-small: 3.4rem;
+    --text-title-xsmall: 3.2rem;
+    --text-title-xxsmall: 2.4rem;
+
+    --text-body-xxxlarge: 3rem;
+    --text-body-xxlarge: 2.8rem;
+    --text-body-xlarge: 2.6rem;
+    --text-body-large: 2.4rem;
+    --text-body-medium: 2rem;
+    --text-body-small: 1.8rem;
+    --text-body-xsmall: 1.6rem;
+    --text-body-xxsmall: 1.5rem;
+    --text-body-xxxsmall: 1.4rem;
+    --text-body-tiny: 1.3rem;
+
+    --text-body-default: 10px;
+
+    //line-height
+    --base-line-height: 1.4;
+
+    //letter-spacing
+    --base-letter-spacing: -0.25px;
+
+    //text-color
+    --color-text-bolder: var(--color-black);
+    --color-text-basic: var(--color-gray-4);
+    --color-text-light: var(--color-gray-3);
+    --color-text-white: var(--color-white);
+
+    //border-color
+    --color-border-basic: var(--color-gray-2);
+
+    //bg-color
+    --color-bg-white: var(--color-white);
+    --color-bg-gray: var(--color-gray-1);
+    --color-bg-gray-dark: var(--color-gray-5);
+
+    //layout-gap
+    --gap-title-large-desc: 60px;
+    --gap-title-medium-cont: 60px;
+
+    --card-list-gap: 40px;
+    --card-list-category-pos: 20px;
+    --card-list--txt-padding-y: 30px;
+    --card-list-gap-title-desc: 20px;
+    --card-list-gap-desc-btn: 30px;
+
+    --tag-list-gap: 24px;
+
+    //section
+    --section-padding-x: 200px;
+
+    //content
+    --content-width: 1440px;
+    --content-padding-x: 28px;
+    --content-padding-x-mo: 16px;
+
+    //breakpoint
+    --breakpoint-mobile-small: 360px;
+    --breakpoint-mobile-medium: 600px;
+    --breakpoint-mobile-large: 768px;
+    --breakpoint-tablet: 1024px;
+    --breakpoint-tablet-large: 1280px;
+    --breakpoint-pc: 1920px;
+}

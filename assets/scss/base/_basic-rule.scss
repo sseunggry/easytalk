@@ -1,0 +1,72 @@
+@charset "UTF-8";
+@import "../util";
+
+//default
+html{
+    font-size: $body-fz;
+    font-weight: 400;
+    line-height: $line-height;
+    color: $base-color;
+
+    &[lang="ko-KR"], &[lang="ko"]{
+        font-family: $font-family-ko;
+    }
+}
+
+/* font */
+.tit{
+    &-xxl{
+        font-size: var(--text-title-xxlarge);
+    }
+    &-xl{
+        font-size: var(--text-title-xlarge);
+    }
+    &-l{
+        font-size: var(--text-title-large);
+    }
+    &-m{
+        font-size: var(--text-title-medium);
+    }
+    &-s{
+        font-size: var(--text-title-small);
+    }
+    &-xs{
+        font-size: var(--text-title-xsmall);
+    }
+    &-xxs{
+        font-size: var(--text-title-xxsmall);
+    }
+}
+.txt{
+    &-l{
+        font-size: var(--text-body-large);
+    }
+    &-m{
+        font-size: var(--text-body-medium);
+    }
+    &-s{
+        font-size: var(--text-body-small);
+    }
+}
+
+/* font-style */
+.fw-normal{
+    font-weight: 400 !important;
+}
+.fw-medium{
+    font-weight: 500 !important;
+}
+.fw-bold{
+    font-weight: 700 !important;
+}
+
+
+/* common */
+img{
+    width: 100%;
+}
+
+/* blind */
+.blind {
+    @include blind();
+}

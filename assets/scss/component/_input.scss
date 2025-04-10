@@ -1,0 +1,121 @@
+@charset "UTF-8";
+@import "../util";
+
+.form-list{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    &.gap-lg{
+        gap: 2.4rem;
+    }
+}
+
+/* input */
+.input-wrap{
+    --input-label-text-size: var(--text-body-xsmall);
+    --input-label-color-text: var(--color-gray-10);
+    --input-label-gap: 1rem;
+
+    --input-bg: var(--color-gray-1);
+    --input-color-text: var(--color-black);
+    --input-color-text-placeholder: var(--color-gray-4);
+    --input-text-size: var(--text-body-xsmall);
+    --input-text-button-gap: 0.6rem;
+    --input-padding: 0 1.6rem;
+    --input-height: 5.5rem;
+    --input-border-radius: 1.2rem;
+    --input-color-border: var(--color-white);
+    --input-color-border-active: var(--color-yellow-3);
+    --input-color-border-error: var(--color-red);
+
+    --input-timer-color-text: var(--color-red);
+
+
+    .label-txt{
+        display: block;
+        margin-bottom: var(--input-label-gap);
+        font-size: var(--input-label-text-size);
+        font-weight: 500;
+        color: var(--input-label-color-text);
+    }
+    .input{
+        display: flex;
+        align-items: center;
+        gap: var(--input-text-button-gap);
+        padding: var(--input-padding);
+        width: 100%;
+        height: var(--input-height);
+        font-size: var(--input-text-size);
+        color: var(--input-color-text);
+        border-radius: var(--input-border-radius);
+        background-color: var(--input-bg);
+        border: 0.2rem solid var(--input-color-border);
+
+        &:focus-within{
+            border-color: var(--input-color-border-active);
+        }
+
+        input[type="text"], input[type="tel"]{
+            width: 100%;
+            &::placeholder{
+                color: var(--input-color-text-placeholder);
+            }
+            ~ *:not(input) {
+                flex-shrink: 0;
+            }
+        }
+
+        .timer{
+            font-weight: 500;
+            color: var(--input-timer-color-text);
+        }
+    }
+    &.error{
+        .input{
+            border-color: var(--input-color-border-error);
+        }
+
+        .error-msg{
+            display: flex;
+            align-items: center;
+            margin-top: 0.6rem;
+            font-size: var(--text-body-tiny);
+            color: var(--color-red);
+            
+            &::before{
+                content: '';
+                display: inline-block;
+                margin-right: 0.4rem;
+                width: 1.4rem;
+                height: 1.4rem;
+                @include bg('icon/ico-error.png');
+            }
+        }
+    }
+
+    //column 2개씩
+    &.column{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: -1rem;
+
+        .label-txt{
+            width: 100%;
+        }
+        .checkbox, .radio{
+            // flex: 1;
+            margin-bottom: 1rem;
+            width: calc(50% - 0.4rem);
+
+            ~ .checkbox, ~ .radio{
+                margin-top: 0;
+                margin-bottom: 1rem;
+            }
+
+            &:nth-of-type(2n){
+                margin-left: 0.8rem;
+            }
+        }
+    }
+}

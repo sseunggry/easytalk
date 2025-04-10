@@ -1,0 +1,19 @@
+@charset "UTF-8";
+@import "../util";
+
+/* progress */
+.progress{
+    display: flex;
+    gap: 0.6rem;
+
+    .bar{
+        width: 100%;
+        height: 0.6rem;
+        border-radius: 100rem;
+        background-color: #EDEDED;
+
+        &.active{
+            background-color: var(--color-yellow-3);;    
+        }        
+    }
+}
