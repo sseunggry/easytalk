@@ -1,3 +1,165 @@
 @charset "UTF-8";
 @import "./base";
 @import "./component";
+
+//space
+$position: (t:top, b:bottom, r:right, l: left);
+$total: 10;
+@each $abbr, $pos in $position {
+  @for $i from 0 to $total {
+    .m#{$abbr}-#{$i} {margin-#{$pos}: $i*1rem !important;}
+    .p#{$abbr}-#{$i} {padding-#{$pos}: $i*1rem !important;}
+  }
+}
+
+// @media all and (max-width:720px){
+//   @each $abbr, $pos in $position {
+//     @for $i from 0 to $total {
+//       .m#{$abbr}-#{$i} {margin-#{$pos}: $i*1.39vw !important;}
+//       .p#{$abbr}-#{$i} {padding-#{$pos}: $i*1.39vw !important;}
+//     }
+//   }
+// }
+
+
+// header
+.header{
+    position: sticky;
+    top: 0;
+    padding: 0 2rem;
+    width: 100%;
+    height: 5rem;
+    border-bottom: 0.1rem solid var(--color-border-basic);
+    background-color: var(--color-white);
+    z-index: 2;
+    
+    .inner{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+    .inner:nth-of-type(2){
+        display: none;
+    }
+
+    .btn-back{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 2.4rem;
+        height: 2.4rem;
+        @include bg('/icon/ico-back.png');
+    }
+    .h-tit{
+        padding: 0 calc(2.4rem + 1.2rem);
+        width: 100%;
+        text-align: center;
+        font-size: var(--text-body-xsmall);
+        font-weight: 500;
+    }
+}
+
+
+.wrap{
+    &.layout-small{
+        background-color: var(--color-gray-2);
+
+        .container{
+            position: relative;
+            margin: 0 auto;
+            max-width: 42rem;
+            width: 100%;
+        }
+
+        .header{
+            .inner:nth-of-type(1){
+                display: none;
+            }
+            .inner:nth-of-type(2){
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        .contents{
+            position: relative;
+            overflow-y: auto;
+            height: calc(100vh - 5rem);
+            padding: 0 2rem;
+            // padding-bottom: 10.6rem;
+            background-color: var(--color-white);
+
+            .progress{
+                margin: 0.4rem 0;
+            }
+
+            .section{
+                padding-top: 6rem;
+
+                &:last-of-type{
+                    padding-bottom: 6rem;
+                }
+
+                .sec-tit{
+                    margin-bottom: 4rem;
+
+                    .tit{
+                        font-size: var(--text-title-xxsmall);
+                        font-weight: 700;
+                    }
+                    .sub-desc{
+                        margin-top: 1rem;
+                        font-size: var(--text-body-xsmall);
+                        color: var(--color-gray-8);
+                    }
+
+                    &.medium{
+                        .tit{
+                            font-size: var(--text-body-xxlarge);
+                        }
+                    }
+                }
+
+                .complete-info{
+                    padding-top: 14rem;
+                    text-align: center;
+
+                    .txt{
+                        font-size: var(--text-title-xxsmall);
+                        font-weight: 600;
+                    }
+                    .sub-desc{
+                        margin-top: 1.2rem;
+                        font-size: var(--text-body-small);
+                        color: var(--color-gray-7);
+                        line-height: 1.5;
+                    }
+
+                    &::before{
+                        content: '';
+                        display: block;
+                        margin: 0 auto 2rem;
+                        width: 12rem;
+                        height: 12rem;
+                        @include bg('icon/ico-complete.png');
+                    }
+                }
+            }
+
+            .btn-fixed{
+                position: fixed;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                padding: 2rem 2rem 3rem;
+                max-width: 42rem;
+                width: 100%;
+                background-color: var(--color-white);
+            }
+        }
+    }
+}

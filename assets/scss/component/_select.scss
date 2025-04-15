@@ -157,12 +157,14 @@
                     right: 0;
                     bottom: 0;
                     background-color: rgba(0, 0, 0, 0.5);
+                    z-index: 999;
                 }
                 .option-list{
                     overflow-y: visible;
                     padding: 2rem 0 3.2rem;
                     transform: translate(0, 0);
                     max-height: none;
+                    z-index: 999;
                     // display: block;
 
                     // &::after{

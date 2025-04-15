@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/favicon_180.png" />
+        <link rel="icon" type="image/png" sizes="512x512" href="../../assets/img/favicon_512.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="../../assets/img/favicon_192.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon_32.png" />
+        <title>사전 문진</title>
+        <!-- css -->
+        <link href="../../assets/css/common.css" type="text/css" rel="stylesheet" />
+        <link href="../../assets/css/style.css" type="text/css" rel="stylesheet" />
+        <!-- script -->
+        <script defer src="../../assets/js/jquery-2.2.4.min.js"></script>
+        <script defer src="../../assets/js/swiper-bundle.min.js"></script>
+        <script defer src="../../assets/js/common.js"></script>
+    </head>
+
+    <body>
+        <div class="wrap layout-small">
+            <div class="container">
+                <!-- 헤더 영역 -->
+                <header class="header">
+                    <div class="inner">
+                        <button type="button" class="btn-menu"><span class="blind">메뉴</span></button>
+                        <h1 class="logo">
+                            <a href="#!">logo</a>
+                        </h1>
+                        <nav>
+                            
+                        </nav>
+                    </div>
+                    <div class="inner">
+                        <button type="button" class="btn-back"><span class="blind">백버튼</span></button>
+                        <p class="h-tit">사전 문진</p>
+                    </div>
+                </header>
+                <!-- //헤더 영역 -->
+                
+                <!-- 컨텐츠 영역 -->
+                <div class="contents">
+                    <div class="progress">
+                        <span class="bar active"></span>
+                        <span class="bar active"></span>
+                        <span class="bar"></span>
+                    </div>
+
+                    <section class="section">
+                        <div class="sec-tit medium">
+                            <p class="tit">생활 습관을 알아볼게요</p>
+                        </div>
+
+                        <div class="form-list gap-lagre">
+                            <div class="input-wrap">
+                                <p class="label-txt">평소 식욕</p>
+                                <div class="radio">
+                                    <input type="radio" id="radio1-1" name="radio1" checked>
+                                    <label for="radio1-1">
+                                        <span>매우 강함</span>
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="radio1-2" name="radio1">
+                                    <label for="radio1-2">
+                                        <span>강함</span>
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="radio1-3" name="radio1">
+                                    <label for="radio1-3">
+                                        <span>보통</span>
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="radio1-4" name="radio1">
+                                    <label for="radio1-4">
+                                        <span>약함</span>
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="radio1-5" name="radio1">
+                                    <label for="radio1-5">
+                                        <span>매우 약함</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="input-wrap column">
+                                <p class="label-txt">평소 식사시간</p>
+                                <div class="radio">
+                                    <input type="radio" id="radio2-1" name="radio2" checked>
+                                    <label for="radio2-1">
+                                        <span>규칙적</span>
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="radio2-2" name="radio2">
+                                    <label for="radio2-2">
+                                        <span>불규칙적</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="input-wrap">
+                                <p class="label-txt">식사량이 가장 많은 시간</p>
+                                <div class="radio">
+                                    <input type="radio" id="radio3-1" name="radio3" checked>
+                                    <label for="radio3-1">
+                                        <span>아침</span>
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="radio3-2" name="radio3">
+                                    <label for="radio3-2">
+                                        <span>점심</span>
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="radio3-3" name="radio3">
+                                    <label for="radio3-3">
+                                        <span>저녁</span>
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="radio3-4" name="radio3">
+                                    <label for="radio3-4">
+                                        <span>야식</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="input-wrap">
+                                <p class="label-txt">평소 운동빈도</p>
+                                <div class="radio">
+                                    <input type="radio" id="radio4-1" name="radio4" checked>
+                                    <label for="radio4-1">
+                                        <span>운동하지 않음</span>
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="radio4-2" name="radio4">
+                                    <label for="radio4-2">
+                                        <span>주 1~2회</span>
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="radio4-3" name="radio4">
+                                    <label for="radio4-3">
+                                        <span>주 3회 이상</span>
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="radio4-4" name="radio4">
+                                    <label for="radio4-4">
+                                        <span>한달에 1~2회</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="input-wrap column">
+                                <p class="label-txt">평소 변비약이나 제품 복용 유무</p>
+                                <div class="radio">
+                                    <input type="radio" id="radio5-1" name="radio5" checked>
+                                    <label for="radio5-1">
+                                        <span>유</span>
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="radio5-2" name="radio5">
+                                    <label for="radio5-2">
+                                        <span>무</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="input-wrap">
+                                <p class="label-txt">배변 회수</p>
+                                <div class="radio">
+                                    <input type="radio" id="radio6-1" name="radio6" checked>
+                                    <label for="radio6-1">
+                                        <span>매일 1회 이상</span>
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="radio6-2" name="radio6">
+                                    <label for="radio6-2">
+                                        <span>2~3일에 1회</span>
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="radio6-3" name="radio6">
+                                    <label for="radio6-3">
+                                        <span>4일 이상 1회</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="input-wrap">
+                                <p class="label-txt">취침 시간</p>
+                                <div class="radio">
+                                    <input type="radio" id="radio7-1" name="radio7" checked>
+                                    <label for="radio7-1">
+                                        <span>밤 10시 이전</span>
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="radio7-2" name="radio7">
+                                    <label for="radio7-2">
+                                        <span>밤 12시 이전</span>
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="radio7-3" name="radio7">
+                                    <label for="radio7-3">
+                                        <span>밤 12시 이후</span>
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="radio7-4" name="radio7">
+                                    <label for="radio7-4">
+                                        <span>불규칙적</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="input-wrap">
+                                <p class="label-txt">수면의 질</p>
+                                <div class="radio">
+                                    <input type="radio" id="radio4-1" name="radio4" checked>
+                                    <label for="radio4-1">
+                                        <span>깨지 않고 잠</span>
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="radio4-2" name="radio4">
+                                    <label for="radio4-2">
+                                        <span>자주 깨고 잠들기가 힘듬</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="btn-wrap btn-fixed">
+                        <button type="button" class="btn large gray">이전</button>
+                        <button type="button" class="btn large primary" disabled>다음</button>
+                    </div>
+                </div>
+                <!--//컨텐츠 영역 -->
+            </div>
+        </div>
+    </body>
+</html>

@@ -11,6 +11,9 @@
         //     flex: 1;
         // }
     }
+    .btn{
+        flex: 1;
+    }
 
     &.flex-wrap{
         flex-wrap: wrap;
@@ -53,7 +56,7 @@
     --btn-bg-gray: var(--color-gray-2);
     --btn-color-text-white: var(--color-white);
     --btn-color-text-black: var(--color-black);
-    --btn-color-text-gary: var(--color-gray-6);
+    --btn-color-text-gary: var(--color-gray-7);
 
     --btn-bg-disabled: var(--color-gray-3);
     --btn-color-text-disabled: var(--color-gray-4);

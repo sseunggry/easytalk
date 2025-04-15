@@ -6,7 +6,7 @@
     flex-direction: column;
     gap: 2rem;
 
-    &.gap-lg{
+    &.gap-lagre{
         gap: 2.4rem;
     }
 }
@@ -30,7 +30,6 @@
     --input-color-border-error: var(--color-red);
 
     --input-timer-color-text: var(--color-red);
-
 
     .label-txt{
         display: block;
@@ -70,6 +69,9 @@
             font-weight: 500;
             color: var(--input-timer-color-text);
         }
+    }
+    .error-msg{
+        display: none;
     }
     &.error{
         .input{

@@ -3,6 +3,7 @@ $(function () {
     const uiCommon = {
         init: () => {
             uiCommon.selectBox();
+            uiCommon.btnFixed();
         },
         selectBox: () => {
             $('.select').each((idx, el) => {
@@ -22,6 +23,8 @@ $(function () {
                 options.each((idx, el) => {
                     const value = $(el).val();
                     const text = $(el).text();
+
+                    console.log($(el).attr('checked'));
 
                     if($(el).hasClass('placeholder')) return;
                     html += `<li class="option" role="option" tabindex="0" data-value="${value}">${text}</li>`
@@ -64,9 +67,9 @@ $(function () {
                     const selectedVal = $(this).val();
                     const $matched = $items.filter(`[data-value="${selectedVal}"]`);
                     if ($matched.length) {
-                    $value.text($matched.text()).removeClass('placeholder');
-                    $items.attr('aria-selected', 'false');
-                    $matched.attr('aria-selected', 'true');
+                        $value.text($matched.text()).removeClass('placeholder');
+                        $items.attr('aria-selected', 'false');
+                        $matched.attr('aria-selected', 'true');
                     }
                 });
 
@@ -119,6 +122,16 @@ $(function () {
                 }
             });
         },
+        btnFixed: () => {
+            if($('.btn-fixed').length){
+                $('.btn-fixed').each((idx, el) => {
+                    const fixedHeight = $(el).innerHeight();
+                    const contents = $(el).parents('.contents');
+
+                    contents.css('padding-bottom', `${fixedHeight * 0.1}rem`);
+                });
+            }
+        }
     }
 
     uiCommon.init();

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/favicon_180.png" />
+        <link rel="icon" type="image/png" sizes="512x512" href="../../assets/img/favicon_512.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="../../assets/img/favicon_192.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon_32.png" />
+        <title>휴대폰 인증</title>
+        <!-- css -->
+        <link href="../../assets/css/common.css" type="text/css" rel="stylesheet" />
+        <link href="../../assets/css/style.css" type="text/css" rel="stylesheet" />
+        <!-- script -->
+        <script defer src="../../assets/js/jquery-2.2.4.min.js"></script>
+        <script defer src="../../assets/js/swiper-bundle.min.js"></script>
+        <script defer src="../../assets/js/common.js"></script>
+    </head>
+
+    <body>
+        <div class="wrap layout-small">
+            <div class="container">
+                <!-- 헤더 영역 -->
+                <header class="header">
+                    <div class="inner">
+                        <button type="button" class="btn-menu"><span class="blind">메뉴</span></button>
+                        <h1 class="logo">
+                            <a href="#!">logo</a>
+                        </h1>
+                        <nav>
+                            
+                        </nav>
+                    </div>
+                    <div class="inner">
+                        <button type="button" class="btn-back"><span class="blind">백버튼</span></button>
+                        <p class="h-tit">휴대폰 번호로 시작</p>
+                    </div>
+                </header>
+                <!-- //헤더 영역 -->
+                
+                <!-- 컨텐츠 영역 -->
+                <div class="contents">
+                    <section class="section">
+                        <div class="sec-tit">
+                            <p class="tit">주민등록번호를 입력해주세요</p>
+                            <p class="sub-desc">의료처방을 받기 위한 본인인증 과정</p>
+                        </div>
+
+                        <div class="form-list">
+                            <div class="input-wrap">
+                                <label for="inpPersonNum" class="label-txt">주민등록번호 (7자리)</label>
+                                <div class="input">
+                                    <input type="tel" id="inpPersonNum" placeholder="7자리 숫자" value="">
+                                    <span>-</span>
+                                    <input type="tel" id="inpPersonNum" placeholder="" value="2*****">
+                                </div>
+                            </div>
+                            <div class="input-wrap">
+                                <label for="inpName" class="label-txt">이름</label>
+                                <div class="input">
+                                    <input type="text" id="inpName" placeholder="본인이름" value="홍길동">
+                                </div>
+                                <p class="error-msg">에러 메세지 입니다.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="btn-wrap btn-fixed">
+                        <button type="button" class="btn large primary" disabled>다음</button>
+                    </div>
+                </div>
+                <!--//컨텐츠 영역 -->
+            </div>
+        </div>
+    </body>
+</html>
