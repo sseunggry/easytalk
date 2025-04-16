@@ -29,6 +29,10 @@
 
     &.flex-column{
         flex-direction: column;
+
+        .btn{
+            flex: none;
+        }
     }
 }
 
@@ -46,6 +50,9 @@
     --btn-fz-small: 1.4rem;
     --btn-fz-medium: 1.6rem;
     --btn-fz-large: 1.6rem;
+
+    --btn-ico-size-xsmall: 1.4rem;
+    --btn-ico-size-medium: 1.6rem;
 
     --btn-color-line: var(--color-black);
     --btn-color-line-gray: var(--color-gray-3);
@@ -65,7 +72,7 @@
     align-items: center;
     justify-content: center;
     padding: 0 1.4rem;
-    flex: 1 1 auto;
+    // flex: 1 1 auto;
 
     // size
     &.xsmall{
@@ -74,6 +81,12 @@
         min-height: var(--btn-height-xsmall);
         font-size: var(--btn-fz-xsmall);
         border-radius: var(--btn-border-radius-xsmall);
+
+        [class*="ico-"]{
+            margin-left: 0.4rem;
+            width: var(--btn-ico-size-xsmall);
+            height: var(--btn-ico-size-xsmall);
+        }
     }
     &.small{
         height: var(--btn-height-small);
@@ -84,6 +97,12 @@
         height: var(--btn-height-medium);
         font-size: var(--btn-fz-medium);
         border-radius: var(--btn-border-radius-medium);
+
+        [class*="ico-"]{
+            margin-left: 2rem;
+            width: var(--btn-ico-size-medium);
+            height: var(--btn-ico-size-medium);
+        }
     }
     &.large{
         height: var(--btn-height-large);
@@ -146,6 +165,10 @@
             height: 1.6rem;
             @include bg('icon/ico-naver.png');
         }
+    }
+    [class*="ico-"]{
+        display: inline-block;
+        @include bg('icon/ico-arrow-right-w.png');
     }
 
     //disabled

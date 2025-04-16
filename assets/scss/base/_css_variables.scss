@@ -28,7 +28,11 @@
     --color-red: #FF6955;
 
     //text
-    --text-title-xxlarge: 6.4rem;
+    --text-title-extra-large3: 13rem;
+    --text-title-extra-large2: 12rem;
+    --text-title-extra-large: 8rem;
+    --text-title-xxxlarge: 6.4rem;
+    --text-title-xxlarge: 5.6rem;
     --text-title-xlarge: 4.8rem;
     --text-title-large: 4.6rem;
     --text-title-medium: 4rem;
@@ -63,6 +67,7 @@
 
     //border-color
     --color-border-basic: var(--color-gray-3);
+    --color-border-white: var(--color-white);
 
     //bg-color
     --color-bg-white: var(--color-white);
