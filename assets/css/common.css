@@ -722,6 +722,7 @@ img {
   --color-text-light: var(--color-gray-3);
   --color-text-white: var(--color-white);
   --color-border-basic: var(--color-gray-3);
+  --color-border-light: var(--color-gray-2);
   --color-border-white: var(--color-white);
   --color-bg-white: var(--color-white);
   --color-bg-gray: var(--color-gray-1);
@@ -929,6 +930,20 @@ img {
   font-size: var(--input-label-text-size);
   font-weight: 500;
   color: var(--input-label-color-text);
+}
+.input-wrap .label-txt.required {
+  position: relative;
+}
+.input-wrap .label-txt.required::after {
+  content: "";
+  position: absolute;
+  top: 0.4rem;
+  display: inline-block;
+  margin-left: 0.4rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background-color: #FF4640;
 }
 .input-wrap .input {
   display: flex;
@@ -1560,8 +1575,8 @@ img {
   top: 0;
   width: 100%;
   padding: 3rem 0;
-  border-bottom: 0.1rem solid var(--color-border-white);
-  background-color: #ddd;
+  border-bottom: 0.1rem solid var(--color-border-basic);
+  background-color: var(--color-white);
   z-index: 2;
 }
 .header > .inner {
@@ -1613,6 +1628,10 @@ img {
   font-size: var(--text-body-xsmall);
   color: var(--color-gray-8);
 }
+.header.gray {
+  border-bottom-color: var(--color-border-white);
+  background-color: #ddd;
+}
 
 .footer {
   padding: 8rem 0;
@@ -1657,8 +1676,6 @@ img {
   justify-content: center;
   padding: 0 2rem;
   height: 5rem;
-  border-bottom-color: var(--color-border-basic);
-  background-color: var(--color-white);
 }
 .wrap.layout-small .header > .inner:nth-of-type(1) {
   display: none;
@@ -1752,8 +1769,8 @@ section .complete-info::before {
 .fixed-top-banner {
   position: sticky;
   top: 0;
+  padding: 0.8rem 0;
   width: 100%;
-  height: 5.4rem;
   font-size: var(--text-body-xsmall);
   color: var(--color-gray-11);
   background-color: var(--color-yellow-3);
@@ -1772,4 +1789,27 @@ section .complete-info::before {
 
 .txt-al-center {
   text-align: center !important;
+}
+
+.c-gray {
+  color: var(--color-gray-4) !important;
+}
+
+.chk-list {
+  font-size: var(--text-body-xsmall);
+}
+.chk-list li {
+  display: flex;
+  align-items: center;
+}
+.chk-list li::before {
+  content: "";
+  display: block;
+  margin-right: 0.6rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  background: url(../img/icon/ico-check-active.png) no-repeat center/cover;
+}
+.chk-list li + li {
+  margin-top: 1rem;
 }

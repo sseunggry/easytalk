@@ -2,8 +2,16 @@
 $(function () {
     const uiCommon = {
         init: () => {
+            uiCommon.resize();
+            
             uiCommon.selectBox();
-            uiCommon.btnFixed();
+            uiCommon.btnBottomFixed();
+            uiCommon.topBannerFixed();
+        },
+        resize: () => {
+            $(window).resize(() => {
+                uiCommon.topBannerFixed();
+            });
         },
         selectBox: () => {
             $('.select').each((idx, el) => {
@@ -122,16 +130,25 @@ $(function () {
                 }
             });
         },
-        btnFixed: () => {
+        btnBottomFixed: () => {
             if($('.btn-fixed').length){
                 $('.btn-fixed').each((idx, el) => {
                     const fixedHeight = $(el).innerHeight();
                     const contents = $(el).parents('.contents');
-
+    
                     contents.css('padding-bottom', `${fixedHeight * 0.1}rem`);
                 });
             }
-        }
+
+        },
+        topBannerFixed: () => {
+            if($('.fixed-top-banner').length){
+                const topBanner = $('.fixed-top-banner').innerHeight();
+                const header = $('.header');
+    
+                header.css('top', topBanner * 0.1 + 'rem');
+            }
+        },
     }
 
     uiCommon.init();

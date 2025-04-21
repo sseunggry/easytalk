@@ -37,6 +37,22 @@
         font-size: var(--input-label-text-size);
         font-weight: 500;
         color: var(--input-label-color-text);
+
+        &.required{
+            position: relative;
+
+            &::after{
+                content: '';
+                position: absolute;
+                top: 0.4rem;
+                display: inline-block;
+                margin-left: 0.4rem;
+                width: 0.4rem;
+                height: 0.4rem;
+                border-radius: 50%;
+                background-color: #FF4640;
+            }
+        }
     }
     .input{
         display: flex;
