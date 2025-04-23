@@ -1787,12 +1787,57 @@ section .complete-info::before {
   top: 5.3rem;
 }
 
-.txt-al-center {
-  text-align: center !important;
+.fixed-bottom-banner {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  border: 0.15rem solid var(--color-yellow-2);
+  border-radius: 1rem;
+  background-color: var(--color-white);
+  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(1.5rem);
+  z-index: 2;
 }
-
-.c-gray {
-  color: var(--color-gray-4) !important;
+.fixed-bottom-banner .inner {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+.fixed-bottom-banner .left {
+  display: flex;
+  gap: 1.6rem;
+  padding: 0 2rem;
+}
+.fixed-bottom-banner .left .txt-wrap {
+  letter-spacing: -0.04rem;
+}
+.fixed-bottom-banner .left .txt-wrap .tit {
+  font-weight: 700;
+  font-size: var(--text-body-small);
+}
+.fixed-bottom-banner .left .txt-wrap .desc {
+  font-size: var(--text-body-xxxsmall);
+}
+.fixed-bottom-banner .right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1.6rem;
+  border-left: 0.15rem solid var(--color-yellow-2);
+}
+.fixed-bottom-banner .right .tit {
+  font-weight: 500;
+  font-size: var(--text-body-xxxsmall);
+}
+.fixed-bottom-banner .right .tel {
+  font-weight: 500;
+  font-size: var(--text-body-xsmall);
+}
+.fixed-bottom-banner .right .desc {
+  color: var(--color-gray-6);
+  font-size: var(--text-body-tiny2);
 }
 
 .chk-list {
@@ -1812,4 +1857,12 @@ section .complete-info::before {
 }
 .chk-list li + li {
   margin-top: 1rem;
+}
+
+.txt-al-center {
+  text-align: center !important;
+}
+
+.c-gray {
+  color: var(--color-gray-4) !important;
 }
