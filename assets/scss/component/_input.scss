@@ -13,14 +13,14 @@
 
 /* input */
 .input-wrap{
-    --input-label-text-size: var(--text-body-xsmall);
+    --input-label-text-size: 1.6rem;
     --input-label-color-text: var(--color-gray-10);
     --input-label-gap: 1rem;
 
     --input-bg: var(--color-gray-1);
     --input-color-text: var(--color-black);
     --input-color-text-placeholder: var(--color-gray-4);
-    --input-text-size: var(--text-body-xsmall);
+    --input-text-size: 1.6rem;
     --input-text-button-gap: 0.6rem;
     --input-padding: 0 1.6rem;
     --input-height: 5.5rem;
@@ -98,7 +98,7 @@
             display: flex;
             align-items: center;
             margin-top: 0.6rem;
-            font-size: var(--text-body-tiny);
+            font-size: 1.3rem;
             color: var(--color-red);
             
             &::before{

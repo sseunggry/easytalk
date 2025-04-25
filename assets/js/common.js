@@ -7,10 +7,12 @@ $(function () {
             uiCommon.selectBox();
             uiCommon.btnBottomFixed();
             uiCommon.topBannerFixed();
+            uiCommon.mainSecKvHeight();
         },
         resize: () => {
             $(window).resize(() => {
                 uiCommon.topBannerFixed();
+                uiCommon.mainSecKvHeight();
             });
         },
         selectBox: () => {
@@ -147,6 +149,14 @@ $(function () {
                 const header = $('.header');
     
                 header.css('top', topBanner * 0.1 + 'rem');
+            }
+        },
+        mainSecKvHeight: () => {
+            if($('.wrap.main .sec-kv').length){
+                const secKv = $('.wrap.main .sec-kv');
+                const fixedHeight = $('.header').innerHeight() + $('.fixed-top-banner').innerHeight();
+    
+                secKv.css('height', `calc(100vh - ${fixedHeight * 0.1}rem)`);
             }
         },
     }

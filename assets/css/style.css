@@ -1,19 +1,3 @@
-.info-txt {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-size: var(--text-body-xxxsmall);
-  color: var(--color-gray-5);
-  line-height: 1;
-}
-.info-txt::before {
-  content: "";
-  display: inline-block;
-  width: 1.4rem;
-  height: 1.4rem;
-  background: url(../img/icon/ico-info.png) no-repeat center/cover;
-}
-
 .wrap.main section:not(.sec-kv) {
   display: flex;
   align-items: center;
@@ -23,12 +7,12 @@
   text-align: center;
 }
 .wrap.main section:not(.sec-kv) .tit-wrap .tit {
-  font-size: var(--text-title-large);
+  font-size: 4.6rem;
   font-weight: 700;
 }
 .wrap.main section:not(.sec-kv) .tit-wrap .desc {
   margin-top: 1.6rem;
-  font-size: var(--text-body-xlarge);
+  font-size: 2.6rem;
   line-height: 1.5;
 }
 .wrap.main section.sec-kv {
@@ -39,7 +23,7 @@
   padding-top: 15rem;
 }
 .wrap.main section.sec-kv .tit-wrap .sub-txt {
-  font-size: var(--text-body-small);
+  font-size: 1.8rem;
   font-weight: 500;
   color: var(--color-gray-9);
 }
@@ -47,7 +31,7 @@
   margin-top: 0.8rem;
 }
 .wrap.main section.sec-kv .tit-wrap .tit {
-  font-size: var(--text-title-xlarge);
+  font-size: 4.8rem;
   font-weight: 700;
   color: var(--color-gray-9);
   line-height: 1.3;
@@ -56,7 +40,7 @@
   margin-top: 1.6rem;
 }
 .wrap.main section.sec-kv .tit-wrap .desc {
-  font-size: var(--text-body-medium);
+  font-size: 2rem;
   color: var(--color-gray-6);
 }
 .wrap.main section.sec-kv .tit-wrap + .btn {
@@ -66,26 +50,12 @@
   height: 84rem;
   background: url(../img/content/main-sec01.jpg) no-repeat center/cover;
 }
-.wrap.main section.sec-01 .tit-wrap {
-  color: var(--color-white);
-}
-.wrap.main section.sec-01 .tit-wrap .tit {
-  font-size: var(--text-title-large);
-}
-.wrap.main section.sec-01 .tit-wrap .desc {
-  font-size: var(--text-body-xlarge);
-  line-height: 1.5;
-}
 .wrap.main section.sec-02 {
   height: 84rem;
   background: url(../img/content/main-sec02.jpg) no-repeat center/cover;
 }
-.wrap.main section.sec-02 .tit-wrap {
-  color: var(--color-white);
-  text-align: center;
-}
 .wrap.main section.sec-02 .tit-wrap .tit {
-  font-size: var(--text-title-xxlarge);
+  font-size: 5.6rem;
   color: var(--color-yellow-3);
 }
 .wrap.main section.sec-02 .tit-wrap .num {
@@ -94,11 +64,11 @@
   justify-content: center;
   gap: 2rem;
   margin-top: 2rem;
-  font-size: var(--text-title-extra-large3);
+  font-size: 13rem;
   font-weight: 700;
 }
 .wrap.main section.sec-02 .tit-wrap .num .unit {
-  font-size: var(--text-title-extra-large);
+  font-size: 8rem;
 }
 .wrap.main section.sec-03 {
   height: 84rem;
@@ -108,11 +78,11 @@
   color: var(--color-white);
 }
 .wrap.main section.sec-03 .tit-wrap .tit {
-  font-size: var(--text-title-xxlarge);
+  font-size: 5.6rem;
 }
 .wrap.main section.sec-03 .tit-wrap .desc {
   margin-top: 2rem;
-  font-size: var(--text-title-extra-large2);
+  font-size: 12rem;
   font-weight: 700;
   color: var(--color-yellow-3);
 }
@@ -129,6 +99,9 @@
 }
 .wrap.main section.sec-04 .step-list li:nth-of-type(2n) .img-wrap {
   order: 1;
+}
+.wrap.main section.sec-04 .step-list li + li {
+  margin-top: 8rem;
 }
 .wrap.main section.sec-04 .step-list .img-wrap {
   overflow: hidden;
@@ -156,15 +129,15 @@
   width: 100%;
 }
 .wrap.main section.sec-04 .step-list .txt-wrap .tag {
-  font-size: var(--text-body-medium);
+  font-size: 2rem;
   font-weight: 700;
 }
 .wrap.main section.sec-04 .step-list .txt-wrap .tit {
-  font-size: var(--text-title-medium);
+  font-size: 4rem;
   font-weight: 700;
 }
 .wrap.main section.sec-04 .step-list .txt-wrap .desc {
-  font-size: var(--text-body-xlarge);
+  font-size: 2.6rem;
   color: var(--color-gray-8);
   line-height: 1.5;
 }
@@ -176,7 +149,7 @@
   color: var(--color-yellow-3);
 }
 .wrap.main section.sec-05 .tit-wrap .tit {
-  font-size: var(--text-title-xxxlarge);
+  font-size: 6.4rem;
 }
 .wrap.main section.sec-06 {
   background-color: var(--color-yellow-1);
@@ -200,11 +173,11 @@
   gap: 1.6rem;
 }
 .wrap.main section.sec-06 .txt-wrap .tit {
-  font-size: var(--text-title-xlarge);
+  font-size: 4.8rem;
   font-weight: 700;
 }
 .wrap.main section.sec-06 .txt-wrap .desc {
-  font-size: var(--text-body-xlarge);
+  font-size: 2.6rem;
 }
 .wrap.main section.sec-06 .img-wrap {
   flex-shrink: 0;
@@ -213,6 +186,9 @@
 .wrap.main section.sec-07 {
   padding: 14rem 0;
   background-color: var(--color-yellow-0);
+}
+.wrap.main section.sec-07 .review-swiper {
+  padding: 0 7.2rem;
 }
 .wrap.main section.sec-07 .review-swiper .swiper-btn-wrap .swiper-button-prev {
   left: 0;
@@ -232,42 +208,37 @@
 .wrap.main section.sec-07 .review-swiper .swiper-btn-wrap .swiper-button-next::after {
   display: none;
 }
-.wrap.main section.sec-07 .review-list {
-  display: flex;
-  gap: 2rem;
-  padding: 0 7.2rem;
-}
-.wrap.main section.sec-07 .review-list li a {
+.wrap.main section.sec-07 .review-item a {
   display: block;
   padding: 3rem;
   background-color: var(--color-white);
   border: 0.1rem solid var(--color-yellow-3);
 }
-.wrap.main section.sec-07 .review-list li .img-wrap {
+.wrap.main section.sec-07 .review-item .img-wrap {
   overflow: hidden;
   position: relative;
   border-radius: 1.6rem;
 }
-.wrap.main section.sec-07 .review-list li .img-wrap::before {
+.wrap.main section.sec-07 .review-item .img-wrap::before {
   content: "";
   padding-top: 93.3%;
   display: block;
 }
-.wrap.main section.sec-07 .review-list li .img-wrap img {
+.wrap.main section.sec-07 .review-item .img-wrap img {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   height: 100%;
 }
-.wrap.main section.sec-07 .review-list li .txt-wrap {
+.wrap.main section.sec-07 .review-item .txt-wrap {
   margin-top: 2rem;
-  font-size: var(--text-body-xxsmall);
+  font-size: 1.5rem;
   line-height: 1.5;
 }
 .wrap.shop .page-tit .tit {
   margin-bottom: 8rem;
-  font-size: var(--text-title-large);
+  font-size: 4.6rem;
   font-weight: 700;
   text-align: center;
 }
@@ -303,7 +274,7 @@
   margin-top: 2.4rem;
 }
 .wrap.shop .sec-kv .link-list .txt-wrap .tit {
-  font-size: var(--text-title-xsmall);
+  font-size: 3.2rem;
 }
 .wrap.shop .sec-kv .link-list .txt-wrap .tit strong {
   font-weight: 700;
@@ -316,11 +287,11 @@
   margin-top: 1rem;
 }
 .wrap.shop .sec-kv .link-list .txt-wrap .price .fee {
-  font-size: var(--text-body-xxlarge);
+  font-size: 2.8rem;
   color: var(--color-gray-9);
 }
 .wrap.shop .sec-kv .link-list .txt-wrap .price .origin {
-  font-size: var(--text-body-small);
+  font-size: 1.8rem;
   color: var(--color-gray-5);
   text-decoration: line-through;
 }
@@ -360,7 +331,7 @@
   background-color: #fafafa;
 }
 .wrap.shop-detail .sec-kv .left-box .txt-wrap .tit {
-  font-size: var(--text-title-small);
+  font-size: 3.4rem;
 }
 .wrap.shop-detail .sec-kv .left-box .txt-wrap .tit strong {
   font-weight: 700;
@@ -374,7 +345,7 @@
   background-color: var(--color-border-basic);
 }
 .wrap.shop-detail .sec-kv .left-box .txt-wrap .info {
-  font-size: var(--text-body-small);
+  font-size: 1.8rem;
   font-weight: 500;
 }
 .wrap.shop-detail .sec-kv .left-box .txt-wrap .info .chk-list {
@@ -394,7 +365,7 @@
   border: 0.1rem solid var(--color-border-light);
 }
 .wrap.shop-detail .sec-kv .left-box .txt-wrap .plan-list li .period {
-  font-size: var(--text-body-xxlarge);
+  font-size: 2.8rem;
   font-weight: 700;
 }
 .wrap.shop-detail .sec-kv .left-box .txt-wrap .plan-list li .price-wrap {
@@ -404,16 +375,16 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  font-size: var(--text-title-small);
+  font-size: 3.4rem;
   font-weight: 700;
 }
 .wrap.shop-detail .sec-kv .left-box .txt-wrap .plan-list li .price-wrap .price .unit {
   margin-left: 0.4rem;
-  font-size: var(--text-title-xxsmall);
+  font-size: 2.4rem;
 }
 .wrap.shop-detail .sec-kv .left-box .txt-wrap .plan-list li .price-wrap .discount {
   margin-top: 0.6rem;
-  font-size: var(--text-body-small);
+  font-size: 1.8rem;
   color: var(--color-gray-4);
   line-height: 1;
 }
@@ -435,7 +406,7 @@
   flex-direction: column;
   gap: 2.4rem;
   width: 42.6%;
-  font-size: var(--text-body-xxxsmall);
+  font-size: 1.4rem;
   color: var(--color-gray-7);
   border: 0.1rem solid var(--color-border-basic);
   border-radius: 1rem;
@@ -468,7 +439,7 @@
 .wrap.shop-detail .sec-kv .right-box .order-box .info-bottom .count {
   display: flex;
   align-items: center;
-  font-size: var(--text-body-xxsmall);
+  font-size: 1.5rem;
   font-weight: 500;
   height: 3.4rem;
   border: 0.1rem solid var(--color-border-basic);
@@ -498,7 +469,7 @@
   background-image: url(../img/icon/ico-plus.png);
 }
 .wrap.shop-detail .sec-kv .right-box .order-box .info-bottom .price {
-  font-size: var(--text-body-xsmall);
+  font-size: 1.6rem;
   font-weight: 500;
 }
 .wrap.shop-detail .sec-kv .right-box .order-box .btn-del {
@@ -514,7 +485,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  font-size: var(--text-body-xsmall);
+  font-size: 1.6rem;
 }
 .wrap.shop-detail .sec-kv .right-box .total .price {
   font-size: var(--text-body-);
@@ -528,24 +499,24 @@
   background: url(../img/content/shop-sec01-02.jpg) no-repeat center/cover;
 }
 .wrap.shop-detail .sec-01 .txt-wrap .tit {
-  font-size: var(--text-title-xsmall);
+  font-size: 3.2rem;
 }
 .wrap.shop-detail .sec-01 .txt-wrap .price {
   margin-top: 1rem;
-  font-size: var(--text-body-xxlarge);
+  font-size: 2.8rem;
   font-weight: 700;
 }
 .wrap.shop-detail .sec-01 .txt-wrap .price .origin {
   display: inline-block;
   margin-left: 1rem;
   opacity: 0.6;
-  font-size: var(--text-body-large);
+  font-size: 2.4rem;
   font-weight: 400;
   text-decoration: line-through;
 }
 .wrap.shop-detail .sec-01 .txt-wrap .desc {
   margin-top: 2.4rem;
-  font-size: var(--text-body-medium);
+  font-size: 2rem;
 }
 .wrap.shop-detail .sec-01 .txt-wrap .btn.primary {
   margin-top: 2.4rem;
@@ -563,18 +534,18 @@
 .wrap.shop-detail .sec-02 .txt-wrap .sub-tit {
   display: inline-block;
   margin-bottom: 4rem;
-  font-size: var(--text-title-xxsmall);
+  font-size: 2.4rem;
   font-weight: 700;
   line-height: 1;
 }
 .wrap.shop-detail .sec-02 .txt-wrap .tit {
-  font-size: var(--text-title-medium);
+  font-size: 4rem;
   line-height: 1.5;
 }
 .wrap.shop-detail .sec-02 .txt-wrap .note-txt {
   position: absolute;
   bottom: 5rem;
-  font-size: var(--text-body-xsmall);
+  font-size: 1.6rem;
   color: var(--color-gray-5);
 }
 .wrap.shop-detail .sec-03 .inner {
@@ -589,7 +560,7 @@
   color: var(--color-gray-9);
 }
 .wrap.shop-detail .sec-03 .info-list .txt-wrap .tit {
-  font-size: var(--text-body-xxxlarge);
+  font-size: 3rem;
 }
 .wrap.shop-detail .sec-03 .info-list .txt-wrap .tit::before {
   content: "";
@@ -601,7 +572,7 @@
 }
 .wrap.shop-detail .sec-03 .info-list .txt-wrap .desc {
   margin-top: 2rem;
-  font-size: var(--text-body-xsmall);
+  font-size: 1.6rem;
 }
 .wrap.shop-detail .sec-03 .info-list .img-wrap {
   margin-top: 3.5rem;
@@ -628,22 +599,22 @@
 .wrap.shop-detail .sec-03 .certificate .txt-wrap .tit {
   display: flex;
   flex-direction: column;
-  font-size: var(--text-body-xxxlarge);
+  font-size: 3rem;
   font-weight: 700;
   color: var(--color-gray-9);
 }
 .wrap.shop-detail .sec-03 .certificate .txt-wrap .tit .sub {
   margin-bottom: 0.6rem;
-  font-size: var(--text-title-xxsmall);
+  font-size: 2.4rem;
   font-weight: 400;
 }
 .wrap.shop-detail .sec-03 .certificate .txt-wrap .desc {
   margin-top: 1.6rem;
-  font-size: var(--text-body-xsmall);
+  font-size: 1.6rem;
   color: var(--color-gray-8);
 }
 .wrap.shop-detail .sec-03 .certificate .txt-wrap .desc.small {
-  font-size: var(--text-body-xxxsmall);
+  font-size: 1.4rem;
 }
 .wrap.shop-detail .sec-04 {
   display: flex;
@@ -676,7 +647,7 @@
 }
 .wrap.shop-detail .sec-04 .txt-wrap .tit {
   margin-bottom: 2.4rem;
-  font-size: var(--text-title-xxsmall);
+  font-size: 2.4rem;
   font-weight: 700;
 }
 .wrap.shop-detail .sec-04 .txt-wrap .chk-list li::before {
@@ -702,7 +673,7 @@
   justify-content: center;
   width: 16rem;
   height: 16rem;
-  font-size: var(--text-body-xsmall);
+  font-size: 1.6rem;
   text-align: center;
   border-radius: 50%;
   background-color: var(--color-yellow-1);
@@ -710,7 +681,7 @@
 }
 .wrap.shop-detail .sec-05 .step-list li strong {
   margin-bottom: 0.8rem;
-  font-size: var(--text-body-xxxsmall);
+  font-size: 1.4rem;
   font-weight: 700;
 }
 .wrap.shop-detail .sec-05 .step-list li::before {
@@ -737,10 +708,153 @@
 }
 .wrap.shop-detail .sec-05 .txt-wrap .tit {
   margin-bottom: 2rem;
-  font-size: var(--text-body-small);
+  font-size: 1.8rem;
   font-weight: 700;
 }
 .wrap.shop-detail .sec-05 .txt-wrap .desc {
-  font-size: var(--text-body-medium);
+  font-size: 2rem;
   line-height: 1.5;
+}
+
+@media screen and (max-width: 720px) {
+  .wrap.main section:not(.sec-kv) .tit-wrap .tit {
+    font-size: 2.4rem;
+  }
+  .wrap.main section:not(.sec-kv) .tit-wrap .desc {
+    margin-top: 0.8rem;
+    font-size: 1.6rem;
+  }
+  .wrap.main section.sec-kv {
+    min-height: 60rem;
+    background: url(../img/content/main-visual-m.jpg) no-repeat center/cover;
+  }
+  .wrap.main section.sec-kv .tit-wrap {
+    padding-top: 6.2rem;
+    text-align: center;
+  }
+  .wrap.main section.sec-kv .tit-wrap .sub-txt {
+    font-size: 1.4rem;
+  }
+  .wrap.main section.sec-kv .tit-wrap .tit {
+    font-size: 2.6rem;
+  }
+  .wrap.main section.sec-kv .tit-wrap .tit .mob-only {
+    justify-content: center;
+  }
+  .wrap.main section.sec-kv .tit-wrap .desc {
+    font-size: 1.6rem;
+  }
+  .wrap.main section.sec-kv .tit-wrap + .btn {
+    display: none;
+  }
+  .wrap.main section.sec-01 {
+    height: 100vh;
+    min-height: 60rem;
+    background: url(../img/content/main-sec01-m.jpg) no-repeat center/cover;
+  }
+  .wrap.main section.sec-02 {
+    height: 100vh;
+    min-height: 60rem;
+    background: url(../img/content/main-sec02-m.jpg) no-repeat center/cover;
+  }
+  .wrap.main section.sec-02 .tit-wrap .tit {
+    font-size: 1.8rem;
+  }
+  .wrap.main section.sec-02 .tit-wrap .num {
+    gap: 0.8rem;
+    margin-top: 0.8rem;
+    font-size: 5.6rem;
+  }
+  .wrap.main section.sec-02 .tit-wrap .num .unit {
+    font-size: 3rem;
+  }
+  .wrap.main section.sec-03 {
+    height: 100vh;
+    min-height: 60rem;
+    background: url(../img/content/main-sec03-m.jpg) no-repeat center/cover;
+  }
+  .wrap.main section.sec-03 .tit-wrap .tit {
+    font-size: 1.8rem;
+  }
+  .wrap.main section.sec-03 .tit-wrap .desc {
+    margin-top: 1.6rem;
+    font-size: 5rem;
+  }
+  .wrap.main section.sec-04 {
+    padding: 8rem 0;
+  }
+  .wrap.main section.sec-04 .step-list li {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .wrap.main section.sec-04 .step-list li:nth-of-type(2n) .img-wrap {
+    order: 0;
+  }
+  .wrap.main section.sec-04 .step-list li + li {
+    margin-top: 6rem;
+  }
+  .wrap.main section.sec-04 .step-list .img-wrap {
+    width: 61%;
+  }
+  .wrap.main section.sec-04 .step-list .txt-wrap {
+    text-align: center;
+    gap: 0.8rem;
+  }
+  .wrap.main section.sec-04 .step-list .txt-wrap .tag {
+    font-size: 1.6rem;
+  }
+  .wrap.main section.sec-04 .step-list .txt-wrap .tit {
+    font-size: 2.8rem;
+  }
+  .wrap.main section.sec-04 .step-list .txt-wrap .desc {
+    font-size: 1.5rem;
+  }
+  .wrap.main section.sec-05 {
+    height: 20rem;
+    background: url(../img/content/main-sec05-m.jpg) no-repeat center/cover;
+  }
+  .wrap.main section.sec-05 .tit-wrap .tit {
+    font-size: 3.4rem;
+  }
+  .wrap.main section.sec-06 .list li {
+    flex-direction: column;
+    gap: 4rem;
+    padding: 8rem 0;
+  }
+  .wrap.main section.sec-06 .list li:nth-of-type(2n) .img-wrap {
+    order: -1;
+  }
+  .wrap.main section.sec-06 .txt-wrap {
+    gap: 1.2rem;
+    text-align: center;
+  }
+  .wrap.main section.sec-06 .txt-wrap .tit {
+    font-size: 2.8rem;
+  }
+  .wrap.main section.sec-06 .txt-wrap .desc {
+    font-size: 1.5rem;
+  }
+  .wrap.main section.sec-06 .img-wrap {
+    order: -1;
+    max-width: 66.6%;
+  }
+  .wrap.main section.sec-07 {
+    padding: 8rem 0;
+  }
+  .wrap.main section.sec-07 .review-swiper .swiper-slide {
+    width: 68.8%;
+  }
+  .wrap.main section.sec-07 .review-swiper .swiper-btn-wrap {
+    display: none;
+  }
+  .wrap.main section.sec-07 .review-item a {
+    padding: 2.4rem;
+  }
+  .wrap.main section.sec-07 .review-item .img-wrap::before {
+    padding-top: 100%;
+  }
+  .wrap.main section.sec-07 .review-item .txt-wrap {
+    margin-top: 1.6rem;
+    font-size: 1.4rem;
+  }
 }
