@@ -334,7 +334,8 @@
                 text-align: center;
 
                 li{
-                    width: 34.3%;
+                    width: 41.2rem;
+                    // width: 34.3%;
                 }
 
                 .img-wrap{
@@ -393,12 +394,13 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: flex-start;
-                gap: 4rem;
+                // gap: 4rem;
                 max-width: 108rem;
             }
     
             .left-box{
                 overflow: hidden;
+                // width: 100%;
                 width: 53.7%;
                 border-radius: 1rem;
     
@@ -512,6 +514,7 @@
                 display: flex;
                 flex-direction: column;
                 gap: 2.4rem;
+                // flex-shrink: 0;
                 width: 42.6%;
                 font-size: 1.4rem;
                 color: var(--color-gray-7);
@@ -623,6 +626,9 @@
                     font-size: 3.2rem;
                 }
                 .price{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     margin-top: 1rem;
                     font-size: 2.8rem;
                     font-weight: 700;
@@ -869,10 +875,108 @@
             }
         }
     }
-}
 
-@media screen and (max-width: 720px) {
-    .wrap{
+
+    @media screen and (max-width: 960px) {
+        &.shop-detail{
+            .sec-kv{
+                padding: 4rem 0;
+        
+                .inner{
+                    gap: 2rem;
+                }
+        
+                .left-box{
+                    width: 51%;
+                    .txt-wrap{
+                        padding: 3.2rem 2rem;
+        
+                        .tit{
+                            font-size: 3.2rem;
+        
+                            &::after{
+                                margin: 2.4rem 0;
+                            }
+                        }
+                        .info{
+                            font-size: 1.6rem;
+                        }
+                        .plan-list{
+                            margin-top: 2.8rem;
+        
+                            li{
+                                padding: 2.4rem;
+        
+                                .period{
+                                    font-size: 2.4rem;
+                                }
+                                .price-wrap{
+                                    .price{
+                                        font-size: 2.8rem;
+                                        .unit{
+                                            font-size: 2rem;
+                                        }
+                                    }
+                                    .discount{
+                                        font-size: 1.6rem;
+        
+                                        span{
+                                            + span{
+                                                &::before{
+                                                    width: 1.6rem;
+                                                    height: 1.6rem;
+                                                    margin: 0 0.1rem 0.2rem;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .right-box{
+                    padding: 2rem;
+                    width: 46%;
+                    font-size: 1.4rem;
+        
+                    .order-box{
+                        padding: 2rem;
+
+                        .info-bottom{
+                            flex-direction: column;
+                            row-gap: 1rem;
+        
+                            .count{
+                                align-self: flex-start;
+                            }
+                            .price{
+                                align-self: flex-end;
+                            }
+                        }
+                        .btn-del{
+                            top: 2.2rem;
+                            right: 2.2rem;
+                        }
+                    }
+        
+                    .total{
+                        gap: 1rem;
+                        flex-direction: column;
+
+                        > span{
+                            align-self: flex-start;
+                        }
+                        .price{
+                            align-self: flex-end;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 720px) {
         &.main{
             section{
                 &:not(.sec-kv){
@@ -1065,5 +1169,293 @@
                 }
             }
         }
+
+        &.shop{
+            .page-tit{
+                .tit{
+                    margin-bottom: 3rem;
+                    font-size: 2rem;
+                }
+            }
+            .sec-kv{
+                padding: 3rem 0 5rem;
+
+                .link-list{
+                    gap: 1.2rem;
+
+                    li{
+                        width: 41.2rem;
+                    }
+                    .txt-wrap{
+                        margin-top: 1.2rem;
+                        .tit{
+                            font-size: 1.4rem;
+                        }
+                        .price{
+                            gap: 0.4rem;
+                            margin-top: 0.2rem;
+
+                            .fee{
+                                font-size: 1.6rem;
+                            }
+                            .origin{
+                                font-size: 1.2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.shop-detail{
+            .sec-kv{
+                padding: 3rem 0;
+        
+                .inner{
+                    flex-direction: column;
+                }
+        
+                .left-box{
+                    width: 100%;
+
+                    .txt-wrap{
+                        padding: 3.2rem 2rem;
+        
+                        .tit{
+                            font-size: 2.4rem;
+
+                            &::after{
+                                margin: 1.6rem 0;
+                            }
+                        }
+                        .info{
+                            font-size: 1.4rem;
+        
+                            .chk-list{
+                                margin-top: 0.6rem;
+                            }
+                        }
+                        .plan-list{
+                            margin-top: 1.6rem;
+        
+                            li{
+                                padding: 2.4rem 2rem;
+        
+                                .period{
+                                    font-size: 2rem;
+                                }
+                                .price-wrap{
+                                    .price{
+                                        font-size: 2.8rem;
+        
+                                        .unit{
+                                            margin-left: 0.4rem;
+                                            font-size: 1.8rem;
+                                        }
+                                    }
+                                    .discount{
+                                        margin-top: 0.6rem;
+                                        font-size: 1.2rem;
+        
+                                        span{
+                                            + span{
+                                                &::before{
+                                                    width: 1.8rem;
+                                                    height: 1.8rem;
+                                                    margin: 0 0.2rem 0.25rem;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+        
+                                + li{
+                                    margin-top: 2rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                .right-box{
+                    display: none;
+                }
+            }
+            .sec-01{
+                .txt-wrap{
+                    padding: 8rem 0;
+                    @include bg('content/shop-sec01-02.jpg');
+        
+                    .tit{
+                        font-size: 2.4rem;
+                    }
+                    .price{
+                        margin-top: 0.6rem;
+                        font-size: 2rem;
+        
+                        .origin{
+                            margin-left: 1rem;
+                            font-size: 1.4rem;
+                        }
+                    }
+                    .desc{
+                        margin-top: 1.6rem;
+                        font-size: 1.6rem;
+                        word-break: keep-all;
+                    }
+                    .btn.primary{
+                        margin-top: 1.6rem;
+                        width: 20rem;
+                    }
+                }
+            }
+            .sec-02{
+                @include bg('content/shop-sec02-m.jpg', center);
+                height: 100vh;
+                min-height: 60rem;
+        
+                .txt-wrap{
+                    padding-top: 6rem;
+        
+                    .sub-tit{
+                        margin-bottom: 1.2rem;
+                        font-size: 1.6rem;
+                    }
+                    .tit{
+                        font-size: 2.4rem;
+                    }
+                    .note-txt{
+                        bottom: 6rem;
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+            .sec-03{
+                .inner{
+                    padding-top: 8rem;
+                    padding-bottom: 8rem;
+                }
+                .info-list{
+                    li{
+                        + li{
+                            margin-top: 6rem;
+                        }
+                    }
+        
+                    .txt-wrap{
+                        .tit{
+                            font-size: 2.6rem;
+                            &::before{
+                                margin-bottom: 1.2rem;
+                                width: 1rem;
+                                height: 1rem;
+                            }
+                        }
+                        .desc{
+                            margin-top: 1.2rem;
+                            font-size: 1.6rem;
+                        }
+                    }
+                    .img-wrap{
+                        margin-top: 3.5rem;
+                    }
+                }
+                //작업중
+                .certificate{
+                    margin-top: 6rem;
+                    padding: 2rem;
+        
+                    &::before{
+                        margin-right: 4rem;
+                        width: 17.6rem;
+                        height: 23.8rem;
+                    }
+                    .txt-wrap{
+                        .tit{
+                            font-size: 3rem;
+        
+                            .sub{
+                                margin-bottom: 0.6rem;
+                                font-size: 2.4rem;
+                                font-weight: 400;
+                            }
+                        }
+                        .desc{
+                            margin-top: 1.6rem;
+                            font-size: 1.6rem;
+                            
+                            &.small{
+                                font-size: 1.4rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .sec-04{
+                flex-direction: column;
+        
+                .img-wrap{
+                    width: 100%;
+                }
+                .txt-wrap{
+                    width: 100%;
+                    padding: 6rem 4rem;
+        
+                    .tit{
+                        margin-bottom: 2.4rem;
+                        font-size: 2.4rem;
+                        text-align: center;
+                    }
+                    .chk-list{
+                        margin: 0 auto;
+                        li {
+                            + li{
+                                margin-top: 1.6rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .sec-05{
+                padding: 6rem 0;
+                
+                .step-list{
+                    flex-direction: column;
+                    gap: 5rem;
+        
+                    li{
+                        width: 16rem;
+                        height: 16rem;
+                        font-size: 1.6rem;
+        
+                        strong{
+                            margin-bottom: 0.8rem;
+                            font-size: 1.4rem;
+                        }
+        
+                        &::before{
+                            top: 50%;
+                            right: 50%;
+                            transform: translateY(50%);
+                            width: 0.2rem;
+                            height: 100%;
+                        }
+                    }
+                }
+                .txt-wrap{
+                    margin-top: 6rem;
+                    
+                    .tit{
+                        margin-bottom: 2rem;
+                        font-size: 1.8rem;
+                    }
+                    .desc{
+                        font-size: 2rem;
+                        line-height: 1.5;
+                    }
+                }
+            }
+        }
     }
 }
+
+

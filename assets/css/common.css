@@ -1898,6 +1898,46 @@ section .complete-info::before {
   .fixed-top-banner .btn-wrap {
     display: none;
   }
+  .fixed-bottom-banner {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    border-width: 0;
+    border-radius: 0;
+  }
+  .fixed-bottom-banner .inner {
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+  .fixed-bottom-banner .left {
+    justify-content: space-between;
+    gap: 1.2rem;
+    padding: 1.6rem 2rem;
+    width: 100%;
+  }
+  .fixed-bottom-banner .left .txt-wrap .tit {
+    font-size: 1.6rem;
+  }
+  .fixed-bottom-banner .left .txt-wrap .desc {
+    margin-top: 0.5rem;
+    font-size: 1.3rem;
+  }
+  .fixed-bottom-banner .right {
+    display: none;
+  }
+  .chk-list {
+    font-size: 1.3rem;
+  }
+  .chk-list li::before {
+    margin-right: 0.6rem;
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+  .chk-list li + li {
+    margin-top: 0.6rem;
+  }
   .info-txt {
     justify-content: center;
     gap: 0.4rem;
