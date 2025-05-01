@@ -18,3 +18,15 @@
         }        
     }
 }
+
+@media screen and (max-width: 360px) {
+    .progress{
+        gap: 1.67vw;
+        margin: 1.11vw 0;
+
+        .bar{
+            height: 1.67vw;
+            border-radius: 277.78vw;   
+        }
+    }
+}

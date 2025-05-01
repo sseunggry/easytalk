@@ -137,3 +137,68 @@
         }
     }
 }
+
+@media screen and (max-width: 360px) {
+    .form-list{
+        gap: 5.56vw;
+    
+        &.gap-lagre{
+            gap: 6.67vw;
+        }
+    }
+    
+    /* input */
+    .input-wrap{
+        --input-label-text-size: 4.44vw;
+        --input-label-gap: 2.78vw;
+    
+        --input-text-size: 4.44vw;
+        --input-text-button-gap: 1.67vw;
+        --input-padding: 0 4.44vw;
+        --input-height: 15.28vw;
+        --input-border-radius: 3.33vw;
+    
+        .label-txt{
+            &.required{
+                &::after{
+                    top: 1.11vw;
+                    margin-left: 1.11vw;
+                    width: 1.11vw;
+                    height: 1.11vw;
+                }
+            }
+        }
+        .input{
+            border-width: 0.56vw;
+        }
+        &.error{
+            .error-msg{
+                margin-top: 1.67vw;
+                font-size: 3.61vw;
+                
+                &::before{
+                    margin-right: 1.11vw;
+                    width: 3.89vw;
+                    height: 3.89vw;
+                }
+            }
+        }
+    
+        //column 2개씩
+        &.column{
+            margin-bottom: -2.78vw;
+            .checkbox, .radio{
+                margin-bottom: 2.78vw;
+                width: calc(50% - 1.11vw);
+    
+                ~ .checkbox, ~ .radio{
+                    margin-bottom: 2.78vw;
+                }
+    
+                &:nth-of-type(2n){
+                    margin-left: 2.22vw;
+                }
+            }
+        }
+    }
+}

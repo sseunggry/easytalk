@@ -509,12 +509,11 @@
                     }
                 }
             }
-            .right-box{
+            .order-box{
                 padding: 3.2rem;
                 display: flex;
                 flex-direction: column;
                 gap: 2.4rem;
-                // flex-shrink: 0;
                 width: 42.6%;
                 font-size: 1.4rem;
                 color: var(--color-gray-7);
@@ -535,7 +534,7 @@
                     }
                 }
     
-                .order-box{
+                .list-box{
                     position: relative;
                     padding: 2.4rem;
                     background-color: var(--color-yellow-0);
@@ -608,7 +607,7 @@
                     font-size: 1.6rem;
     
                     .price{
-                        font-size: var(--text-body-);
+                        font-size: 2.4rem;
                         font-weight: 700;
                         color: var(--color-gray-9);
                     }
@@ -616,6 +615,27 @@
             }
         }
         .sec-01{
+            .img-wrap{
+                overflow: hidden;
+                position: relative;
+                margin-right: 4rem;
+                width: 100%;
+
+                &::before{
+                    content: '';
+                    padding-top: 33.75%;
+                    display: block;
+                }
+                img{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: auto;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
             .txt-wrap{
                 padding: 6rem 0;
                 text-align: center;
@@ -694,6 +714,7 @@
                 }
     
                 .txt-wrap{
+                    word-break: keep-all;
                     color: var(--color-gray-9);
     
                     .tit{
@@ -743,16 +764,7 @@
                         height: 100%;
                     }
                 }
-    
-                // &::before{
-                //     content: '';
-                //     display: block;
-                //     flex-shrink: 0;
-                //     margin-right: 4rem;
-                //     width: 17.6rem;
-                //     height: 23.8rem;
-                //     @include bg('content/shop-sec04-certificate.png');
-                // }
+
                 .txt-wrap{
                     width: 100%;
                     .tit{
@@ -814,7 +826,7 @@
                 .tit{
                     margin-bottom: 2.4rem;
                     font-size: 2.4rem;
-                    font-weight: 700;
+                    font-weight: 500;
                 }
                 .chk-list{
                     li{
@@ -897,6 +909,110 @@
                 }
             }
         }
+
+        .modal{
+            .order-box{
+                padding-bottom: 2.4rem;
+                display: flex;
+                flex-direction: column;
+                gap: 2.4rem;
+                font-size: 1.4rem;
+                color: var(--color-gray-7);
+    
+                .info-list{
+                    li{
+                        strong{
+                            display: inline-block;
+                            margin-right: 0.8rem;
+                            font-weight: 700;
+                        }
+    
+                        + li{
+                            margin-top: 1.6rem;
+                        }
+                    }
+                }
+    
+                .list-box{
+                    position: relative;
+                    padding: 2.4rem;
+                    background-color: var(--color-yellow-0);
+    
+                    .name{
+                        padding-right: calc(1.6rem + 1rem);
+                        color: var(--color-gray-8);
+                    }
+                    .info-bottom{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-top: 1.6rem;
+                        padding-top: 1.6rem;
+                        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    
+                        .count{
+                            display: flex;
+                            align-items: center;
+                            font-size: 1.5rem;
+                            font-weight: 500;
+                            height: 3.4rem;
+                            border: 0.1rem solid var(--color-border-basic);
+                            border-radius: 0.4rem;
+                            background-color: var(--color-white);
+    
+                            .num{
+                                padding: 0 1.2rem;
+                                max-width: 8rem;
+                                @include ellipsis();
+                            }
+    
+                            [class*="btn-"]{
+                                width: 3.4rem;
+                                height: 100%;
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                background-size: 1.6rem;
+                            }
+    
+                            .btn-minus{
+                                border-right: 0.1rem solid var(--color-border-basic);
+                                background-image: url(#{$base-url}img/icon/ico-minus.png);
+                            }
+                            .btn-plus{
+                                border-left: 0.1rem solid var(--color-border-basic);
+                                background-image: url(#{$base-url}img/icon/ico-plus.png);
+                            }
+                        }
+                        .price{
+                            font-size: 1.6rem;
+                            font-weight: 500;
+                        }
+                    }
+                    .btn-del{
+                        position: absolute;
+                        top: 2.45rem;
+                        right: 2.4rem;
+                        width: 1.6rem;
+                        height: 1.6rem;
+                        @include bg('icon/ico-del.png');
+                    }
+                }
+    
+                .total{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 2rem;
+                    font-size: 1.6rem;
+    
+                    .price{
+                        font-size: 2.4rem;
+                        font-weight: 700;
+                        color: var(--color-gray-9);
+                    }
+                }
+            }
+        }
     }
 
 
@@ -958,12 +1074,12 @@
                         }
                     }
                 }
-                .right-box{
+                .order-box{
                     padding: 2rem;
                     width: 46%;
                     font-size: 1.4rem;
         
-                    .order-box{
+                    .list-box{
                         padding: 2rem;
 
                         .info-bottom{
@@ -996,6 +1112,26 @@
                     }
                 }
             }
+            .sec-04{
+                .txt-wrap{
+                    padding-left: 5.6rem;
+                    padding-right: 5.6rem;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 870px) {
+        &.shop-detail{
+            .sec-05{
+                .inner{
+                    padding: 0 2rem;
+                }
+                .step-list{
+                    // justify-content: space-between;
+                    gap: 2rem;
+                }
+            }
         }
     }
 
@@ -1016,6 +1152,7 @@
         
                 &.sec-kv{
                     min-height: 60rem;
+                    max-height: 80rem;
                     @include bg('content/main-visual-m.jpg');
         
                     .tit-wrap{
@@ -1044,11 +1181,13 @@
                 &.sec-01{
                     height: 100vh;
                     min-height: 60rem;
+                    max-height: 80rem;
                     @include bg('content/main-sec01-m.jpg');
                 }
                 &.sec-02{
                     height: 100vh;
                     min-height: 60rem;
+                    max-height: 80rem;
                     @include bg('content/main-sec02-m.jpg');
         
                     .tit-wrap{       
@@ -1069,6 +1208,7 @@
                 &.sec-03{
                     height: 100vh;
                     min-height: 60rem;
+                    max-height: 80rem;
                     @include bg('content/main-sec03-m.jpg');
         
                     .tit-wrap{
@@ -1167,6 +1307,7 @@
                     padding: 8rem 0;
         
                     .review-swiper{
+                        padding: 0;
                         .swiper-slide{
                             width: 68.8%;
                         }
@@ -1207,7 +1348,7 @@
                     gap: 1.2rem;
 
                     li{
-                        width: 41.2rem;
+                        width: 100%;
                     }
                     .txt-wrap{
                         margin-top: 1.2rem;
@@ -1299,11 +1440,16 @@
                         }
                     }
                 }
-                .right-box{
+                .order-box{
                     display: none;
                 }
             }
             .sec-01{
+                .img-wrap{
+                    &::before{
+                        padding-top: 70%;
+                    }
+                }
                 .txt-wrap{
                     padding: 8rem 0;
                     @include bg('content/shop-sec01-02.jpg');
@@ -1335,6 +1481,7 @@
                 @include bg('content/shop-sec02-m.jpg', center);
                 height: 100vh;
                 min-height: 60rem;
+                max-height: 80rem;
         
                 .txt-wrap{
                     padding-top: 6rem;
@@ -1365,6 +1512,10 @@
                     }
         
                     .txt-wrap{
+                        br{
+                            display: none;
+                        }
+
                         .tit{
                             font-size: 2.6rem;
                             &::before{
@@ -1376,6 +1527,12 @@
                         .desc{
                             margin-top: 1.2rem;
                             font-size: 1.6rem;
+
+                        }
+                    }
+                    .order1{
+                        .desc{
+                            margin-top: 3.5rem;
                         }
                     }
                     .img-wrap{
@@ -1383,29 +1540,28 @@
                     }
                 }
                 .certificate{
-                    margin-top: 6rem;
-                    padding: 2rem;
-        
-                    &::before{
-                        margin-right: 4rem;
-                        width: 14.6rem;
-                        height: 19.8rem;
+                    margin-top: 8.33vw;
+                    padding: 2.78vw;
+
+                    .img-wrap{
+                        margin-right: 5.56vw;
                     }
+        
                     .txt-wrap{
                         .tit{
-                            font-size: 2.8rem;
+                            font-size: 3.89vw;
         
                             .sub{
-                                margin-bottom: 0.4rem;
-                                font-size: 2rem;
+                                margin-bottom: 0.56vw;
+                                font-size: 2.78vw;
                             }
                         }
                         .desc{
-                            margin-top: 1.2rem;
-                            font-size: 1.4rem;
+                            margin-top: 1.67vw;
+                            font-size: 1.94vw;
                             
                             &.small{
-                                font-size: 1.2rem;
+                                font-size: 1.67vw;
                             }
                         }
                     }
@@ -1438,15 +1594,15 @@
                 }
             }
             .sec-05{
-                padding: 6rem 0;
+                padding: 6rem 0 7rem;
                 
                 .step-list{
                     flex-direction: column;
                     gap: 5rem;
         
                     li{
-                        width: 16rem;
-                        height: 16rem;
+                        width: 20rem;
+                        height: 20rem;
                         font-size: 1.6rem;
         
                         strong{
@@ -1479,236 +1635,204 @@
         }
     }
 
+    @media screen and (max-width: 400px) {
+        &.shop-detail{
+            .sec-02{
+                .txt-wrap{
+                    .tit{
+                        br{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     @media screen and (max-width: 360px) {
-        // &.main{
-        //     section{
-        //         &:not(.sec-kv){
-        //             .tit-wrap{
-        //                 .tit{
-        //                     font-size: 2.4rem;
-        //                 }
-        //                 .desc{
-        //                     margin-top: 0.8rem;
-        //                     font-size: 1.6rem;
-        //                 }
-        //             }
-        //         }
-        
-        //         &.sec-kv{
-        //             min-height: 60rem;
-        //             @include bg('content/main-visual-m.jpg');
-        
-        //             .tit-wrap{
-        //                 padding-top: 6.2rem;
-        //                 text-align: center;
+        &.main {
+            section {
+                &:not(.sec-kv) {
+                    .tit-wrap {
+                        .tit {
+                            font-size: 6.67vw;
+                        }
+                        .desc {
+                            margin-top: 2.22vw;
+                            font-size: 4.44vw;
+                        }
+                    }
+                }
 
-        //                 .sub-txt{
-        //                     font-size: 1.4rem;
-        //                 }
-        //                 .tit{
-        //                     font-size: 2.6rem;
+                &.sec-kv {
+                    min-height: 166.67vw;
+                    max-height: 222.22vw;
 
-        //                     .mob-only{
-        //                         justify-content: center;
-        //                     }  
-        //                 }
-        //                 .desc{
-        //                     font-size: 1.6rem;
-        //                 }
-        
-        //                 + .btn{
-        //                     display: none;
-        //                 }
-        //             }
-        //         }
-        //         &.sec-01{
-        //             height: 100vh;
-        //             min-height: 60rem;
-        //             @include bg('content/main-sec01-m.jpg');
-        //         }
-        //         &.sec-02{
-        //             height: 100vh;
-        //             min-height: 60rem;
-        //             @include bg('content/main-sec02-m.jpg');
-        
-        //             .tit-wrap{       
-        //                 .tit{
-        //                     font-size: 1.8rem;
-        //                 }
-        //                 .num{
-        //                     gap: 0.8rem;
-        //                     margin-top: 0.8rem;
-        //                     font-size: 5.6rem;
-        
-        //                     .unit{
-        //                         font-size: 3rem;
-        //                     }
-        //                 }
-        //             }
-        //         }
-        //         &.sec-03{
-        //             height: 100vh;
-        //             min-height: 60rem;
-        //             @include bg('content/main-sec03-m.jpg');
-        
-        //             .tit-wrap{
-        //                 .tit{
-        //                     font-size: 1.8rem;
-        //                 }
-        //                 .desc{
-        //                     margin-top: 1.6rem;
-        //                     font-size: 5rem;
-        //                 }
-        //             }
-        //         }
-        //         &.sec-04{
-        //             padding: 8rem 0;
-        
-        //             .step-list{
-        //                 li{
-        //                     flex-direction: column;
-        //                     gap: 2rem;
-        
-        //                     &:nth-of-type(2n){
-        //                         .img-wrap{
-        //                             order: 0;
-        //                         }
-        //                     }
+                    .tit-wrap {
+                        padding-top: 17.22vw;
 
-        //                     + li{
-        //                         margin-top: 6rem;
-        //                     }
-        //                 }
-        
-        //                 .img-wrap{
-        //                     width: 61%;
-        //                 }
-        //                 .txt-wrap{
-        //                     text-align: center;
-        //                     gap: 0.8rem;
-        
-        //                     .tag{
-        //                         font-size: 1.6rem;
-        //                     }
-        //                     .tit{
-        //                         font-size: 2.8rem;
-        //                     }
-        //                     .desc{
-        //                         font-size: 1.5rem;
-        //                     }
-        //                 }
-        //             }
-        //         }
-        //         &.sec-05{
-        //             height: 20rem;
-        //             @include bg('content/main-sec05-m.jpg');
-        
-        //             .tit-wrap{
-        //                 .tit{
-        //                     font-size: 3.4rem;
-        //                 }
-        //             }
-        //         }
-        //         &.sec-06{
-        //             .list{
-        //                 li{
-        //                     flex-direction: column;
-        //                     // display: flex;
-        //                     // align-items: center;
-        //                     // justify-content: space-between;
-        //                     gap: 4rem;
-        //                     padding: 8rem 0;
-        
-        //                     &:nth-of-type(2n){
-        //                         .img-wrap{
-        //                             order: -1;
-        //                         }
-        //                     }
-        //                 }
-        //             }
-        
-        //             .txt-wrap{
-        //                 gap: 1.2rem;
-        //                 text-align: center;
-        
-        //                 .tit{
-        //                     font-size: 2.8rem;
-        //                 }
-        //                 .desc{
-        //                     font-size: 1.5rem;
-        //                 }
-        //             }
-        //             .img-wrap{
-        //                 order: -1;
-        //                 max-width: 66.6%;
-        //             }
-        //         }
-        //         &.sec-07{
-        //             padding: 8rem 0;
-        
-        //             .review-swiper{
-        //                 .swiper-slide{
-        //                     width: 68.8%;
-        //                 }
-        //                 .swiper-btn-wrap{
-        //                     display: none;
-        //                 }
-        //             }
-        //             .review-item{
-        //                 a{
-        //                     padding: 2.4rem;
-        //                 }
-    
-        //                 .img-wrap{
-        //                     &::before{
-        //                         padding-top: 100%;
-        //                     }
-        //                 }
-        //                 .txt-wrap{
-        //                     margin-top: 1.6rem;
-        //                     font-size: 1.4rem;
-        //                 }
-        //             }
-        //         }
-        //     }
-        // }
+                        .sub-txt {
+                            font-size: 3.89vw;
+                        }
+                        .tit {
+                            font-size: 7.22vw;
+                        }
+                        .desc {
+                            font-size: 4.44vw;
+                        }
+                    }
+                }
 
-        // &.shop{
-        //     .page-tit{
-        //         .tit{
-        //             margin-bottom: 3rem;
-        //             font-size: 2rem;
-        //         }
-        //     }
-        //     .sec-kv{
-        //         padding: 3rem 0 5rem;
+                &.sec-01 {
+                    height: 100vh;
+                    min-height: 166.67vw;
+                    max-height: 222.22vw;
+                }
 
-        //         .link-list{
-        //             gap: 1.2rem;
+                &.sec-02 {
+                    height: 100vh;
+                    min-height: 166.67vw;
+                    max-height: 222.22vw;
 
-        //             li{
-        //                 width: 41.2rem;
-        //             }
-        //             .txt-wrap{
-        //                 margin-top: 1.2rem;
-        //                 .tit{
-        //                     font-size: 1.4rem;
-        //                 }
-        //                 .price{
-        //                     gap: 0.4rem;
-        //                     margin-top: 0.2rem;
+                    .tit-wrap {
+                        .tit {
+                            font-size: 5.00vw;
+                        }
+                        .num {
+                            gap: 2.22vw;
+                            margin-top: 2.22vw;
+                            font-size: 15.56vw;
 
-        //                     .fee{
-        //                         font-size: 1.6rem;
-        //                     }
-        //                     .origin{
-        //                         font-size: 1.2rem;
-        //                     }
-        //                 }
-        //             }
-        //         }
-        //     }
-        // }
+                            .unit {
+                                font-size: 8.33vw;
+                            }
+                        }
+                    }
+                }
+
+                &.sec-03 {
+                    height: 100vh;
+                    min-height: 166.67vw;
+                    max-height: 222.22vw;
+
+                    .tit-wrap {
+                        .tit {
+                            font-size: 5.00vw;
+                        }
+                        .desc {
+                            margin-top: 4.44vw;
+                            font-size: 13.89vw;
+                        }
+                    }
+                }
+
+                &.sec-04 {
+                    padding: 22.22vw 0;
+
+                    .step-list {
+                        li {
+                            gap: 5.56vw;
+
+                            + li {
+                                margin-top: 16.67vw;
+                            }
+                        }
+
+                        .txt-wrap {
+                            gap: 2.22vw;
+
+                            .tag {
+                                font-size: 4.44vw;
+                            }
+                            .tit {
+                                font-size: 7.78vw;
+                            }
+                            .desc {
+                                font-size: 4.17vw;
+                            }
+                        }
+                    }
+                }
+
+                &.sec-05 {
+                    height: 55.56vw;
+
+                    .tit-wrap {
+                        .tit {
+                            font-size: 9.44vw;
+                        }
+                    }
+                }
+
+                &.sec-06 {
+                    .list {
+                        li {
+                            gap: 11.11vw;
+                            padding: 22.22vw 0;
+                        }
+                    }
+
+                    .txt-wrap {
+                        gap: 3.33vw;
+
+                        .tit {
+                            font-size: 7.78vw;
+                        }
+                        .desc {
+                            font-size: 4.17vw;
+                        }
+                    }
+                }
+
+                &.sec-07 {
+                    padding: 22.22vw 0;
+
+                    .review-item {
+                        a {
+                            padding: 6.67vw;
+                        }
+                        .txt-wrap {
+                            margin-top: 4.44vw;
+                            font-size: 3.89vw;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.shop{
+            .page-tit{
+                .tit{
+                    margin-bottom: 8.33vw;
+                    font-size: 5.56vw;
+                }
+            }
+            .sec-kv{
+                padding: 8.33vw 0 13.89vw;
+
+                .link-list{
+                    gap: 3.33vw;
+                    
+                    .txt-wrap{
+                        margin-top: 3.33vw;
+                        .tit{
+                            font-size: 3.89vw;
+                        }
+                        .price{
+                            gap: 1.11vw;
+                            margin-top: 0.56vw;
+
+                            .fee{
+                                font-size: 4.44vw;
+                            }
+                            .origin{
+                                font-size: 3.33vw;
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
         &.shop-detail{
             .sec-kv{
@@ -1779,9 +1903,6 @@
                         }
                     }
                 }
-                .right-box{
-                    display: none;
-                }
             }
             .sec-01{
                 .txt-wrap{
@@ -1815,6 +1936,7 @@
                 @include bg('content/shop-sec02-m.jpg', center);
                 height: 100vh;
                 min-height: 166.67vw;
+                max-height: 222.22vw;
         
                 .txt-wrap{
                     padding-top: 16.67vw;
@@ -1862,34 +1984,6 @@
                         margin-top: 9.72vw;
                     }
                 }
-                .certificate{
-                    margin-top: 16.67vw;
-                    padding: 5.56vw;
-        
-                    &::before{
-                        margin-right: 11.11vw;
-                        width: 40.56vw;
-                        height: 55.00vw;
-                    }
-                    .txt-wrap{
-                        .tit{
-                            font-size: 7.78vw;
-        
-                            .sub{
-                                margin-bottom: 1.11vw;
-                                font-size: 5.56vw;
-                            }
-                        }
-                        .desc{
-                            margin-top: 3.33vw;
-                            font-size: 3.89vw;
-                            
-                            &.small{
-                                font-size: 3.33vw;
-                            }
-                        }
-                    }
-                }
             }
             .sec-04{
                 flex-direction: column;
@@ -1918,7 +2012,7 @@
                 }
             }
             .sec-05{
-                padding: 16.67vw 0;
+                padding: 16.67vw 0 24.67vw;
                 
                 .step-list{
                     flex-direction: column;

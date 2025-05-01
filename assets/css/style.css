@@ -399,7 +399,7 @@
 .wrap.shop-detail .sec-kv .left-box .txt-wrap .plan-list li + li {
   margin-top: 2rem;
 }
-.wrap.shop-detail .sec-kv .right-box {
+.wrap.shop-detail .sec-kv .order-box {
   padding: 3.2rem;
   display: flex;
   flex-direction: column;
@@ -410,24 +410,24 @@
   border: 0.1rem solid var(--color-border-basic);
   border-radius: 1rem;
 }
-.wrap.shop-detail .sec-kv .right-box .info-list li strong {
+.wrap.shop-detail .sec-kv .order-box .info-list li strong {
   display: inline-block;
   margin-right: 0.8rem;
   font-weight: 700;
 }
-.wrap.shop-detail .sec-kv .right-box .info-list li + li {
+.wrap.shop-detail .sec-kv .order-box .info-list li + li {
   margin-top: 1.6rem;
 }
-.wrap.shop-detail .sec-kv .right-box .order-box {
+.wrap.shop-detail .sec-kv .order-box .list-box {
   position: relative;
   padding: 2.4rem;
   background-color: var(--color-yellow-0);
 }
-.wrap.shop-detail .sec-kv .right-box .order-box .name {
+.wrap.shop-detail .sec-kv .order-box .list-box .name {
   padding-right: 2.6rem;
   color: var(--color-gray-8);
 }
-.wrap.shop-detail .sec-kv .right-box .order-box .info-bottom {
+.wrap.shop-detail .sec-kv .order-box .list-box .info-bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -435,7 +435,7 @@
   padding-top: 1.6rem;
   border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
 }
-.wrap.shop-detail .sec-kv .right-box .order-box .info-bottom .count {
+.wrap.shop-detail .sec-kv .order-box .list-box .info-bottom .count {
   display: flex;
   align-items: center;
   font-size: 1.5rem;
@@ -445,33 +445,33 @@
   border-radius: 0.4rem;
   background-color: var(--color-white);
 }
-.wrap.shop-detail .sec-kv .right-box .order-box .info-bottom .count .num {
+.wrap.shop-detail .sec-kv .order-box .list-box .info-bottom .count .num {
   padding: 0 1.2rem;
   max-width: 8rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.wrap.shop-detail .sec-kv .right-box .order-box .info-bottom .count [class*=btn-] {
+.wrap.shop-detail .sec-kv .order-box .list-box .info-bottom .count [class*=btn-] {
   width: 3.4rem;
   height: 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 1.6rem;
 }
-.wrap.shop-detail .sec-kv .right-box .order-box .info-bottom .count .btn-minus {
+.wrap.shop-detail .sec-kv .order-box .list-box .info-bottom .count .btn-minus {
   border-right: 0.1rem solid var(--color-border-basic);
   background-image: url(../img/icon/ico-minus.png);
 }
-.wrap.shop-detail .sec-kv .right-box .order-box .info-bottom .count .btn-plus {
+.wrap.shop-detail .sec-kv .order-box .list-box .info-bottom .count .btn-plus {
   border-left: 0.1rem solid var(--color-border-basic);
   background-image: url(../img/icon/ico-plus.png);
 }
-.wrap.shop-detail .sec-kv .right-box .order-box .info-bottom .price {
+.wrap.shop-detail .sec-kv .order-box .list-box .info-bottom .price {
   font-size: 1.6rem;
   font-weight: 500;
 }
-.wrap.shop-detail .sec-kv .right-box .order-box .btn-del {
+.wrap.shop-detail .sec-kv .order-box .list-box .btn-del {
   position: absolute;
   top: 2.45rem;
   right: 2.4rem;
@@ -479,17 +479,37 @@
   height: 1.6rem;
   background: url(../img/icon/ico-del.png) no-repeat center/cover;
 }
-.wrap.shop-detail .sec-kv .right-box .total {
+.wrap.shop-detail .sec-kv .order-box .total {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
   font-size: 1.6rem;
 }
-.wrap.shop-detail .sec-kv .right-box .total .price {
-  font-size: var(--text-body-);
+.wrap.shop-detail .sec-kv .order-box .total .price {
+  font-size: 2.4rem;
   font-weight: 700;
   color: var(--color-gray-9);
+}
+.wrap.shop-detail .sec-01 .img-wrap {
+  overflow: hidden;
+  position: relative;
+  margin-right: 4rem;
+  width: 100%;
+}
+.wrap.shop-detail .sec-01 .img-wrap::before {
+  content: "";
+  padding-top: 33.75%;
+  display: block;
+}
+.wrap.shop-detail .sec-01 .img-wrap img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: 100%;
+  object-fit: cover;
 }
 .wrap.shop-detail .sec-01 .txt-wrap {
   padding: 6rem 0;
@@ -559,6 +579,7 @@
   margin-top: 12rem;
 }
 .wrap.shop-detail .sec-03 .info-list .txt-wrap {
+  word-break: keep-all;
   color: var(--color-gray-9);
 }
 .wrap.shop-detail .sec-03 .info-list .txt-wrap .tit {
@@ -661,7 +682,7 @@
 .wrap.shop-detail .sec-04 .txt-wrap .tit {
   margin-bottom: 2.4rem;
   font-size: 2.4rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 .wrap.shop-detail .sec-04 .txt-wrap .chk-list li::before {
   background-image: url(../img/icon/ico-check-b.png);
@@ -729,6 +750,95 @@
   line-height: 1.5;
   color: var(--color-gray-9);
 }
+.wrap.shop-detail .modal .order-box {
+  padding-bottom: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  font-size: 1.4rem;
+  color: var(--color-gray-7);
+}
+.wrap.shop-detail .modal .order-box .info-list li strong {
+  display: inline-block;
+  margin-right: 0.8rem;
+  font-weight: 700;
+}
+.wrap.shop-detail .modal .order-box .info-list li + li {
+  margin-top: 1.6rem;
+}
+.wrap.shop-detail .modal .order-box .list-box {
+  position: relative;
+  padding: 2.4rem;
+  background-color: var(--color-yellow-0);
+}
+.wrap.shop-detail .modal .order-box .list-box .name {
+  padding-right: 2.6rem;
+  color: var(--color-gray-8);
+}
+.wrap.shop-detail .modal .order-box .list-box .info-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.6rem;
+  padding-top: 1.6rem;
+  border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+}
+.wrap.shop-detail .modal .order-box .list-box .info-bottom .count {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  height: 3.4rem;
+  border: 0.1rem solid var(--color-border-basic);
+  border-radius: 0.4rem;
+  background-color: var(--color-white);
+}
+.wrap.shop-detail .modal .order-box .list-box .info-bottom .count .num {
+  padding: 0 1.2rem;
+  max-width: 8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.wrap.shop-detail .modal .order-box .list-box .info-bottom .count [class*=btn-] {
+  width: 3.4rem;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1.6rem;
+}
+.wrap.shop-detail .modal .order-box .list-box .info-bottom .count .btn-minus {
+  border-right: 0.1rem solid var(--color-border-basic);
+  background-image: url(../img/icon/ico-minus.png);
+}
+.wrap.shop-detail .modal .order-box .list-box .info-bottom .count .btn-plus {
+  border-left: 0.1rem solid var(--color-border-basic);
+  background-image: url(../img/icon/ico-plus.png);
+}
+.wrap.shop-detail .modal .order-box .list-box .info-bottom .price {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.wrap.shop-detail .modal .order-box .list-box .btn-del {
+  position: absolute;
+  top: 2.45rem;
+  right: 2.4rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  background: url(../img/icon/ico-del.png) no-repeat center/cover;
+}
+.wrap.shop-detail .modal .order-box .total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  font-size: 1.6rem;
+}
+.wrap.shop-detail .modal .order-box .total .price {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--color-gray-9);
+}
 @media screen and (max-width: 960px) {
   .wrap.shop-detail .sec-kv {
     padding: 4rem 0;
@@ -774,37 +884,49 @@
     height: 1.6rem;
     margin: 0 0.1rem 0.2rem;
   }
-  .wrap.shop-detail .sec-kv .right-box {
+  .wrap.shop-detail .sec-kv .order-box {
     padding: 2rem;
     width: 46%;
     font-size: 1.4rem;
   }
-  .wrap.shop-detail .sec-kv .right-box .order-box {
+  .wrap.shop-detail .sec-kv .order-box .list-box {
     padding: 2rem;
   }
-  .wrap.shop-detail .sec-kv .right-box .order-box .info-bottom {
+  .wrap.shop-detail .sec-kv .order-box .list-box .info-bottom {
     flex-direction: column;
     row-gap: 1rem;
   }
-  .wrap.shop-detail .sec-kv .right-box .order-box .info-bottom .count {
+  .wrap.shop-detail .sec-kv .order-box .list-box .info-bottom .count {
     align-self: flex-start;
   }
-  .wrap.shop-detail .sec-kv .right-box .order-box .info-bottom .price {
+  .wrap.shop-detail .sec-kv .order-box .list-box .info-bottom .price {
     align-self: flex-end;
   }
-  .wrap.shop-detail .sec-kv .right-box .order-box .btn-del {
+  .wrap.shop-detail .sec-kv .order-box .list-box .btn-del {
     top: 2.2rem;
     right: 2.2rem;
   }
-  .wrap.shop-detail .sec-kv .right-box .total {
+  .wrap.shop-detail .sec-kv .order-box .total {
     gap: 1rem;
     flex-direction: column;
   }
-  .wrap.shop-detail .sec-kv .right-box .total > span {
+  .wrap.shop-detail .sec-kv .order-box .total > span {
     align-self: flex-start;
   }
-  .wrap.shop-detail .sec-kv .right-box .total .price {
+  .wrap.shop-detail .sec-kv .order-box .total .price {
     align-self: flex-end;
+  }
+  .wrap.shop-detail .sec-04 .txt-wrap {
+    padding-left: 5.6rem;
+    padding-right: 5.6rem;
+  }
+}
+@media screen and (max-width: 870px) {
+  .wrap.shop-detail .sec-05 .inner {
+    padding: 0 2rem;
+  }
+  .wrap.shop-detail .sec-05 .step-list {
+    gap: 2rem;
   }
 }
 @media screen and (max-width: 720px) {
@@ -817,6 +939,7 @@
   }
   .wrap.main section.sec-kv {
     min-height: 60rem;
+    max-height: 80rem;
     background: url(../img/content/main-visual-m.jpg) no-repeat center/cover;
   }
   .wrap.main section.sec-kv .tit-wrap {
@@ -841,11 +964,13 @@
   .wrap.main section.sec-01 {
     height: 100vh;
     min-height: 60rem;
+    max-height: 80rem;
     background: url(../img/content/main-sec01-m.jpg) no-repeat center/cover;
   }
   .wrap.main section.sec-02 {
     height: 100vh;
     min-height: 60rem;
+    max-height: 80rem;
     background: url(../img/content/main-sec02-m.jpg) no-repeat center/cover;
   }
   .wrap.main section.sec-02 .tit-wrap .tit {
@@ -862,6 +987,7 @@
   .wrap.main section.sec-03 {
     height: 100vh;
     min-height: 60rem;
+    max-height: 80rem;
     background: url(../img/content/main-sec03-m.jpg) no-repeat center/cover;
   }
   .wrap.main section.sec-03 .tit-wrap .tit {
@@ -932,6 +1058,9 @@
   .wrap.main section.sec-07 {
     padding: 8rem 0;
   }
+  .wrap.main section.sec-07 .review-swiper {
+    padding: 0;
+  }
   .wrap.main section.sec-07 .review-swiper .swiper-slide {
     width: 68.8%;
   }
@@ -959,7 +1088,7 @@
     gap: 1.2rem;
   }
   .wrap.shop .sec-kv .link-list li {
-    width: 41.2rem;
+    width: 100%;
   }
   .wrap.shop .sec-kv .link-list .txt-wrap {
     margin-top: 1.2rem;
@@ -1029,8 +1158,11 @@
   .wrap.shop-detail .sec-kv .left-box .txt-wrap .plan-list li + li {
     margin-top: 2rem;
   }
-  .wrap.shop-detail .sec-kv .right-box {
+  .wrap.shop-detail .sec-kv .order-box {
     display: none;
+  }
+  .wrap.shop-detail .sec-01 .img-wrap::before {
+    padding-top: 70%;
   }
   .wrap.shop-detail .sec-01 .txt-wrap {
     padding: 8rem 0;
@@ -1060,6 +1192,7 @@
     background: url(../img/content/shop-sec02-m.jpg) no-repeat center/cover;
     height: 100vh;
     min-height: 60rem;
+    max-height: 80rem;
   }
   .wrap.shop-detail .sec-02 .txt-wrap {
     padding-top: 6rem;
@@ -1082,6 +1215,9 @@
   .wrap.shop-detail .sec-03 .info-list li + li {
     margin-top: 6rem;
   }
+  .wrap.shop-detail .sec-03 .info-list .txt-wrap br {
+    display: none;
+  }
   .wrap.shop-detail .sec-03 .info-list .txt-wrap .tit {
     font-size: 2.6rem;
   }
@@ -1094,31 +1230,32 @@
     margin-top: 1.2rem;
     font-size: 1.6rem;
   }
+  .wrap.shop-detail .sec-03 .info-list .order1 .desc {
+    margin-top: 3.5rem;
+  }
   .wrap.shop-detail .sec-03 .info-list .img-wrap {
     margin-top: 3.5rem;
   }
   .wrap.shop-detail .sec-03 .certificate {
-    margin-top: 6rem;
-    padding: 2rem;
+    margin-top: 8.33vw;
+    padding: 2.78vw;
   }
-  .wrap.shop-detail .sec-03 .certificate::before {
-    margin-right: 4rem;
-    width: 14.6rem;
-    height: 19.8rem;
+  .wrap.shop-detail .sec-03 .certificate .img-wrap {
+    margin-right: 5.56vw;
   }
   .wrap.shop-detail .sec-03 .certificate .txt-wrap .tit {
-    font-size: 2.8rem;
+    font-size: 3.89vw;
   }
   .wrap.shop-detail .sec-03 .certificate .txt-wrap .tit .sub {
-    margin-bottom: 0.4rem;
-    font-size: 2rem;
+    margin-bottom: 0.56vw;
+    font-size: 2.78vw;
   }
   .wrap.shop-detail .sec-03 .certificate .txt-wrap .desc {
-    margin-top: 1.2rem;
-    font-size: 1.4rem;
+    margin-top: 1.67vw;
+    font-size: 1.94vw;
   }
   .wrap.shop-detail .sec-03 .certificate .txt-wrap .desc.small {
-    font-size: 1.2rem;
+    font-size: 1.67vw;
   }
   .wrap.shop-detail .sec-04 {
     flex-direction: column;
@@ -1143,15 +1280,15 @@
     margin-top: 1.6rem;
   }
   .wrap.shop-detail .sec-05 {
-    padding: 6rem 0;
+    padding: 6rem 0 7rem;
   }
   .wrap.shop-detail .sec-05 .step-list {
     flex-direction: column;
     gap: 5rem;
   }
   .wrap.shop-detail .sec-05 .step-list li {
-    width: 16rem;
-    height: 16rem;
+    width: 20rem;
+    height: 20rem;
     font-size: 1.6rem;
   }
   .wrap.shop-detail .sec-05 .step-list li strong {
@@ -1177,7 +1314,144 @@
     line-height: 1.5;
   }
 }
+@media screen and (max-width: 400px) {
+  .wrap.shop-detail .sec-02 .txt-wrap .tit br {
+    display: none;
+  }
+}
 @media screen and (max-width: 360px) {
+  .wrap.main section:not(.sec-kv) .tit-wrap .tit {
+    font-size: 6.67vw;
+  }
+  .wrap.main section:not(.sec-kv) .tit-wrap .desc {
+    margin-top: 2.22vw;
+    font-size: 4.44vw;
+  }
+  .wrap.main section.sec-kv {
+    min-height: 166.67vw;
+    max-height: 222.22vw;
+  }
+  .wrap.main section.sec-kv .tit-wrap {
+    padding-top: 17.22vw;
+  }
+  .wrap.main section.sec-kv .tit-wrap .sub-txt {
+    font-size: 3.89vw;
+  }
+  .wrap.main section.sec-kv .tit-wrap .tit {
+    font-size: 7.22vw;
+  }
+  .wrap.main section.sec-kv .tit-wrap .desc {
+    font-size: 4.44vw;
+  }
+  .wrap.main section.sec-01 {
+    height: 100vh;
+    min-height: 166.67vw;
+    max-height: 222.22vw;
+  }
+  .wrap.main section.sec-02 {
+    height: 100vh;
+    min-height: 166.67vw;
+    max-height: 222.22vw;
+  }
+  .wrap.main section.sec-02 .tit-wrap .tit {
+    font-size: 5vw;
+  }
+  .wrap.main section.sec-02 .tit-wrap .num {
+    gap: 2.22vw;
+    margin-top: 2.22vw;
+    font-size: 15.56vw;
+  }
+  .wrap.main section.sec-02 .tit-wrap .num .unit {
+    font-size: 8.33vw;
+  }
+  .wrap.main section.sec-03 {
+    height: 100vh;
+    min-height: 166.67vw;
+    max-height: 222.22vw;
+  }
+  .wrap.main section.sec-03 .tit-wrap .tit {
+    font-size: 5vw;
+  }
+  .wrap.main section.sec-03 .tit-wrap .desc {
+    margin-top: 4.44vw;
+    font-size: 13.89vw;
+  }
+  .wrap.main section.sec-04 {
+    padding: 22.22vw 0;
+  }
+  .wrap.main section.sec-04 .step-list li {
+    gap: 5.56vw;
+  }
+  .wrap.main section.sec-04 .step-list li + li {
+    margin-top: 16.67vw;
+  }
+  .wrap.main section.sec-04 .step-list .txt-wrap {
+    gap: 2.22vw;
+  }
+  .wrap.main section.sec-04 .step-list .txt-wrap .tag {
+    font-size: 4.44vw;
+  }
+  .wrap.main section.sec-04 .step-list .txt-wrap .tit {
+    font-size: 7.78vw;
+  }
+  .wrap.main section.sec-04 .step-list .txt-wrap .desc {
+    font-size: 4.17vw;
+  }
+  .wrap.main section.sec-05 {
+    height: 55.56vw;
+  }
+  .wrap.main section.sec-05 .tit-wrap .tit {
+    font-size: 9.44vw;
+  }
+  .wrap.main section.sec-06 .list li {
+    gap: 11.11vw;
+    padding: 22.22vw 0;
+  }
+  .wrap.main section.sec-06 .txt-wrap {
+    gap: 3.33vw;
+  }
+  .wrap.main section.sec-06 .txt-wrap .tit {
+    font-size: 7.78vw;
+  }
+  .wrap.main section.sec-06 .txt-wrap .desc {
+    font-size: 4.17vw;
+  }
+  .wrap.main section.sec-07 {
+    padding: 22.22vw 0;
+  }
+  .wrap.main section.sec-07 .review-item a {
+    padding: 6.67vw;
+  }
+  .wrap.main section.sec-07 .review-item .txt-wrap {
+    margin-top: 4.44vw;
+    font-size: 3.89vw;
+  }
+  .wrap.shop .page-tit .tit {
+    margin-bottom: 8.33vw;
+    font-size: 5.56vw;
+  }
+  .wrap.shop .sec-kv {
+    padding: 8.33vw 0 13.89vw;
+  }
+  .wrap.shop .sec-kv .link-list {
+    gap: 3.33vw;
+  }
+  .wrap.shop .sec-kv .link-list .txt-wrap {
+    margin-top: 3.33vw;
+  }
+  .wrap.shop .sec-kv .link-list .txt-wrap .tit {
+    font-size: 3.89vw;
+  }
+  .wrap.shop .sec-kv .link-list .txt-wrap .price {
+    gap: 1.11vw;
+    margin-top: 0.56vw;
+  }
+  .wrap.shop .sec-kv .link-list .txt-wrap .price .fee {
+    font-size: 4.44vw;
+  }
+  .wrap.shop .sec-kv .link-list .txt-wrap .price .origin {
+    font-size: 3.33vw;
+  }
   .wrap.shop-detail .sec-kv {
     padding: 8.33vw 0;
   }
@@ -1230,9 +1504,6 @@
   .wrap.shop-detail .sec-kv .left-box .txt-wrap .plan-list li + li {
     margin-top: 5.56vw;
   }
-  .wrap.shop-detail .sec-kv .right-box {
-    display: none;
-  }
   .wrap.shop-detail .sec-01 .txt-wrap {
     padding: 22.22vw 0;
     background: url(../img/content/shop-sec01-02.jpg) no-repeat center/cover;
@@ -1261,6 +1532,7 @@
     background: url(../img/content/shop-sec02-m.jpg) no-repeat center/cover;
     height: 100vh;
     min-height: 166.67vw;
+    max-height: 222.22vw;
   }
   .wrap.shop-detail .sec-02 .txt-wrap {
     padding-top: 16.67vw;
@@ -1298,29 +1570,6 @@
   .wrap.shop-detail .sec-03 .info-list .img-wrap {
     margin-top: 9.72vw;
   }
-  .wrap.shop-detail .sec-03 .certificate {
-    margin-top: 16.67vw;
-    padding: 5.56vw;
-  }
-  .wrap.shop-detail .sec-03 .certificate::before {
-    margin-right: 11.11vw;
-    width: 40.56vw;
-    height: 55vw;
-  }
-  .wrap.shop-detail .sec-03 .certificate .txt-wrap .tit {
-    font-size: 7.78vw;
-  }
-  .wrap.shop-detail .sec-03 .certificate .txt-wrap .tit .sub {
-    margin-bottom: 1.11vw;
-    font-size: 5.56vw;
-  }
-  .wrap.shop-detail .sec-03 .certificate .txt-wrap .desc {
-    margin-top: 3.33vw;
-    font-size: 3.89vw;
-  }
-  .wrap.shop-detail .sec-03 .certificate .txt-wrap .desc.small {
-    font-size: 3.33vw;
-  }
   .wrap.shop-detail .sec-04 {
     flex-direction: column;
   }
@@ -1344,7 +1593,7 @@
     margin-top: 4.44vw;
   }
   .wrap.shop-detail .sec-05 {
-    padding: 16.67vw 0;
+    padding: 16.67vw 0 24.67vw;
   }
   .wrap.shop-detail .sec-05 .step-list {
     flex-direction: column;

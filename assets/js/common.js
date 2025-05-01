@@ -1,18 +1,32 @@
 /* common */
 $(function () {
+    let scrollTop, lastScrollTop = 0;
+    let windowWidth = $(window).width();
+
     const uiCommon = {
         init: () => {
             uiCommon.resize();
+            uiCommon.scroll();
             
             uiCommon.selectBox();
             uiCommon.btnBottomFixed();
             uiCommon.topBannerFixed();
             uiCommon.mainSecKvHeight();
+            uiCommon.modalOpen();
+            uiCommon.modalClose();
         },
         resize: () => {
             $(window).resize(() => {
+                windowWidth = $(this).width();
+
                 uiCommon.topBannerFixed();
                 uiCommon.mainSecKvHeight();
+            });
+        },
+        scroll: () => {
+            $(window).on('scroll', () => {
+                scrollTop = $(this).scrollTop();
+                uiCommon.btnScrollShow();
             });
         },
         selectBox: () => {
@@ -136,12 +150,12 @@ $(function () {
             if($('.btn-fixed').length){
                 $('.btn-fixed').each((idx, el) => {
                     const fixedHeight = $(el).innerHeight();
+                    const paddingBottom = windowWidth > 360 ? `${fixedHeight * 0.1}rem` : `${(fixedHeight / windowWidth) * 100}vw`;
                     const contents = $(el).parents('.contents');
     
-                    contents.css('padding-bottom', `${fixedHeight * 0.1}rem`);
+                    contents.css('padding-bottom', `${paddingBottom}`);
                 });
             }
-
         },
         topBannerFixed: () => {
             if($('.fixed-top-banner').length){
@@ -159,13 +173,58 @@ $(function () {
                 secKv.css('height', `calc(100vh - ${fixedHeight * 0.1}rem)`);
             }
         },
+        btnScrollShow: () => {
+            const btnScroll = $('.btn-scroll');
+
+            // btnScroll.each((idx, el) => {
+            //     if(scrollTop > lastScrollTop) {
+            //         $(el).addClass('show');
+            //     } else if(scrollTop < lastScrollTop) {
+            //         $(el).removeClass('show');
+            //     }
+            // });
+
+            // lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+            
+            btnScroll.each((idx, el) => {
+                if(scrollTop > 10) {
+                    $(el).addClass('show');
+                } else if(scrollTop === 0){
+                    $(el).removeClass('show');
+                }
+            });
+        },
+        modalOpen: () => {
+            $('.btn').on('click', (e) => {
+                const dataModal = $(e.target).data('modal');
+
+                if(dataModal){
+                    $(`#${dataModal}`).addClass('open');
+                    $('html').css('overflow', 'hidden');
+                }
+            });
+        },
+        modalClose: () => {
+            $('.btn-close').on('click', (e) => {
+                const modal = $(e.target).parents('.modal');
+
+                modal.removeClass('open');
+                $('html').css('overflow', '');
+            });
+
+            $('.modal').on('click', (e) => {
+                const target = $(e.target);
+                const modal = target.parents('.modal');
+
+                if(target.hasClass('dimd')){
+                    modal.removeClass('open');
+                    $('html').css('overflow', '');
+                }
+            });
+        },
     }
 
-    uiCommon.init();
 
-    $('.select').each((idx, el) => {
-        $(el).find('select').on('change', (e) => {
-            // console.log($(e.target), e.target.value);
-        });
-    });
+    //실행
+    uiCommon.init();
 });

@@ -49,24 +49,42 @@ html{
     }
 }
 
-/* font-style */
-.fw-normal{
-    font-weight: 400 !important;
-}
-.fw-medium{
-    font-weight: 500 !important;
-}
-.fw-bold{
-    font-weight: 700 !important;
-}
-
-
-/* common */
-img{
-    width: 100%;
-}
-
 /* blind */
 .blind {
     @include blind();
 }
+
+/* space */
+$position: (t:top, b:bottom, r:right, l: left);
+$total: 10;
+@each $abbr, $pos in $position {
+  @for $i from 0 to $total {
+    .m#{$abbr}-#{$i} {margin-#{$pos}: $i*1rem !important;}
+    .p#{$abbr}-#{$i} {padding-#{$pos}: $i*1rem !important;}
+  }
+}
+
+@media screen and (max-width: 360px) {
+    @each $abbr, $pos in $position {
+      @for $i from 0 to $total {
+        .m#{$abbr}-#{$i} {margin-#{$pos}: $i*2.78vw !important;}
+        .p#{$abbr}-#{$i} {padding-#{$pos}: $i*2.78vw !important;}
+      }
+    }
+}
+
+/* font-style */
+.fw-normal{font-weight: 400 !important;}
+.fw-medium{font-weight: 500 !important;}
+.fw-bold{font-weight: 700 !important;}
+
+/* common */
+img{width: 100%;}
+.txt-al-center{text-align: center !important;}
+.c-gray{color: var(--color-gray-4) !important;}
+.pc-only{display: flex !important;}
+.mob-only{display: none !important;}
+
+.flex{display: flex;}
+.flex.direction{flex-direction: column;}
+.order1{order: 1;}
