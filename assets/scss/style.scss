@@ -87,9 +87,6 @@
                 @include bg('content/main-sec02.jpg');
     
                 .tit-wrap{
-                    // color: var(--color-white);
-                    // text-align: center;
-    
                     .tit{
                         font-size: 5.6rem;
                         color: var(--color-yellow-3);
@@ -100,8 +97,12 @@
                         justify-content: center;
                         gap: 2rem;
                         margin-top: 2rem;
-                        font-size: 13rem;
                         font-weight: 700;
+
+                        .count{
+                            min-width: 52rem;
+                            font-size: 13rem;
+                        }
     
                         .unit{
                             font-size: 8rem;
@@ -249,13 +250,10 @@
             &.sec-07{
                 padding: 14rem 0;
                 background-color: var(--color-yellow-0);
-    
+
                 .review-swiper{
                     padding: 0 7.2rem;
-                    .swiper-slide{
-                        // padding: 0 7.2rem;
-                        // width: 68.8%;
-                    }
+
                     .swiper-btn-wrap{
                         .swiper-button-prev{
                             left: 0;
@@ -1197,7 +1195,11 @@
                         .num{
                             gap: 0.8rem;
                             margin-top: 0.8rem;
-                            font-size: 5.6rem;
+
+                            .count{
+                                min-width: 23rem;
+                                font-size: 5.6rem;
+                            }
         
                             .unit{
                                 font-size: 3rem;
@@ -1701,8 +1703,11 @@
                         .num {
                             gap: 2.22vw;
                             margin-top: 2.22vw;
-                            font-size: 15.56vw;
-
+                        
+                            .count{
+                                min-width: 6.39vw;
+                                font-size: 15.56vw;
+                            }
                             .unit {
                                 font-size: 8.33vw;
                             }

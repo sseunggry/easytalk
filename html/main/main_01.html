@@ -14,10 +14,12 @@
         <title>이지톡</title>
         <!-- css -->
         <link href="../../assets/css/swiper-bundle.min.css" type="text/css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
         <link href="../../assets/css/common.css" type="text/css" rel="stylesheet" />
         <link href="../../assets/css/style.css" type="text/css" rel="stylesheet" />
         <!-- script -->
         <script defer src="../../assets/js/jquery-2.2.4.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script defer src="../../assets/js/common.js"></script>
     </head>
@@ -45,7 +47,7 @@
                             <a href="#!"><span class="blind">EASY TALK</span></a>
                         </h1>
                         <ul class="nav">
-                            <li class="active"><a href="#sec02">STORY</a></li>
+                            <li class="active"><a href="#sec01">STORY</a></li>
                             <li><a href="../shop/shop_01.html">SHOP</a></li>
                         </ul>
                         <ul class="util">
@@ -76,7 +78,7 @@
                             <!-- // [D] 로그인 후(e) -->
     
                             <ul class="mob-nav">
-                                <li><a href="#sec02">STORY</a></li>
+                                <li><a href="#sec01">STORY</a></li>
                                 <li><a href="#!">SHOP</a></li>
                             </ul>
                             <ul class="mob-util">
@@ -108,7 +110,7 @@
 
                     <section class="sec-01" id="sec01">
                         <div class="inner">
-                            <div class="tit-wrap">
+                            <div class="tit-wrap" data-aos="fade-up">
                                 <h2 class="tit">단순한 감량 처방만 하지 않습니다</h2>
                                 <p class="desc">
                                     당신의 몸 상태를 깊이 있게 분석하여 체질 개선과 <br/>
@@ -121,9 +123,10 @@
                     <section class="sec-02">
                         <div class="inner">
                             <div class="tit-wrap">
-                                <h2 class="tit">누적 다이어트 진료건수</h2>
+                                <h2 class="tit" data-aos="fade-up">누적 다이어트 진료건수</h2>
                                 <p class="num">
-                                    150,729<span class="unit">건</span>
+                                    <span class="count ani-counter" data-count="150729">150,729</span>
+                                    <span class="unit">건</span>
                                 </p>
                             </div>
                         </div>
@@ -131,7 +134,7 @@
 
                     <section class="sec-03">
                         <div class="inner">
-                            <div class="tit-wrap">
+                            <div class="tit-wrap" data-aos="fade-up">
                                 <h2 class="tit">이지톡 다이어트 사용법</h2>
                                 <p class="desc">HOW TO USE</p>
                             </div>
@@ -142,10 +145,10 @@
                         <div class="inner">
                             <ul class="step-list">
                                 <li>
-                                   <div class="img-wrap">
+                                   <div class="img-wrap" data-aos="fade-up">
                                         <img src="../../assets/img/content/main-sec04-step01.jpg" alt="">
                                    </div>
-                                   <div class="txt-wrap">
+                                   <div class="txt-wrap" data-aos="fade-up" data-aos-delay="50">
                                         <strong class="tag">STEP.1</strong>
                                         <p class="tit">원하는 한약을 선택해 주세요</p>
                                         <p class="desc">
@@ -155,10 +158,10 @@
                                    </div>
                                 </li>
                                 <li>
-                                   <div class="img-wrap">
+                                   <div class="img-wrap" data-aos="fade-up">
                                         <img src="../../assets/img/content/main-sec04-step02.jpg" alt="">
                                    </div>
-                                   <div class="txt-wrap">
+                                   <div class="txt-wrap" data-aos="fade-up" data-aos-delay="50">
                                         <strong class="tag">STEP.2</strong>
                                         <p class="tit">비대면 진료 예약을 해주세요</p>
                                         <p class="desc">
@@ -168,10 +171,10 @@
                                    </div>
                                 </li>
                                 <li>
-                                   <div class="img-wrap">
+                                   <div class="img-wrap" data-aos="fade-up">
                                         <img src="../../assets/img/content/main-sec04-step03.jpg" alt="">
                                    </div>
-                                   <div class="txt-wrap">
+                                   <div class="txt-wrap" data-aos="fade-up" data-aos-delay="50">
                                         <strong class="tag">STEP.3</strong>
                                         <p class="tit">다이어트 한약 결제해 주세요</p>
                                         <p class="desc">
@@ -180,10 +183,10 @@
                                    </div>
                                 </li>
                                 <li>
-                                   <div class="img-wrap">
+                                   <div class="img-wrap" data-aos="fade-up">
                                         <img src="../../assets/img/content/main-sec04-step04.jpg" alt="">
                                    </div>
-                                   <div class="txt-wrap">
+                                   <div class="txt-wrap" data-aos="fade-up" data-aos-delay="50">
                                         <strong class="tag">STEP.4</strong>
                                         <p class="tit">비대면 전화 진료</p>
                                         <p class="desc">
@@ -193,10 +196,10 @@
                                    </div>
                                 </li>
                                 <li>
-                                   <div class="img-wrap">
+                                   <div class="img-wrap" data-aos="fade-up">
                                         <img src="../../assets/img/content/main-sec04-step05.jpg" alt="">
                                    </div>
-                                   <div class="txt-wrap">
+                                   <div class="txt-wrap" data-aos="fade-up" data-aos-delay="50">
                                         <strong class="tag">STEP.5</strong>
                                         <p class="tit">집앞으로 택배배송</p>
                                         <p class="desc">
@@ -213,7 +216,7 @@
 
                     <section class="sec-05">
                         <div class="inner">
-                            <div class="tit-wrap">
+                            <div class="tit-wrap" data-aos="fade-up">
                                 <h2 class="tit">EASY TALK CARE</h2>
                             </div>
                         </div>
@@ -230,7 +233,7 @@
                                         </p>
                                         <p class="info-txt">실제 이지톡 다이어트 이용 고객님과의 대화를 재구성했습니다.</p>
                                     </div>
-                                    <div class="img-wrap">
+                                    <div class="img-wrap" data-aos="fade-left">
                                         <img src="../../assets/img/content/main-sec06-thum01.png" alt="">
                                     </div>
                                 </li>
@@ -244,7 +247,7 @@
                                         </p>
                                         <p class="info-txt">실제 이지톡 다이어트 이용 고객님과의 대화를 재구성했습니다.</p>
                                     </div>
-                                    <div class="img-wrap">
+                                    <div class="img-wrap" data-aos="fade-right">
                                         <img src="../../assets/img/content/main-sec06-thum02.png" alt="">
                                     </div>
                                 </li>
@@ -378,6 +381,8 @@
         </div>
     </body>
     <script>
+        AOS.init();
+
         var swiper = new Swiper(".review-swiper", {
             speed: 500,
             slidesPerView: 3,

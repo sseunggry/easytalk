@@ -172,29 +172,30 @@
         }
         &.alert{
             .modal-content{
-                padding: 4rem 2rem 3rem;
-                border-radius: 2rem 2rem 0 0;
+                padding: 11.11vw 5.56vw 8.33vw;
+                border-radius: 5.56vw 5.56vw 0 0;
             }
 
             .txt-wrap{
                 .tit{
-                    font-size: 2rem;
+                    font-size: 5.56vw;
+                    word-break: keep-all;
                 }
                 .desc{
-                    margin-top: 1.6rem;
-                    font-size: 1.6rem;
+                    margin-top: 4.44vw;
+                    font-size: 4.44vw;
                 }
 
                 ~ .btn-wrap{
-                    margin-top: 3rem;
+                    margin-top: 8.33vw;
                 }
             }
 
             .btn-close{
-                top: 2rem;
-                right: 2rem;
-                width: 2.4rem;
-                height: 2.4rem;
+                top: 5.56vw;
+                right: 5.56vw;
+                width: 6.67vw;
+                height: 6.67vw;
             }
         }
     }

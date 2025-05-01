@@ -2,6 +2,7 @@
 $(function () {
     let scrollTop, lastScrollTop = 0;
     let windowWidth = $(window).width();
+    let counted = false;
 
     const uiCommon = {
         init: () => {
@@ -15,13 +16,11 @@ $(function () {
             uiCommon.mainSecKvHeight();
             uiCommon.modalOpen();
             uiCommon.modalClose();
+            uiCommon.aniCounter();
 
-            //input 마스킹 원
-            const initialVal = $('.dot-input-wrap input').val();
-            if (initialVal) uiCommon.inputNumMasking(initialVal);
-
-            // $('.dot-input-wrap input').on('input', function () {
-            //     uiCommon.inputNumMasking($(this).val());
+            // let number = $('.ani-counter').text().replace(/\D/g, '');
+            // $('.ani-counter').rollingNum({
+            //     number: number
             // });
         },
         resize: () => {
@@ -36,6 +35,7 @@ $(function () {
             $(window).on('scroll', () => {
                 scrollTop = $(this).scrollTop();
                 uiCommon.btnScrollShow();
+                uiCommon.aniCounter();
             });
         },
         selectBox: () => {
@@ -56,8 +56,6 @@ $(function () {
                 options.each((idx, el) => {
                     const value = $(el).val();
                     const text = $(el).text();
-
-                    console.log($(el).attr('checked'));
 
                     if($(el).hasClass('placeholder')) return;
                     html += `<li class="option" role="option" tabindex="0" data-value="${value}">${text}</li>`
@@ -168,6 +166,12 @@ $(function () {
                mobMenu.removeClass('open');
                $('html').css('overflow', '');
             });
+            $('.header .mob-menu .mob-nav a').on('click', (e) => {
+               const mobMenu = $(e.target).parents('.header').children('.mob-menu'); 
+               
+               mobMenu.removeClass('open');
+               $('html').css('overflow', '');
+            });
         },
         btnBottomFixed: () => {
             if($('.btn-fixed').length){
@@ -245,21 +249,38 @@ $(function () {
                 }
             });
         },
-        inputNumMasking: (val) => {
-            const dots = $('.dot');
+        aniCounter: () => {
+            if($('.ani-counter').length){
+                const $counter = $('.ani-counter');
+                const offset = $counter.offset().top - window.innerHeight + 100;
 
-            dots.each(function (i) {
-                if (val[i]) {
-                    if(i === 0){
-                        $(this).text(val[i]);
-                    } else{
-                        $(this).text('').addClass('filled');
-                    }
-                } else {
-                    $(this).text('').removeClass('filled');
+                if (!counted && scrollTop > offset) {
+                    counted = true;
+
+                    $('.ani-counter').each((idx, el) => {
+                        let $this = $(el);
+                        let target = parseInt($this.attr('data-count'), 10);
+                        // let numWidth = document.querySelector('.ani-counter').getBoundingClientRect().width;
+    
+                        // $this.css('width', numWidth*1.1);
+    
+                        $({ countNum: 0 }).animate(
+                            { countNum: target },
+                            {
+                                duration: 1500, // 1.5초 동안
+                                easing: 'swing',
+                                step: function () {
+                                    $this.text(Math.floor(this.countNum).toLocaleString());
+                                },
+                                complete: function () {
+                                    $this.text(target.toLocaleString()); // 마지막 숫자 정확히 설정
+                                }
+                            }
+                        );
+                    });
                 }
-            });
-        }
+            }
+        },
     }
 
 

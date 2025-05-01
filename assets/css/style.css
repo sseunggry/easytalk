@@ -64,8 +64,11 @@
   justify-content: center;
   gap: 2rem;
   margin-top: 2rem;
-  font-size: 13rem;
   font-weight: 700;
+}
+.wrap.main section.sec-02 .tit-wrap .num .count {
+  min-width: 52rem;
+  font-size: 13rem;
 }
 .wrap.main section.sec-02 .tit-wrap .num .unit {
   font-size: 8rem;
@@ -979,6 +982,9 @@
   .wrap.main section.sec-02 .tit-wrap .num {
     gap: 0.8rem;
     margin-top: 0.8rem;
+  }
+  .wrap.main section.sec-02 .tit-wrap .num .count {
+    min-width: 23rem;
     font-size: 5.6rem;
   }
   .wrap.main section.sec-02 .tit-wrap .num .unit {
@@ -1359,6 +1365,9 @@
   .wrap.main section.sec-02 .tit-wrap .num {
     gap: 2.22vw;
     margin-top: 2.22vw;
+  }
+  .wrap.main section.sec-02 .tit-wrap .num .count {
+    min-width: 6.39vw;
     font-size: 15.56vw;
   }
   .wrap.main section.sec-02 .tit-wrap .num .unit {

@@ -13,11 +13,14 @@
         <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon_32.png" />
         <title>휴대폰 인증</title>
         <!-- css -->
+        <link href="../../assets/css/swiper-bundle.min.css" type="text/css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
         <link href="../../assets/css/common.css" type="text/css" rel="stylesheet" />
         <link href="../../assets/css/style.css" type="text/css" rel="stylesheet" />
         <!-- script -->
         <script defer src="../../assets/js/jquery-2.2.4.min.js"></script>
-        <script defer src="../../assets/js/swiper-bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script defer src="../../assets/js/common.js"></script>
     </head>
 
@@ -25,19 +28,54 @@
         <div class="wrap layout-small">
             <div class="container">
                 <!-- 헤더 영역 -->
-                <header class="header">
+                <header class="header"><!-- [D] 비활성화일 경우, gray 클래스 추가 -->
                     <div class="inner">
                         <button type="button" class="btn-menu"><span class="blind">메뉴</span></button>
                         <h1 class="logo">
-                            <a href="#!">logo</a>
+                            <a href="#!"><span class="blind">EASY TALK</span></a>
                         </h1>
-                        <nav>
-                            
-                        </nav>
+                        <ul class="nav">
+                            <li class="active"><a href="#sec01">STORY</a></li>
+                            <li><a href="../shop/shop_01.html">SHOP</a></li>
+                        </ul>
+                        <ul class="util">
+                            <li><a href="#!">Login</a></li>
+                            <li><a href="#!">Cart</a></li>
+                            <li><a href="#!">My page</a></li>
+                        </ul>
                     </div>
                     <div class="inner">
                         <button type="button" class="btn-back"><span class="blind">백버튼</span></button>
-                        <p class="h-tit">휴대폰 번호로 시작</p>
+                        <p class="h-tit">사전 문진</p>
+                    </div>
+
+                    <div class="mob-menu">
+                        <div class="dimd"></div>
+                        <div class="menu-cont">
+                            <!-- [D] 로그인 전(s) -->
+                            <div class="menu-top">
+                                <p class="desc">로그인이 필요합니다.</p>
+                                <button type="button" class="btn-login">로그인</button>
+                            </div>
+                            <!-- // [D] 로그인 전(e) -->
+    
+                            <!-- [D] 로그인 후(s) -->
+                            <!-- <div class="menu-top">
+                                <p class="name"><strong>송효진</strong>님</p>
+                            </div> -->
+                            <!-- // [D] 로그인 후(e) -->
+    
+                            <ul class="mob-nav">
+                                <li><a href="#sec01">STORY</a></li>
+                                <li><a href="#!">SHOP</a></li>
+                            </ul>
+                            <ul class="mob-util">
+                                <li><a href="#!">Login</a></li>
+                                <li><a href="#!">Cart</a></li>
+                                <li><a href="#!">My page</a></li>
+                            </ul>
+                        </div>
+                        <button type="button" class="btn-close"></button>
                     </div>
                 </header>
                 <!-- //헤더 영역 -->
@@ -80,7 +118,17 @@
                                 <div class="input">
                                     <input type="tel" id="inpPersonNum" placeholder="7자리 숫자" value="">
                                     <span>-</span>
-                                    <input type="tel" id="inpPersonNum" placeholder="" value="2*****">
+                                    <div class="dot-input-wrap">
+                                        <input type="tel" maxlength="1" value="2"/>
+                                        <div class="dots">
+                                            <span class="dot"></span>
+                                            <span class="dot"></span>
+                                            <span class="dot"></span>
+                                            <span class="dot"></span>
+                                            <span class="dot"></span>
+                                            <span class="dot"></span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="input-wrap">
