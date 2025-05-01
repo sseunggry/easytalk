@@ -69,6 +69,113 @@
         border-bottom-color: var(--color-border-white);
         background-color: #ddd;
     }
+
+    &:not(.gray){
+        > .inner:first-of-type{
+            .nav{
+                li.active{
+                    &:hover{
+                        color: var(--color-yellow-3);
+                    }
+                }
+            }
+        }
+    }
+
+    .mob-menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 83.3%;
+        overflow-y: auto;
+        height: 100vh;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 99;
+
+        .dimd{
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: none;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: -1;
+        }
+
+        .menu-cont{
+            min-height: 100vh;
+            background-color: var(--color-white);
+        }
+
+        &.open{
+            opacity: 1;
+            visibility: visible;
+
+            .dimd{
+                display: block;
+            }
+        }
+        .menu-top{
+            display: flex;
+            align-items: center;
+            // justify-content: space-between;
+            padding: 1.6rem 2rem;
+            min-height: 5.2rem;
+            background-color: var(--color-yellow-3);
+
+            .desc{
+                font-size: 1.3rem;
+                color: rgba(0, 0, 0, 0.6);
+            }
+            .name{
+                font-size: 1.3rem;
+                font-weight: 700;
+
+                strong{
+                    margin-right: 0.4rem;
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                }
+            }
+            .btn-login{
+                margin-left: auto;
+                font-size: 1.5rem;
+                font-weight: 500;
+            }
+        }
+        .mob-nav{
+            li{
+                a{
+                    display: block;
+                    padding: 1.6rem 2rem;
+                    font-size: 1.6rem;
+                }
+            }
+        }
+        .mob-util{
+            border-top: 0.1rem solid var(--color-border-basic);
+            li{
+                a{
+                    display: block;
+                    padding: 1.2rem 2rem;
+                    color: var(--color-gray-5);
+                    font-size: 1.4rem;
+                }
+            }
+        }
+
+        .btn-close{
+            position: fixed;
+            top: 1.4rem;
+            left:  calc(83.3% + 0.8rem);
+            width: 2.4rem;
+            height: 2.4rem;
+            @include bg('icon/ico-close-w.png');
+        }
+    }
 }
 
 //footer
@@ -526,6 +633,51 @@ section{
             a{
                 width: 29.44vw;
                 height: 4.44vw;
+            }
+        }
+        .mob-menu{
+            .menu-top{
+                padding: 4.44vw 5.56vw;
+                min-height: 14.44vw;
+
+                .desc{
+                    font-size: 3.61vw;
+                }
+                .name{
+                    font-size: 3.61vw;
+
+                    strong{
+                        margin-right: 1.11vw;
+                        font-size: 4.44vw;
+                    }
+                }
+                .btn-login{
+                    font-size: 4.17vw;
+                }
+            }
+            .mob-nav{
+                li{
+                    a{
+                        padding: 4.44vw 5.56vw;
+                        font-size: 4.44vw;
+                    }
+                }
+            }
+            .mob-util{
+                border-top-width: 0.28vw;
+                li{
+                    a{
+                        padding: 3.33vw 5.56vw;
+                        font-size: 3.89vw;
+                    }
+                }
+            }
+
+            .btn-close{
+                top: 3.89vw;
+                left:  calc(83.3% + 2.22vw);
+                width: 6.67vw;
+                height: 6.67vw;
             }
         }
     }

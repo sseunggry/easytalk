@@ -9,11 +9,20 @@ $(function () {
             uiCommon.scroll();
             
             uiCommon.selectBox();
+            uiCommon.btnMenuClick();
             uiCommon.btnBottomFixed();
             uiCommon.topBannerFixed();
             uiCommon.mainSecKvHeight();
             uiCommon.modalOpen();
             uiCommon.modalClose();
+
+            //input 마스킹 원
+            const initialVal = $('.dot-input-wrap input').val();
+            if (initialVal) uiCommon.inputNumMasking(initialVal);
+
+            // $('.dot-input-wrap input').on('input', function () {
+            //     uiCommon.inputNumMasking($(this).val());
+            // });
         },
         resize: () => {
             $(window).resize(() => {
@@ -146,6 +155,20 @@ $(function () {
                 }
             });
         },
+        btnMenuClick: () => {
+            $('.header .btn-menu').on('click', (e) => {
+               const mobMenu = $(e.target).parents('.header').children('.mob-menu'); 
+               
+               mobMenu.addClass('open');
+               $('html').css('overflow', 'hidden');
+            });
+            $('.header .mob-menu .btn-close').on('click', (e) => {
+               const mobMenu = $(e.target).parents('.header').children('.mob-menu'); 
+               
+               mobMenu.removeClass('open');
+               $('html').css('overflow', '');
+            });
+        },
         btnBottomFixed: () => {
             if($('.btn-fixed').length){
                 $('.btn-fixed').each((idx, el) => {
@@ -222,6 +245,21 @@ $(function () {
                 }
             });
         },
+        inputNumMasking: (val) => {
+            const dots = $('.dot');
+
+            dots.each(function (i) {
+                if (val[i]) {
+                    if(i === 0){
+                        $(this).text(val[i]);
+                    } else{
+                        $(this).text('').addClass('filled');
+                    }
+                } else {
+                    $(this).text('').removeClass('filled');
+                }
+            });
+        }
     }
 
 
