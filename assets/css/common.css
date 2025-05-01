@@ -2142,21 +2142,23 @@ img {
     left: 0;
     bottom: 0;
     transform: translate(0, 100%);
-    padding: 6rem 4rem;
+    padding: 4rem 2rem 3rem;
     width: 100%;
     border-radius: 2rem 2rem 0 0;
     transition: transform 0.5s;
   }
+  .modal.alert .txt-wrap {
+    width: 100%;
+  }
   .modal.alert .txt-wrap .tit {
-    font-size: 2.4rem;
-    font-weight: 700;
+    font-size: 2rem;
   }
   .modal.alert .txt-wrap .desc {
     margin-top: 1.6rem;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   .modal.alert .txt-wrap ~ .btn-wrap {
-    margin-top: 3.5rem;
+    margin-top: 3rem;
   }
   .modal.alert .btn-close {
     top: 2rem;
@@ -2177,20 +2179,18 @@ img {
     border-radius: 5.56vw 5.56vw 0 0;
   }
   .modal.alert .modal-content {
-    top: auto;
-    padding: 6rem 4rem;
-    border-radius: 2.4rem;
+    padding: 4rem 2rem 3rem;
+    border-radius: 2rem 2rem 0 0;
   }
   .modal.alert .txt-wrap .tit {
-    font-size: 2.4rem;
-    font-weight: 700;
+    font-size: 2rem;
   }
   .modal.alert .txt-wrap .desc {
     margin-top: 1.6rem;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   .modal.alert .txt-wrap ~ .btn-wrap {
-    margin-top: 3.5rem;
+    margin-top: 3rem;
   }
   .modal.alert .btn-close {
     top: 2rem;
