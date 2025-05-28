@@ -63,6 +63,21 @@
         margin-left: auto;
         font-size: 1.6rem;
         color: var(--color-gray-8);
+
+        .cart-count{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: -0.2rem;
+            width: 1.4rem;
+            height: 1.4rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            vertical-align: middle;
+            color: var(--color-white);
+            border-radius: 50%;
+            background-color: var(--color-red);
+        }
     }
 
     &.gray{
@@ -468,6 +483,16 @@ section{
     }
 }
 
+.page-tit{
+    margin: 10rem 0 6rem;
+    font-size: 4.6rem;
+    text-align: center;
+
+    .tit{
+        font-weight: 700;
+    }
+}
+
 @media screen and (max-width: 720px) {
     .header{
         padding: 1.6rem 0;
@@ -615,6 +640,11 @@ section{
         justify-content: center;
         gap: 0.4rem;
         font-size: 1.2rem;
+    }
+
+    .page-tit{
+        margin: 3rem 0 3.4rem;
+        font-size: 2rem;
     }
 
     .pc-only{display: none !important;}
@@ -848,5 +878,10 @@ section{
             width: 3.89vw;
             height: 3.89vw;
         }
+    }
+
+    .page-tit{
+        margin: 8.33vw 0;
+        font-size: 5.56vw;
     }
 }

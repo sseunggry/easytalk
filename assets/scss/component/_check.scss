@@ -2,6 +2,38 @@
 @import "../util";
 
 /* check */
+.check{
+    input[type="checkbox"]{
+        @include blind;
+
+        &:checked{
+            ~ label{
+                &::before{
+                    @include bg('icon/ico-check-b.png', $color: var(--color-yellow-3));
+                    border-color: var(--color-yellow-3);
+                }
+            }
+        }
+    }
+    label{
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 1.6rem;
+        cursor: pointer;
+
+        &::before{
+            content: '';
+            display: inline-flex;
+            margin: 0.3rem;
+            width: 1.8rem;
+            height: 1.8rem;
+            border-radius: 0.5rem;
+            border: 0.2rem solid var(--color-gray-3);
+        }
+    }
+}
+/* checkbox */
 .checkbox, .radio{
     --check-label-gap: 1.6rem;
     --check-label-padding: 0 2.2rem;

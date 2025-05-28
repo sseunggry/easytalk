@@ -32,15 +32,18 @@
 }
 
 .btn{
+    --btn-height-xxsmall: 3.2rem;
     --btn-height-xsmall: 3.4rem;
     --btn-height-small: 3.6rem;
     --btn-height-medium: 4.8rem;
     --btn-height-large: 5.6rem;
+    --btn-border-radius-xxsmall: 0.6rem;
     --btn-border-radius-xsmall: 0.6rem;
     --btn-border-radius-small: 0.6rem;
     --btn-border-radius-medium: 0.6rem;
     --btn-border-radius-large: 1.2rem;
 
+    --btn-fz-xxsmall: 1.4rem;
     --btn-fz-xsmall: 1.3rem;
     --btn-fz-small: 1.4rem;
     --btn-fz-medium: 1.6rem;
@@ -51,6 +54,7 @@
 
     --btn-color-line: var(--color-black);
     --btn-color-line-gray: var(--color-gray-3);
+    --btn-color-line-gray2: var(--color-gray-3-2);
     --btn-bg-primary: var(--color-yellow-3);
     --btn-bg-secondary: var(--color-yellow-2);
     --btn-bg-black: var(--color-black);
@@ -70,6 +74,13 @@
     // flex: 1 1 auto;
 
     // size
+    &.xxsmall{
+        padding: 0 1rem;
+        width: fit-content;
+        height: var(--btn-height-xxsmall);
+        font-size: var(--btn-fz-xxsmall);
+        border-radius: var(--btn-border-radius-xxsmall);
+    }
     &.xsmall{
         padding-top: 1rem;
         padding-bottom: 1rem;
@@ -133,6 +144,9 @@
 
         &.gray{
             border-color: var(--btn-color-line-gray);
+        }
+        &.gray2{
+            border-color: var(--btn-color-line-gray2);
         }
     }
     &.kakao{
@@ -209,6 +223,7 @@
     }
     
     .btn {
+        --btn-height-xxsmall: 8.89vw;
         --btn-height-xsmall: 9.44vw;
         --btn-height-small: 10.00vw;
         --btn-height-medium: 13.33vw;
@@ -218,6 +233,7 @@
         --btn-border-radius-medium: 1.67vw;
         --btn-border-radius-large: 3.33vw;
 
+        --btn-fz-xxsmall: 3.89vw;
         --btn-fz-xsmall: 3.61vw;
         --btn-fz-small: 3.89vw;
         --btn-fz-medium: 4.44vw;
@@ -229,6 +245,9 @@
         padding: 0 3.89vw;
 
         // size
+        &.xxsmall{
+            padding: 0 2.78vw;
+        }
         &.xsmall {
             padding-top: 2.78vw;
             padding-bottom: 2.78vw;

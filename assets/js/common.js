@@ -231,7 +231,13 @@ $(function () {
                 }
             });
         },
-        modalClose: () => {
+        modalClose: (e) => {
+            if(e){
+                const modal = $(e.target).parents('.modal');
+
+                modal.removeClass('open');
+                $('html').css('overflow', '');
+            }
             $('.btn-close').on('click', (e) => {
                 const modal = $(e.target).parents('.modal');
 

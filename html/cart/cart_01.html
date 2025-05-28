@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/favicon_180.png" />
+        <link rel="icon" type="image/png" sizes="512x512" href="../../assets/img/favicon_512.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="../../assets/img/favicon_192.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon_32.png" />
+        <title>장바구니 &gt; 이지톡</title>
+        <!-- css -->
+        <link href="../../assets/css/swiper-bundle.min.css" type="text/css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
+        <link href="../../assets/css/common.css" type="text/css" rel="stylesheet" />
+        <link href="../../assets/css/style.css" type="text/css" rel="stylesheet" />
+        <!-- script -->
+        <script defer src="../../assets/js/jquery-2.2.4.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script defer src="../../assets/js/common.js"></script>
+    </head>
+
+    <body>
+        <div class="wrap cart">
+            <div class="container">
+                <!-- 상단고정배너 영역 -->
+                <div class="fixed-top-banner">
+                    <div class="inner">
+                        <p class="pc-only">쉽고 간편하게 온라인으로 결제 후 전화진료 및 택배 배송이 가능합니다.</p>
+                        <p class="mob-only">내원이 어려우시면 전화 진료 후 택배 배송 가능합니다.</p>
+                        <div class="btn-wrap">
+                            <a href="#!" class="btn xsmall black">맞춤 처방 진료 예약하기 <i class="ico-arrow"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 상단고정배너 영역 -->
+
+                <!-- 헤더 영역 -->
+                <header class="header"><!-- [D] 비활성화일 경우, gray 클래스 추가 -->
+                    <div class="inner">
+                        <button type="button" class="btn-menu"><span class="blind">메뉴</span></button>
+                        <h1 class="logo">
+                            <a href="#!"><span class="blind">EASY TALK</span></a>
+                        </h1>
+                        <ul class="nav">
+                            <li class="active"><a href="#sec01">STORY</a></li>
+                            <li><a href="../shop/shop_01.html">SHOP</a></li>
+                        </ul>
+                        <ul class="util">
+                            <li><a href="#!">Login</a></li>
+                            <li><a href="#!">Cart <span class="cart-count">1</span></a></li>
+                            <li><a href="#!">My page</a></li>
+                        </ul>
+                    </div>
+                    <div class="inner">
+                        <button type="button" class="btn-back"><span class="blind">백버튼</span></button>
+                        <p class="h-tit">사전 문진</p>
+                    </div>
+
+                    <div class="mob-menu">
+                        <div class="dimd"></div>
+                        <div class="menu-cont">
+                            <!-- [D] 로그인 전(s) -->
+                            <div class="menu-top">
+                                <p class="desc">로그인이 필요합니다.</p>
+                                <button type="button" class="btn-login">로그인</button>
+                            </div>
+                            <!-- // [D] 로그인 전(e) -->
+    
+                            <!-- [D] 로그인 후(s) -->
+                            <!-- <div class="menu-top">
+                                <p class="name"><strong>송효진</strong>님</p>
+                            </div> -->
+                            <!-- // [D] 로그인 후(e) -->
+    
+                            <ul class="mob-nav">
+                                <li><a href="#sec01">STORY</a></li>
+                                <li><a href="#!">SHOP</a></li>
+                            </ul>
+                            <ul class="mob-util">
+                                <li><a href="#!">Login</a></li>
+                                <li><a href="#!">Cart</a></li>
+                                <li><a href="#!">My page</a></li>
+                            </ul>
+                        </div>
+                        <button type="button" class="btn-close"></button>
+                    </div>
+                </header>
+                <!-- //헤더 영역 -->
+
+                <!-- 컨텐츠 영역 -->
+                <div class="contents">
+                    <section class="sec-kv">
+                        <div class="inner">
+                            <div class="page-tit">
+                                <h2 class="tit mb-6">장바구니</h2>
+                            </div>
+                            <div class="cart-info flex">
+                                <div class="cart-list">
+                                    <div class="all-check">
+                                        <div class="check">
+                                            <input type="checkbox" id="allCheck" name="allCheck">
+                                            <label for="allCheck">전체선택 <span class="c-gray">(2/2)</span></label>
+                                        </div>
+                                        <button type="button" class="btn line gray2 small">선택삭제</button>
+                                    </div>
+                                    <div class="product-check-list">
+                                        <div class="item">
+                                            <div class="check">
+                                                <input type="checkbox" id="chk1-1" name="chk1">
+                                                <label for="chk1-1"><span class="blind">이지톡 베이직</span></label>
+                                            </div>
+                                            <div class="info">
+                                                <div class="img-wrap">
+                                                    <img src="../../assets/img/content/shop-intro-thumb1.jpg" alt="" />
+                                                </div>
+                                                <div class="txt-wrap">
+                                                    <p class="tit">이지톡 베이직</p>
+                                                    <ul class="list">    
+                                                        <li>
+                                                            <p class="txt">이지톡 베이직 4주 (3통 23만원) <strong class="count">1개</strong></p>
+                                                            <button type="button" class="btn-del"><span class="blind">삭제</span></button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="check">
+                                                <input type="checkbox" id="chk1-1" name="chk1">
+                                                <label for="chk1-1"><span class="blind">이지톡 베이직</span></label>
+                                            </div>
+                                            <div class="info">
+                                                <div class="img-wrap">
+                                                    <img src="../../assets/img/content/shop-intro-thumb1.jpg" alt="" />
+                                                </div>
+                                                <div class="txt-wrap">
+                                                    <p class="tit">이지톡 프리미엄</p>
+                                                    <ul class="list">    
+                                                        <li>
+                                                            <p class="txt">이지톡 프리미엄 4주 (3통 33만원) <strong class="count">1개</strong></p>
+                                                            <button type="button" class="btn-del"><span class="blind">삭제</span></button>
+                                                        </li>
+                                                        <li>
+                                                            <p class="txt">이지톡 프리미엄 8주 (6통 31.3만원) <strong class="count">1개</strong></p>
+                                                            <button type="button" class="btn-del"><span class="blind">삭제</span></button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="price-info">
+                                    <p class="tit">결제 예상 금액</p>
+                                    <ul class="list">
+                                        <li>
+                                            <strong>수량</strong>
+                                            <span>3개</span>
+                                        </li>
+                                        <li>
+                                            <strong>상품금액</strong>
+                                            <span>800,000원</span>
+                                        </li>
+                                        <li>
+                                            <strong>배송비</strong>
+                                            <span>무료</span>
+                                        </li>
+                                    </ul>
+                                    <div class="total">
+                                        <p>총 결제 예상 금액</p>
+                                        <p>800,000원</p>
+                                    </div>
+                                    <div class="btn-wrap">
+                                        <a href="#!" class="btn large black"><strong>800,000원</strong> 구매하기</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!--//컨텐츠 영역 -->
+            </div>
+        </div>
+    </body>
+</html>

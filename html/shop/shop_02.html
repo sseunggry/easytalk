@@ -52,7 +52,7 @@
                         </ul>
                         <ul class="util">
                             <li><a href="#!">Login</a></li>
-                            <li><a href="#!">Cart</a></li>
+                            <li><a href="#!">Cart <span class="cart-count">1</span></a></li>
                             <li><a href="#!">My page</a></li>
                         </ul>
                     </div>
@@ -180,7 +180,7 @@
                                     <p class="price">230,000원</p>
                                 </div>
                                 <div class="btn-wrap flex-wrap">
-                                    <button type="button" class="btn medium secondary">장바구니</button>
+                                    <button type="button" class="btn medium secondary" data-modal="modalCartContain">장바구니</button>
                                     <button type="button" class="btn medium primary">구매하기</button>
                                     <button type="button" class="btn medium black">상담 신청하기</button>
                                 </div>
@@ -426,6 +426,20 @@
                         <button type="button" class="btn medium secondary" data-modal="modalCart">장바구니</button>
                         <button type="button" class="btn medium primary">구매하기</button>
                     </div>
+                </div>
+            </div>
+
+            <div class="modal alert" id="modalCartContain">
+                <div class="dimd"></div>
+                <div class="modal-content">
+                    <div class="txt-wrap">
+                        <p class="tit">선택하신 상품을 장바구니에 담았습니다.</p>
+                    </div>
+                    <div class="btn-wrap">
+                        <button type="button" class="btn large black" onclick="uiCommon.modalClose(this)">계속쇼핑</button>
+                        <button type="button" class="btn large primary">장바구니</button>
+                    </div>
+                    <button type="button" class="btn-close"></button>
                 </div>
             </div>
         </div>

@@ -1267,6 +1267,7 @@ img {
   --color-gray-1: #F7F7F7;
   --color-gray-2: #F2F2F2;
   --color-gray-3: #E6E6E6;
+  --color-gray-3-2: #cccccc;
   --color-gray-4: #999999;
   --color-gray-5: #808080;
   --color-gray-6: #666666;
@@ -1323,14 +1324,17 @@ img {
 }
 
 .btn {
+  --btn-height-xxsmall: 3.2rem;
   --btn-height-xsmall: 3.4rem;
   --btn-height-small: 3.6rem;
   --btn-height-medium: 4.8rem;
   --btn-height-large: 5.6rem;
+  --btn-border-radius-xxsmall: 0.6rem;
   --btn-border-radius-xsmall: 0.6rem;
   --btn-border-radius-small: 0.6rem;
   --btn-border-radius-medium: 0.6rem;
   --btn-border-radius-large: 1.2rem;
+  --btn-fz-xxsmall: 1.4rem;
   --btn-fz-xsmall: 1.3rem;
   --btn-fz-small: 1.4rem;
   --btn-fz-medium: 1.6rem;
@@ -1339,6 +1343,7 @@ img {
   --btn-ico-size-medium: 1.6rem;
   --btn-color-line: var(--color-black);
   --btn-color-line-gray: var(--color-gray-3);
+  --btn-color-line-gray2: var(--color-gray-3-2);
   --btn-bg-primary: var(--color-yellow-3);
   --btn-bg-secondary: var(--color-yellow-2);
   --btn-bg-black: var(--color-black);
@@ -1353,6 +1358,13 @@ img {
   align-items: center;
   justify-content: center;
   padding: 0 1.4rem;
+}
+.btn.xxsmall {
+  padding: 0 1rem;
+  width: fit-content;
+  height: var(--btn-height-xxsmall);
+  font-size: var(--btn-fz-xxsmall);
+  border-radius: var(--btn-border-radius-xxsmall);
 }
 .btn.xsmall {
   padding-top: 1rem;
@@ -1413,6 +1425,9 @@ img {
 }
 .btn.line.gray {
   border-color: var(--btn-color-line-gray);
+}
+.btn.line.gray2 {
+  border-color: var(--btn-color-line-gray2);
 }
 .btn.kakao {
   color: var(--btn-color-text-black);
@@ -1480,6 +1495,7 @@ img {
     row-gap: 3.33vw;
   }
   .btn {
+    --btn-height-xxsmall: 8.89vw;
     --btn-height-xsmall: 9.44vw;
     --btn-height-small: 10.00vw;
     --btn-height-medium: 13.33vw;
@@ -1488,6 +1504,7 @@ img {
     --btn-border-radius-small: 1.67vw;
     --btn-border-radius-medium: 1.67vw;
     --btn-border-radius-large: 3.33vw;
+    --btn-fz-xxsmall: 3.89vw;
     --btn-fz-xsmall: 3.61vw;
     --btn-fz-small: 3.89vw;
     --btn-fz-medium: 4.44vw;
@@ -1495,6 +1512,9 @@ img {
     --btn-ico-size-xsmall: 3.89vw;
     --btn-ico-size-medium: 4.44vw;
     padding: 0 3.89vw;
+  }
+  .btn.xxsmall {
+    padding: 0 2.78vw;
   }
   .btn.xsmall {
     padding-top: 2.78vw;
@@ -1735,6 +1755,39 @@ img {
   }
 }
 /* check */
+.check input[type=checkbox] {
+  overflow: hidden;
+  position: absolute;
+  display: block;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  border: 0;
+  z-index: -1;
+}
+.check input[type=checkbox]:checked ~ label::before {
+  background: var(--color-yellow-3) url(../img/icon/ico-check-b.png) no-repeat center/cover;
+  border-color: var(--color-yellow-3);
+}
+.check label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+.check label::before {
+  content: "";
+  display: inline-flex;
+  margin: 0.3rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 0.5rem;
+  border: 0.2rem solid var(--color-gray-3);
+}
+
+/* checkbox */
 .checkbox, .radio {
   --check-label-gap: 1.6rem;
   --check-label-padding: 0 2.2rem;
@@ -2282,6 +2335,20 @@ img {
   font-size: 1.6rem;
   color: var(--color-gray-8);
 }
+.header .util .cart-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -0.2rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  vertical-align: middle;
+  color: var(--color-white);
+  border-radius: 50%;
+  background-color: var(--color-red);
+}
 .header.gray {
   border-bottom-color: var(--color-border-white);
   background-color: #ddd;
@@ -2619,6 +2686,15 @@ section .complete-info::before {
   background: url(../img/icon/ico-info.png) no-repeat center/cover;
 }
 
+.page-tit {
+  margin: 10rem 0 6rem;
+  font-size: 4.6rem;
+  text-align: center;
+}
+.page-tit .tit {
+  font-weight: 700;
+}
+
 @media screen and (max-width: 720px) {
   .header {
     padding: 1.6rem 0;
@@ -2732,6 +2808,10 @@ section .complete-info::before {
     justify-content: center;
     gap: 0.4rem;
     font-size: 1.2rem;
+  }
+  .page-tit {
+    margin: 3rem 0 3.4rem;
+    font-size: 2rem;
   }
   .pc-only {
     display: none !important;
@@ -2907,5 +2987,9 @@ section .complete-info::before {
   .info-txt::before {
     width: 3.89vw;
     height: 3.89vw;
+  }
+  .page-tit {
+    margin: 8.33vw 0;
+    font-size: 5.56vw;
   }
 }

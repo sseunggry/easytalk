@@ -315,15 +315,10 @@
 
     &.shop{
         .page-tit{
-            .tit{
-                margin-bottom: 8rem;
-                font-size: 4.6rem;
-                font-weight: 700;
-                text-align: center;
-            }
+            margin-bottom: 8rem;
         }
         .sec-kv{
-            padding: 10rem 0 16rem;
+            padding-bottom: 16rem;
 
             .link-list{
                 display: flex;
@@ -1013,6 +1008,140 @@
         }
     }
 
+    &.cart{
+        .cart-info{
+            .cart-list{
+                padding: 2.4rem;
+                width: 53.7%;
+                border: 0.1rem solid var(--color-border-basic);
+                border-radius: 1rem;
+
+                .all-check{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding-bottom: 1.6rem;
+                    border-bottom: 0.1rem solid var(--color-gray-2);
+                }
+
+                .product-check-list{
+                    .item{
+                        position: relative;
+                        margin-top: 1.6rem;
+                        padding-left: 2.8rem;
+
+                        .check{
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+
+                            label{
+                                width: 100%;
+                                height: 100%;
+
+                                &::before{
+                                    align-self: flex-start;
+                                }
+                            }
+                        }
+
+                        .info{
+                            display: flex;
+                            gap: 0.8rem;
+                            padding-top: 0.3rem;
+                            padding-left: 0.4rem;
+
+                            .img-wrap{
+                                width: 10rem;
+                            }
+                            .txt-wrap{
+                                flex: 1;
+
+                                .tit{
+                                    font-size: 1.6rem;
+                                    font-weight: 500;
+                                }
+                                .list{
+                                    li{
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-between;
+                                        margin-top: 0.8rem;
+                                        padding: 1.2rem 1.6rem;
+                                        background-color: var(--color-yellow-0);
+    
+                                        .txt{
+                                            font-size: 1.4rem;
+    
+                                            strong{
+                                                display: inline-block;
+                                                margin-left: 0.4rem;
+                                                font-weight: 700;
+                                            }
+                                        }
+    
+                                        .btn-del{
+                                            position: relative;
+                                            width: 1.6rem;
+                                            height: 1.6rem;
+                                            @include bg('icon/ico-del.png');
+                                            z-index: 2;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .price-info{
+                margin-left: auto;
+                padding: 3.2rem;
+                width: 42.6%;
+                border: 0.1rem solid var(--color-border-basic);
+                border-radius: 1rem;
+
+                .tit{
+                    margin-bottom: 2rem;
+                    font-size: 1.8rem;
+                    font-weight: 700;
+                }
+                .list{
+                    &::after{
+                        content: '';
+                        display: block;
+                        margin: 2.4rem 0;
+                        width: 100%;
+                        height: 0.1rem;
+                        background-color: var(--color-border-basic);
+                    }
+                    li{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        color: var(--color-gray-7);
+                        font-size: 1.6rem;
+                        line-height: 1;
+
+                        + li{
+                            margin-top: 1.6rem;
+                        }
+                    }
+                }
+            }
+            .total{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 2.4rem;
+                font-size: 2rem;
+                font-weight: 700;
+            }
+        }
+    }
+
 
     @media screen and (max-width: 960px) {
         &.shop-detail{
@@ -1338,13 +1467,10 @@
 
         &.shop{
             .page-tit{
-                .tit{
-                    margin-bottom: 3rem;
-                    font-size: 2rem;
-                }
+                margin-bottom: 3rem;
             }
             .sec-kv{
-                padding: 3rem 0 5rem;
+                padding-bottom: 5rem;
 
                 .link-list{
                     gap: 1.2rem;
@@ -1635,6 +1761,8 @@
                 }
             }
         }
+
+
     }
 
     @media screen and (max-width: 400px) {
@@ -1806,14 +1934,12 @@
         }
 
         &.shop{
-            .page-tit{
-                .tit{
-                    margin-bottom: 8.33vw;
-                    font-size: 5.56vw;
-                }
-            }
+            // .page-tit{
+            //     margin-bottom: 8.33vw;
+            //     font-size: 5.56vw;
+            // }
             .sec-kv{
-                padding: 8.33vw 0 13.89vw;
+                padding-bottom: 13.89vw;
 
                 .link-list{
                     gap: 3.33vw;
