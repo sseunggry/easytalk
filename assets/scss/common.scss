@@ -353,7 +353,7 @@ section{
     padding: 0 4rem;
     max-width: 128rem;
     width: 100%;
-}
+};
 
 .btn-fixed{
     position: fixed;
@@ -492,6 +492,172 @@ section{
         font-weight: 700;
     }
 }
+
+.info-box-wrap{
+    &.flex{
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .info-box{
+            &:first-of-type{
+                width: 53.7%;
+            }
+            &:last-of-type{
+                width: 42.6%;
+            }
+            &:only-of-type{
+                flex: 1 0 auto;
+            }
+        }
+    }
+}
+
+.info-box{
+    .box{
+        padding: 2.4rem;
+        border-radius: 1rem;
+        border: 0.1rem solid var(--color-gray-3);
+
+        + .box, + .btn-wrap{
+            margin-top: 2rem;
+        }
+    }
+    .box-top{
+        display: flex;
+
+        .tit{
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--color-gray-10);
+
+            span{
+                font-weight: 500;
+            }
+        }
+        &.line{
+            padding-bottom: 1.6rem;
+            border-bottom: 0.1rem solid var(--color-border-light);
+
+            + .box-con{
+                margin-top: 1.6rem;
+            }
+        }
+
+        .btn{
+            margin-left: auto;
+        }
+
+        + .box-con{
+            margin-top: 2rem;
+        }
+    }
+    .box-con{
+        .tit{
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+        .desc{
+            margin-top: 0.8rem;
+            font-size: 1.6rem;
+            color: var(--color-gray-7);
+        }
+
+        .product-list{
+            li{
+                display: flex;
+
+                + li{
+                    margin-top: 1.6rem;
+                }
+            }
+
+            .img-wrap{
+                overflow: hidden;
+                position: relative;
+                flex-shrink: 0;
+                width: 18.8%;
+
+                &::before{
+                    content: '';
+                    padding-top: 100%;
+                    display: block;
+                }
+                img{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    height: 100%;
+                }
+            }
+            .txt-wrap{
+                display: flex;
+                flex-direction: column;
+                margin-left: 0.8rem;
+                line-height: 1;
+
+                .tit{
+                    font-weight: 500;
+                }
+                .desc{
+                    font-size: 1.4rem;
+                    color: var(--color-gray-8);
+
+                    .price{
+                        display: block;
+                        margin-top: 0.8rem;
+                    }
+                }
+            }
+        }
+        .input-wrap{
+            .select{
+                + .input{
+                    margin-top: 1.6rem;
+                }
+            }
+        }
+        .summary-list{
+            &::after{
+                content: '';
+                display: block;
+                margin: 2.4rem 0;
+                width: 100%;
+                height: 0.1rem;
+                background-color: var(--color-border-basic);
+            }
+            li{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                color: var(--color-gray-7);
+                font-size: 1.6rem;
+                line-height: 1;
+
+                + li{
+                    margin-top: 1.6rem;
+                }
+            }
+        }
+        .total{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 2.4rem;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+    }
+    .btn-wrap{
+        .btn.large.primary{
+            &:disabled{
+                background-color: rgba(255, 226, 90, 0.5);
+            }
+        }
+    }
+}
+
+
 
 @media screen and (max-width: 720px) {
     .header{
