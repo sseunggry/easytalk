@@ -2316,7 +2316,7 @@ img {
   display: block;
   width: 13.2rem;
   height: 2rem;
-  background: url(../img/content/logo.png) no-repeat center/cover;
+  background: url(../img/content/logo.png) no-repeat center/100%;
 }
 .header .nav {
   display: flex;

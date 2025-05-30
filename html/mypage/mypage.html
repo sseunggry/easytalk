@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/favicon_180.png" />
+        <link rel="icon" type="image/png" sizes="512x512" href="../../assets/img/favicon_512.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="../../assets/img/favicon_192.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon_32.png" />
+        <title>마이페이지 &gt; 이지톡</title>
+        <!-- css -->
+        <link href="../../assets/css/swiper-bundle.min.css" type="text/css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
+        <link href="../../assets/css/common.css" type="text/css" rel="stylesheet" />
+        <link href="../../assets/css/style.css" type="text/css" rel="stylesheet" />
+        <link href="../../assets/css/mypage.css" type="text/css" rel="stylesheet" />
+        <!-- script -->
+        <script defer src="../../assets/js/jquery-2.2.4.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script defer src="../../assets/js/common.js"></script>
+    </head>
+
+    <body>
+        <div class="wrap cart">
+            <div class="container">
+                <!-- 상단고정배너 영역 -->
+                <div class="fixed-top-banner">
+                    <div class="inner">
+                        <p class="pc-only">쉽고 간편하게 온라인으로 결제 후 전화진료 및 택배 배송이 가능합니다.</p>
+                        <p class="mob-only">내원이 어려우시면 전화 진료 후 택배 배송 가능합니다.</p>
+                        <div class="btn-wrap">
+                            <a href="#!" class="btn xsmall black">맞춤 처방 진료 예약하기 <i class="ico-arrow"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 상단고정배너 영역 -->
+
+                <!-- 헤더 영역 -->
+                <header class="header"><!-- [D] 비활성화일 경우, gray 클래스 추가 -->
+                    <div class="inner">
+                        <button type="button" class="btn-menu"><span class="blind">메뉴</span></button>
+                        <h1 class="logo">
+                            <a href="#!"><span class="blind">EASY TALK</span></a>
+                        </h1>
+                        <ul class="nav">
+                            <li class="active"><a href="#sec01">STORY</a></li>
+                            <li><a href="../shop/shop_01.html">SHOP</a></li>
+                        </ul>
+                        <ul class="util">
+                            <li><a href="#!">Login</a></li>
+                            <li><a href="#!">Cart <span class="cart-count">1</span></a></li>
+                            <li><a href="#!">My page</a></li>
+                        </ul>
+                    </div>
+                    <div class="inner">
+                        <button type="button" class="btn-back"><span class="blind">백버튼</span></button>
+                        <p class="h-tit">사전 문진</p>
+                    </div>
+
+                    <div class="mob-menu">
+                        <div class="dimd"></div>
+                        <div class="menu-cont">
+                            <!-- [D] 로그인 전(s) -->
+                            <div class="menu-top">
+                                <p class="desc">로그인이 필요합니다.</p>
+                                <button type="button" class="btn-login">로그인</button>
+                            </div>
+                            <!-- // [D] 로그인 전(e) -->
+    
+                            <!-- [D] 로그인 후(s) -->
+                            <!-- <div class="menu-top">
+                                <p class="name"><strong>송효진</strong>님</p>
+                            </div> -->
+                            <!-- // [D] 로그인 후(e) -->
+    
+                            <ul class="mob-nav">
+                                <li><a href="#sec01">STORY</a></li>
+                                <li><a href="#!">SHOP</a></li>
+                            </ul>
+                            <ul class="mob-util">
+                                <li><a href="#!">Login</a></li>
+                                <li><a href="#!">Cart</a></li>
+                                <li><a href="#!">My page</a></li>
+                            </ul>
+                        </div>
+                        <button type="button" class="btn-close"></button>
+                    </div>
+                </header>
+                <!-- //헤더 영역 -->
+
+                <!-- 컨텐츠 영역 -->
+                <div class="contents">
+                    <section class="sec-kv">
+                        <div class="inner">
+                            <div class="page-tit">
+                                <h2 class="tit mb-6">마이페이지</h2>
+                            </div>
+                            <div class="mypage-info flex">
+                                <ul class="menu-list">
+                                    <li class="active"><a href="#">주문/배송 조회</a></li>
+                                    <li><a href="#">정보 수정</a></li>
+                                    <li><a href="#">회원탈퇴</a></li>
+                                </ul>
+
+                                <!-- 컨텐츠 영역 -->
+                                <div class="mypage-con">
+                                    <div class="intro-con flex">
+                                        <div class="img-con">
+                                            <img src="../../assets/img/icon/ico-profile.jpg" alt="" />
+                                        </div>
+                                        <div class="txt-con">
+                                            <h4><span>홍길동</span> 님 안녕하세요.</h4>
+                                            <p>abc1234@kakao.com</p>
+                                        </div>
+                                    </div>
+                                    <div class="order-con">
+                                        <h4>주문 조회</h4>
+                                        <div class="order-list">
+                                            <!-- 주문 리스트 PC -->
+                                            <table class="order-table pc-only">
+                                                <colgroup>
+                                                    <col style="width:23.25%;">
+                                                    <col style="width:37.2%;">
+                                                    <col style="width:6.97%;">
+                                                    <col style="width:16.27%;">
+                                                    <col style="width:16.27%;">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th>주문일자(주문번호)</th>
+                                                        <th>상품정보</th>
+                                                        <th>수량</th>
+                                                        <th>상품금액</th>
+                                                        <th>진행상태</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="date">
+                                                            <span>2025.00.00</span>
+                                                            000000000000
+                                                        </td>
+                                                        <td class="product">
+                                                            <div class="flex">
+                                                                <div class="img-con">
+                                                                    <img src="../../assets/img/content/mypage-product.jpg" alt="">
+                                                                </div>
+                                                                <dl>
+                                                                    <dt>이지톡 베이직</dt>
+                                                                    <dd>이지톡 베이직 4주 (3통 23만원)</dd>
+                                                                </dl>
+                                                            </div>
+                                                        </td>
+                                                        <td>1</td>
+                                                        <td>230,000원</td>
+                                                        <td>결제완료</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="date">
+                                                            <span>2025.00.00</span>
+                                                            000000000000
+                                                        </td>
+                                                        <td class="product">
+                                                            <div class="flex">
+                                                                <div class="img-con">
+                                                                    <img src="../../assets/img/content/mypage-product.jpg" alt="">
+                                                                </div>
+                                                                <dl>
+                                                                    <dt>이지톡 베이직</dt>
+                                                                    <dd>이지톡 베이직 4주 (3통 23만원)</dd>
+                                                                </dl>
+                                                            </div>
+                                                        </td>
+                                                        <td>1</td>
+                                                        <td>230,000원</td>
+                                                        <td class="dispatch">
+                                                            배송중
+                                                            <dl class="invoice-con">
+                                                                <dt>
+                                                                    대한통운
+                                                                    <span>123456789</span>
+                                                                </dt>
+                                                                <dd>
+                                                                    <button type="button">배송조회</button>
+                                                                </dd>
+                                                            </dl>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="date">
+                                                            <span>2025.00.00</span>
+                                                            000000000000
+                                                        </td>
+                                                        <td class="product">
+                                                            <div class="flex">
+                                                                <div class="img-con">
+                                                                    <img src="../../assets/img/content/mypage-product.jpg" alt="">
+                                                                </div>
+                                                                <dl>
+                                                                    <dt>이지톡 베이직</dt>
+                                                                    <dd>이지톡 베이직 4주 (3통 23만원)</dd>
+                                                                </dl>
+                                                            </div>
+                                                        </td>
+                                                        <td>1</td>
+                                                        <td>230,000원</td>
+                                                        <td>배송완료</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                            <!-- 주문 리스트 MO -->
+                                            <div class="order-table mob-only">
+                                                <div class="order-data">
+                                                    <div class="date-con">
+                                                        <p>2025.00.00</p>
+                                                        <a href="#">주문 상세보기</a>
+                                                    </div>
+                                                    <div class="product-list">
+                                                        <div class="product">
+                                                            <div class="img-con">
+                                                                <img src="../../assets/img/content/mypage-product.jpg" alt="" />
+                                                            </div>
+                                                            <dl>
+                                                                <dt>
+                                                                    <strong>이지톡 베이직</strong>
+                                                                    <span>이지톡 베이직 4주 (3통 23만원)</span>
+                                                                </dt>
+                                                                <dd>1개</dd>
+                                                                <dd>230,000원</dd>
+                                                            </dl>
+                                                        </div>
+                                                        <div class="product">
+                                                            <div class="img-con">
+                                                                <img src="../../assets/img/content/mypage-product.jpg" alt="" />
+                                                            </div>
+                                                            <dl>
+                                                                <dt>
+                                                                    <strong>이지톡 베이직</strong>
+                                                                    <span>이지톡 베이직 4주 (3통 23만원)</span>
+                                                                </dt>
+                                                                <dd>1개</dd>
+                                                                <dd>230,000원</dd>
+                                                            </dl>
+                                                        </div>
+                                                        <div class="product">
+                                                            <div class="img-con">
+                                                                <img src="../../assets/img/content/mypage-product.jpg" alt="" />
+                                                            </div>
+                                                            <dl>
+                                                                <dt>
+                                                                    <strong>이지톡 베이직</strong>
+                                                                    <span>이지톡 베이직 4주 (3통 23만원)</span>
+                                                                </dt>
+                                                                <dd>1개</dd>
+                                                                <dd>230,000원</dd>
+                                                            </dl>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dispatch-con">
+                                                        <p class="stat">결제완료</p>
+                                                    </div>
+                                                </div>
+                                                <div class="order-data">
+                                                    <div class="date-con">
+                                                        <p>2025.00.00</p>
+                                                        <a href="#">주문 상세보기</a>
+                                                    </div>
+                                                    <div class="product-list">
+                                                        <div class="product">
+                                                            <div class="img-con">
+                                                                <img src="../../assets/img/content/mypage-product.jpg" alt="" />
+                                                            </div>
+                                                            <dl>
+                                                                <dt>
+                                                                    <strong>이지톡 베이직</strong>
+                                                                    <span>이지톡 베이직 4주 (3통 23만원)</span>
+                                                                </dt>
+                                                                <dd>1개</dd>
+                                                                <dd>230,000원</dd>
+                                                            </dl>
+                                                        </div>
+                                                        <div class="product">
+                                                            <div class="img-con">
+                                                                <img src="../../assets/img/content/mypage-product.jpg" alt="" />
+                                                            </div>
+                                                            <dl>
+                                                                <dt>
+                                                                    <strong>이지톡 베이직</strong>
+                                                                    <span>이지톡 베이직 4주 (3통 23만원)</span>
+                                                                </dt>
+                                                                <dd>1개</dd>
+                                                                <dd>230,000원</dd>
+                                                            </dl>
+                                                        </div>
+                                                        <div class="product">
+                                                            <div class="img-con">
+                                                                <img src="../../assets/img/content/mypage-product.jpg" alt="" />
+                                                            </div>
+                                                            <dl>
+                                                                <dt>
+                                                                    <strong>이지톡 베이직</strong>
+                                                                    <span>이지톡 베이직 4주 (3통 23만원)</span>
+                                                                </dt>
+                                                                <dd>1개</dd>
+                                                                <dd>230,000원</dd>
+                                                            </dl>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dispatch-con">
+                                                        <p class="stat">결제완료</p>
+                                                        <button type="button">배송조회</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- 주문 내역이 없습니다. -->
+                                            <!-- <p class="empty">주문 내역이 없습니다.</p> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 컨텐츠 영역 -->
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!--//컨텐츠 영역 -->
+            </div>
+        </div>
+    </body>
+</html>
