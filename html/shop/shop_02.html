@@ -52,7 +52,9 @@
                         </ul>
                         <ul class="util">
                             <li><a href="#!">Login</a></li>
+                            <!-- [M] 2025-05-29 추가 -->
                             <li><a href="#!">Cart <span class="cart-count">1</span></a></li>
+                            <!-- // [M] 2025-05-29 추가 -->
                             <li><a href="#!">My page</a></li>
                         </ul>
                     </div>
@@ -360,8 +362,10 @@
 
                     <div class="btn-wrap btn-fixed btn-scroll mob-only">
                         <button type="button" class="btn black btn-consult">상담신청</button>
-                        <button type="button" class="btn medium secondary" data-modal="modalCart">장바구니</button>
-                        <button type="button" class="btn medium primary">구매하기</button>
+                        <!-- [M] 2025-05-29 삭제 -->
+                        <!-- <button type="button" class="btn medium secondary">장바구니</button> -->
+                        <!-- //[M] 2025-05-29 삭제 -->
+                        <button type="button" class="btn medium primary" data-modal="modalCart">구매하기</button>
                     </div>
                 </div>
                 <!--//컨텐츠 영역 -->
@@ -423,25 +427,27 @@
                         </div>
                     </div>
                     <div class="modal-btn-wrap modal-btn-fixed">
-                        <button type="button" class="btn medium secondary" data-modal="modalCart">장바구니</button>
+                        <button type="button" class="btn medium secondary" data-modal="modalCartContain">장바구니</button>
                         <button type="button" class="btn medium primary">구매하기</button>
                     </div>
                 </div>
             </div>
 
-            <div class="modal alert" id="modalCartContain">
+            <!-- [M] 2025-05-29 추가 -->
+            <div class="modal alert center" id="modalCartContain">
                 <div class="dimd"></div>
                 <div class="modal-content">
                     <div class="txt-wrap">
                         <p class="tit">선택하신 상품을 장바구니에 담았습니다.</p>
                     </div>
                     <div class="btn-wrap">
-                        <button type="button" class="btn large black" onclick="uiCommon.modalClose(this)">계속쇼핑</button>
+                        <button type="button" class="btn large black">계속쇼핑</button>
                         <button type="button" class="btn large primary">장바구니</button>
                     </div>
                     <button type="button" class="btn-close"></button>
                 </div>
             </div>
+            <!-- //[M] 2025-05-29 추가 -->
         </div>
     </body>
 </html>

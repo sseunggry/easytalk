@@ -2196,6 +2196,7 @@ img {
     width: 100%;
   }
   .modal.alert .txt-wrap .tit {
+    word-break: keep-all;
     font-size: 2rem;
   }
   .modal.alert .txt-wrap .desc {
@@ -2210,6 +2211,16 @@ img {
     right: 2rem;
     width: 2.4rem;
     height: 2.4rem;
+  }
+  .modal.alert.center .modal-content {
+    top: 50%;
+    left: 50%;
+    bottom: initial;
+    transform: translate(-50%, -50%);
+    padding: 6rem 4rem;
+    width: fit-content;
+    min-width: 30rem;
+    border-radius: 2.4rem;
   }
 }
 @media screen and (max-width: 360px) {
@@ -2243,6 +2254,13 @@ img {
     right: 5.56vw;
     width: 6.67vw;
     height: 6.67vw;
+  }
+  .modal.alert.center .modal-content {
+    padding: 11.11vw 5.56vw 8.33vw;
+    border-radius: 5.56vw;
+    padding: 16.67vw 11.11vw;
+    min-width: 83.33vw;
+    border-radius: 6.67vw;
   }
 }
 /* progress */
