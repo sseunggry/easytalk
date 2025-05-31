@@ -83,6 +83,7 @@ img{width: 100%;}
 .txt-al-center{text-align: center !important;}
 .c-gray{color: var(--color-gray-4) !important;}
 .c-gray2{color: var(--color-gray-6) !important;}
+.c-green{color: var(--color-green-1) !important;}
 .pc-only{display: flex !important;}
 .mob-only{display: none !important;}
 
@@ -93,6 +94,8 @@ img{width: 100%;}
 .order1{order: 1;}
 
 .ml-auto{margin-left: auto;}
+.visible{display: none !important;}
+.visible.show{display: flex !important;}
 
 @media screen and (max-width: 720px) {
     .pc-only{display: none !important;}

@@ -105,6 +105,17 @@ $(function () {
                         $items.attr('aria-selected', 'false');
                         $matched.attr('aria-selected', 'true');
                     }
+
+                    //컨텐츠 show
+                    const selectedOption = $(this).find('option:selected');
+                    const visibleTarget = selectedOption.data('visible');
+                    const inputWrap = selectedOption.parents('.input-wrap');
+
+                    $('.input').removeClass('show');
+
+                    if (visibleTarget) {
+                        inputWrap.find('.' + visibleTarget).addClass('show');
+                    }
                 });
 
                 function toggleOptions() {
@@ -304,7 +315,7 @@ $(function () {
             $('.input input:disabled').each((idx, el) => {
                 $(el).parents('.input').addClass('disabled');
             });
-        }
+        },
     }
 
     //실행

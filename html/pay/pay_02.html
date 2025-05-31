@@ -11,7 +11,7 @@
         <link rel="icon" type="image/png" sizes="512x512" href="../../assets/img/favicon_512.png" />
         <link rel="icon" type="image/png" sizes="192x192" href="../../assets/img/favicon_192.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon_32.png" />
-        <title>장바구니 &gt; 이지톡</title>
+        <title>결제하기 &gt; 이지톡</title>
         <!-- css -->
         <link href="../../assets/css/swiper-bundle.min.css" type="text/css" rel="stylesheet" />
         <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
@@ -25,7 +25,7 @@
     </head>
 
     <body>
-        <div class="wrap cart">
+        <div class="wrap pay">
             <div class="container">
                 <!-- 상단고정배너 영역 -->
                 <div class="fixed-top-banner">
@@ -97,71 +97,96 @@
                     <section class="sec-kv">
                         <div class="inner">
                             <div class="page-tit">
-                                <h2 class="tit">장바구니</h2>
+                                <p class="sub-tit">주문이 정상적으로 완료되었습니다.</p>
+                                <p class="desc">
+                                    <strong>2025.00.00</strong> 주문하신 상품의 <br/>
+                                    주문번호는 <strong class="c-green">123456789</strong> 입니다.
+                                </p>
                             </div>
                             <div class="info-box-wrap flex">
                                 <div class="info-box">
                                     <div class="box">
+                                        <div class="box-top">
+                                            <p class="tit">주문번호</p>
+                                            <p class="desc ml-auto">12456789</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="box">
                                         <div class="box-top line">
-                                            <div class="check">
-                                                <input type="checkbox" id="allCheck" name="allCheck">
-                                                <label for="allCheck">전체선택 <span class="c-gray2">(2/2)</span></label>
-                                            </div>
-                                            <button type="button" class="btn line gray2 small">선택삭제</button>
+                                            <p class="tit">배송 정보</p>
                                         </div>
                                         <div class="box-con">
-                                            <ul class="product-check-list">
-                                                <li class="item">
-                                                    <div class="check">
-                                                        <input type="checkbox" id="chk1-1" name="chk1">
-                                                        <label for="chk1-1"><span class="blind">이지톡 베이직</span></label>
-                                                    </div>
-                                                    <div class="product-info">
-                                                        <div class="img-wrap">
-                                                            <img src="../../assets/img/content/shop-intro-thumb1.jpg" alt="" />
-                                                        </div>
-                                                        <p class="tit">이지톡 베이직</p>
-                                                        <ul class="option-list">    
-                                                            <li>
-                                                                <p class="txt">이지톡 베이직 4주 (3통 23만원) <strong class="count">1개</strong></p>
-                                                                <button type="button" class="btn-del"><span class="blind">삭제</span></button>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </li>
-                                                <li class="item">
-                                                    <div class="check">
-                                                        <input type="checkbox" id="chk1-2" name="chk1">
-                                                        <label for="chk1-2"><span class="blind">이지톡 베이직</span></label>
-                                                    </div>
-                                                    <div class="product-info">
-                                                        <div class="img-wrap">
-                                                            <img src="../../assets/img/content/shop-intro-thumb1.jpg" alt="" />
-                                                        </div>
-                                                        <p class="tit">이지톡 프리미엄</p>
-                                                        <ul class="option-list">    
-                                                            <li>
-                                                                <p class="txt">이지톡 프리미엄 4주 (3통 33만원) <strong class="count">1개</strong></p>
-                                                                <button type="button" class="btn-del"><span class="blind">삭제</span></button>
-                                                            </li>
-                                                            <li>
-                                                                <p class="txt">이지톡 프리미엄 8주 (6통 31.3만원) <strong class="count">1개</strong></p>
-                                                                <button type="button" class="btn-del"><span class="blind">삭제</span></button>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </li>
-                                            </ul>
+                                            <div class="txt-info">
+                                                <div class="tit-wrap"><strong class="tit">홍길동</strong></div>
+                                                <ul class="desc">
+                                                    <li>010-0000-0000</li>
+                                                    <li>서울 영등포구 양평로1길 00-0 (양평동3가)</li>
+                                                    <li>101동 102호</li>
+                                                    <li>(00000)</li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="input-wrap mt-3">
+                                                <p class="label-txt">배송메모</p>
+                                                <p class="input-txt">공동현관 비밀번호 #1234입니다. 문앞에 놔주세요.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="box">
+                                        <div class="box-top line">
+                                            <p class="tit">결제정보</p>
+                                        </div>
+                                        <div class="box-con">
+                                            <div class="txt-info">
+                                                <div class="tit-wrap"><strong class="tit">신용카드</strong></div>
+                                                <ul class="desc">
+                                                    <li>0000-0000-0000-0000</li>
+                                                    <li>일시불</li>
+                                                    <li>승인일시: 2025.00.00 12:00</li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="info-box">
                                     <div class="box">
-                                        <div class="box-top">
-                                            <p class="tit">결제 예상 금액</p>
-                                        </div>
                                         <div class="box-con">
-                                            <ul class="summary-list">
+                                            <ul class="product-list">
+                                                <li>
+                                                    <div class="img-wrap">
+                                                        <img src="../../assets/img/content/shop-intro-thumb1.jpg" alt="" />
+                                                    </div>
+                                                    <div class="txt-wrap">
+                                                        <p class="tit">이지톡 베이직</p>
+                                                        <p class="desc">이지톡 베이직 4주 (3통 23만원) <strong class="count">1개</strong></p>
+                                                        <p class="desc">배송비 무료 <strong class="price">230,000원</strong></p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="img-wrap">
+                                                        <img src="../../assets/img/content/shop-intro-thumb2.jpg" alt="" />
+                                                    </div>
+                                                    <div class="txt-wrap">
+                                                        <p class="tit">이지톡 프리미엄</p>
+                                                        <p class="desc">이지톡 프리미엄 4주 (3통 33만원) <strong class="count">1개</strong></p>
+                                                        <p class="desc">배송비 무료 <strong class="price">330,000원</strong></p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="img-wrap">
+                                                        <img src="../../assets/img/content/shop-intro-thumb1.jpg" alt="" />
+                                                    </div>
+                                                    <div class="txt-wrap">
+                                                        <p class="tit">이지톡 프리미엄</p>
+                                                        <p class="desc">이지톡 프리미엄 8주 (6통 31.3만원) <strong class="count">1개</strong></p>
+                                                        <p class="desc">배송비 무료 <strong class="price">313,000원</strong></p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <ul class="summary-list line">
                                                 <li>
                                                     <strong>수량</strong>
                                                     <span>3개</span>
@@ -176,23 +201,24 @@
                                                 </li>
                                             </ul>
                                             <div class="total">
-                                                <p>총 결제 예상 금액</p>
+                                                <p>총 결제 금액</p>
                                                 <p>800,000원</p>
-                                            </div>
-                                            <div class="btn-wrap pc-only">
-                                                <a href="#!" class="btn large black"><strong>800,000원</strong> &nbsp;구매하기</a>
                                             </div>
                                         </div>
                                     </div>
+                                    <span class="btn-wrap pc-only">
+                                        <a href="#!" class="btn large primary">홈으로 이동</a>
+                                    </span>
                                 </div>
                             </div>
                         </div>
-                    </section><div class="btn-wrap btn-fixed btn-scroll mob-only">
-                        <a href="#!" class="btn large black"><strong>800,000원</strong> &nbsp;구매하기</a>
-                    </div>
+                    </section>
+                    <div class="btn-wrap btn-fixed btn-scroll mob-only"><a href="#!" class="btn large primary">홈으로 이동</a></div>
                 </div>
                 <!--//컨텐츠 영역 -->
             </div>
+
         </div>
     </body>
 </html>
+ 

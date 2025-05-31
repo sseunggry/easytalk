@@ -68,6 +68,12 @@
             margin-bottom: 0;
         }
     }
+    .input-txt{
+        padding: 1.8rem 1.6rem;
+        font-size: 1.6rem;
+        border-radius: 1.2rem;
+        background-color: var(--color-gray-1);
+    }
     .input{
         display: flex;
         align-items: center;
@@ -227,6 +233,11 @@
         }
         .input-tit{
             margin-bottom: 2.78vw;
+        }
+        .input-txt{
+            padding: 5.00vw 4.44vw;
+            font-size: 4.44vw;
+            border-radius: 3.33vw;
         }
         &.error{
             .error-msg{

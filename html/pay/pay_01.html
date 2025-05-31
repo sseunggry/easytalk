@@ -192,7 +192,7 @@
                                                         <option value="value4" data-visible="write">직접입력</option>
                                                     </select>
                                                 </div>
-                                                <div class="input write">
+                                                <div class="input write visible">
                                                     <input type="text" id="inpName" placeholder="" value="">
                                                 </div>
                                             </div>
@@ -277,7 +277,7 @@
                                                                     <input type="text" id="inpName" placeholder="" value="00000">
                                                                 </div>
                                                                 <div class="btn-wrap">
-                                                                    <button type="button" class="btn black large">주소찾기</button>
+                                                                    <button type="button" class="btn black large" data-modal="modalAddressFind">주소찾기</button>
                                                                 </div>
                                                             </div>
                                                             <div class="input-wrap">
@@ -407,6 +407,7 @@
                 <!--//컨텐츠 영역 -->
             </div>
 
+            <!-- [D] 팝업 - 배송지 삭제 -->
             <div class="modal alert center" id="modalAddressDelete">
                 <div class="dimd"></div>
                 <div class="modal-content">
@@ -420,6 +421,26 @@
                     <button type="button" class="btn-close"></button>
                 </div>
             </div>
+            <!-- //[D] 팝업 - 배송지 삭제 -->
+
+            <!-- [D] 팝업 - 주소 찾기 -->
+            <div class="modal alert full open" id="modalAddressFind">
+                <div class="dimd"></div>
+                <div class="modal-content">
+                    <div class="modal-tit">
+                        <h2>주소찾기</h2>
+                    </div>
+
+                    <!-- 주소 찾기 -->
+                    <div class="serch">
+                        
+                    </div>
+                    <!-- 주소 찾기 -->
+
+                    <button type="button" class="btn-close"></button>
+                </div>
+            </div>
+            <!-- //[D] 팝업 - 주소 찾기 -->
         </div>
     </body>
 </html>

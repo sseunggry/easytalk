@@ -82,6 +82,20 @@
             min-width: 42rem;
             max-height: 80%;
             border-radius: 2.4rem;
+
+            &:has(.modal-tit){
+                padding: 0;
+            }
+        }
+
+        .modal-tit{
+            padding: 2rem 4rem;
+            font-size: 2rem;
+            text-align: center;
+            border-bottom: 0.1rem solid var(--color-border-basic);
+            h2{
+                font-weight: 700;
+            }
         }
 
         .txt-wrap{
@@ -213,6 +227,11 @@
             .modal-content{
                 padding: 11.11vw 5.56vw 8.33vw;
                 border-radius: 5.56vw 5.56vw 0 0;
+            }
+            .modal-tit{
+                padding: 5.56vw 11.11vw;
+                font-size: 5.56vw;
+                border-bottom-width: 0.28vw;
             }
 
             .txt-wrap{
