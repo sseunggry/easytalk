@@ -17,7 +17,6 @@
         <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
         <link href="../../assets/css/common.css" type="text/css" rel="stylesheet" />
         <link href="../../assets/css/style.css" type="text/css" rel="stylesheet" />
-        <link href="../../assets/css/mypage.css" type="text/css" rel="stylesheet" />
         <!-- script -->
         <script defer src="../../assets/js/jquery-2.2.4.min.js"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
@@ -26,7 +25,7 @@
     </head>
 
     <body>
-        <div class="wrap cart">
+        <div class="wrap mypage">
             <div class="container">
                 <!-- 상단고정배너 영역 -->
                 <div class="fixed-top-banner">
@@ -98,12 +97,12 @@
                     <section class="sec-kv">
                         <div class="inner">
                             <div class="page-tit">
-                                <h2 class="tit mb-6">마이페이지</h2>
+                                <h2 class="tit">마이페이지</h2>
                             </div>
                             <div class="mypage-info flex">
                                 <ul class="menu-list">
                                     <li class="active"><a href="#">주문/배송 조회</a></li>
-                                    <li><a href="#">정보 수정</a></li>
+                                    <li><a href="javascript:;" onclick="modalOpen('modalUserInfo')">정보 수정</a></li>
                                     <li><a href="javascript:;" onclick="modalOpen('modalUserWithdraw')">회원탈퇴</a></li>
                                 </ul>
 
@@ -333,33 +332,48 @@
             </div>
         </div>
 
-        <!--//정보수정 -->
-        <div class="modal alert center open" id="modalUserInfo">
+        <!--정보수정 -->
+        <div class="modal alert full" id="modalUserInfo">
             <div class="dimd"></div>
             <div class="modal-content">
-                <div class="txt-wrap">
-                    <p class="tit">정보수정</p>
-
-                    <div class="form-list">
+                <div class="info-wrap">
+                    <div class="txt-wrap">
+                        <p class="tit">정보수정</p>
+                    </div>
+                    <div class="profile-img">
+                        <img src="../../assets/img/icon/ico-profile.jpg" alt="" />
+                        <button type="button" class="btn-picture"></button>
+                    </div>
+                    <div class="form-list gap-xlagre">
                         <div class="input-wrap">
+                            <div class="input-tit flex justify-between">
+                                <label for="inpName" class="label-txt required">본인인증</label>
+                                <button type="button" class="btn line gray2 xxsmall">재인증</button>
+                            </div>
+                            <!-- [D] 휴대폰 인증 전일 경우 -->
+                            <button type="button" class="btn line green xxsmall">휴대폰 인증</button>
+                            <!-- //[D] 휴대폰 인증 전일 경우 -->
+                            <!-- [D] 휴대폰 인증 완료일 경우 -->
+                            <p class="complete"><i class="ico-complete"></i>인증완료</p>
+                            <!-- //[D] 휴대폰 인증 완료일 경우 -->
                             <div class="input">
-                                <input type="text" id="inpEmail" value="abc123@kakao.com">
+                                <input type="text" id="inpEmail" value="abc123@kakao.com" disabled>
                             </div>
                         </div>
                         <div class="input-wrap">
-                            <label for="inpName" class="label-txt">이름</label>
+                            <label for="inpName" class="label-txt required">이름</label>
                             <div class="input">
-                                <input type="text" id="inpName" placeholder="" value="홍길동">
+                                <input type="text" id="inpName" placeholder="" value="홍길동" disabled>
                             </div>
                         </div> 
                         <div class="input-wrap">
-                            <label for="inpPhone" class="label-txt">휴대폰 번호</label>
+                            <label for="inpPhone" class="label-txt required">휴대폰 번호</label>
                             <div class="input">
-                                <input type="text" id="inpPhone" placeholder="" value="010-0000-0000">
+                                <input type="text" id="inpPhone" placeholder="" value="010-0000-0000" disabled>
                             </div>
                         </div>
                         <div class="input-wrap">
-                            <label for="inpAddr01" class="label-txt">휴대폰 번호</label>
+                            <label for="inpAddr01" class="label-txt required">휴대폰 번호</label>
                             <div class="input">
                                 <input type="text" id="inpAddr01" placeholder="" value="서울 마포구 와우산로3길 2">
                             </div>
@@ -368,26 +382,32 @@
                             </div>
                         </div>
                         <div class="input-wrap">
-                            <label for="inpBirth" class="label-txt">생년월일</label>
+                            <label for="inpBirth" class="label-txt required">생년월일</label>
                             <div class="input">
-                                <input type="text" id="inpBirth" placeholder="" value="2000.00.00">
+                                <input type="text" id="inpBirth" placeholder="" value="2000.00.00" disabled>
                             </div>
                         </div>
                         <div class="input-wrap">
-                            <label class="label-txt">개인정보 제 3자 제공 동의</label>
-                            <div class="input">
-                                
+                            <p class="label-txt required">개인정보 제 3자 제공 동의</p>
+                            <div class="check">
+                                <input type="checkbox" id="check1" name="check1">
+                                <label for="check1">개인정보 제3자 제공 동의</label>
                             </div>
                         </div>
                         <div class="input-wrap">
-                            <label class="label-txt">이벤트/혜택 소식 수신 여부</label>
-                            <div class="input">
-                                
+                            <p class="label-txt required">이벤트/혜택 소식 수신 여부</p>
+                            <div class="check">
+                                <input type="checkbox" id="sms1" name="sms1">
+                                <label for="sms1">SMS  수신 동의</label>
                             </div>
                         </div>
                     </div>
+                    <div class="btn-wrap">
+                        <button type="button" class="btn large black">확인</button>
+                    </div>
                 </div>
                 <div class="btn-wrap flex-column">
+                    <p class="btn-tit">소셜 로그인</p>
                     <button type="button" class="btn large kakao">카카오 연결하기</button>
                     <button type="button" class="btn large naver">네이버 연결하기</button>
                 </div>
@@ -396,7 +416,7 @@
         </div>
         <!--//정보수정 -->
 
-        <!--//회원탈퇴 -->
+        <!--회원탈퇴 -->
         <div class="modal alert center" id="modalUserWithdraw">
             <div class="dimd"></div>
             <div class="modal-content">
@@ -416,5 +436,20 @@
             </div>
         </div>
         <!--//회원탈퇴 -->
+
+        <!--본인인증 -->
+        <div class="modal alert center" id="modalUserAlert">
+            <div class="dimd"></div>
+            <div class="modal-content">
+                <div class="txt-wrap">
+                    <p class="sub-tit">본인인증으로 저장된 회원정보는 <br/> 재인증을 통해서만 수정이 가능합니다.</p>
+                </div>
+                <div class="btn-wrap">
+                    <button type="button" class="btn large primary" onclick="modalClose(this)">확인</button>
+                </div>
+                <button type="button" class="btn-close"></button>
+            </div>
+        </div>
+        <!--//본인인증 -->
     </body>
 </html>

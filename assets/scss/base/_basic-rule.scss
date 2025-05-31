@@ -82,9 +82,19 @@ $total: 10;
 img{width: 100%;}
 .txt-al-center{text-align: center !important;}
 .c-gray{color: var(--color-gray-4) !important;}
+.c-gray2{color: var(--color-gray-6) !important;}
 .pc-only{display: flex !important;}
 .mob-only{display: none !important;}
 
 .flex{display: flex;}
-.flex.direction{flex-direction: column;}
+.justify-between{justify-content: space-between;}
+.align-center{align-items: center;}
+.direction{flex-direction: column;}
 .order1{order: 1;}
+
+.ml-auto{margin-left: auto;}
+
+@media screen and (max-width: 720px) {
+    .pc-only{display: none !important;}
+    .mob-only{display: flex !important;}
+}

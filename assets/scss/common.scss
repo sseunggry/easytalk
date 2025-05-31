@@ -550,6 +550,7 @@ section{
     }
     .box-top{
         display: flex;
+        align-items: center;
 
         .tit{
             font-size: 1.8rem;
@@ -558,6 +559,13 @@ section{
 
             span{
                 font-weight: 500;
+            }
+        }
+        .desc{
+            font-size: 1.6rem;
+
+            &.flex-end{
+                justify-items: flex-end;
             }
         }
         &.line{
@@ -667,7 +675,7 @@ section{
         .input-list{
             margin: 1.2rem 0;
         }
-        .address-info{
+        .txt-info{
             .tit-wrap{
                 display: flex;
                 align-items: center;
@@ -706,7 +714,7 @@ section{
                         }
                     }
                 }
-                .address-info{
+                .txt-info{
                     .btn-wrap{
                         position: absolute;
                         top: 0;
@@ -723,7 +731,7 @@ section{
                 margin: 2.4rem 0;
                 width: 100%;
                 height: 0.1rem;
-                background-color: var(--color-border-basic);
+                background-color: var(--color-border-light);
             }
             li{
                 display: flex;
@@ -737,34 +745,99 @@ section{
                     margin-top: 1.6rem;
                 }
             }
+            &.line{
+                margin-top: 2rem;
+                padding-top: 2rem;
+                border-top: 0.1rem solid var(--color-border-light);
+            }
         }
         .total{
             display: flex;
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
-            margin-bottom: 2.4rem;
             font-size: 2rem;
             font-weight: 700;
+
+            + .btn-wrap{
+                margin-top: 2.4rem;
+            }
         }
-    }
-    .btn-wrap{
-        .btn.large.primary{
-            &:disabled{
-                background-color: rgba(255, 226, 90, 0.5);
+        .product-check-list{
+            .item{
+                position: relative;
+                margin-top: 1.6rem;
+                padding-left: 2.8rem;
+
+                .check{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+
+                    label{
+                        width: 100%;
+                        height: 100%;
+
+                        &::before{
+                            align-self: flex-start;
+                        }
+                    }
+                }
+
+                .product-info{
+                    display: flex;
+                    gap: 0.8rem;
+                    padding-top: 0.3rem;
+                    padding-left: 0.4rem;
+
+                    .img-wrap{
+                        width: 10rem;
+                    }
+                    .txt-wrap{
+                        flex: 1;
+
+                        .tit{
+                            font-size: 1.6rem;
+                            font-weight: 500;
+                        }
+                        .list{
+                            li{
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                margin-top: 0.8rem;
+                                padding: 1.2rem 1.6rem;
+                                background-color: var(--color-yellow-0);
+
+                                .txt{
+                                    font-size: 1.4rem;
+
+                                    strong{
+                                        display: inline-block;
+                                        margin-left: 0.4rem;
+                                        font-weight: 700;
+                                    }
+                                }
+
+                                .btn-del{
+                                    position: relative;
+                                    width: 1.6rem;
+                                    height: 1.6rem;
+                                    @include bg('icon/ico-del.png');
+                                    z-index: 0;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
 }
 
-@media screen and (max-width: 960px) {
-
-}
-
 @media screen and (max-width: 720px) {
-    .pc-only{display: none !important;}
-    .mob-only{display: flex !important;}
-
     .header{
         padding: 1.6rem 0;
 
@@ -934,6 +1007,34 @@ section{
     }
 
     .info-box{
+        .box{
+            padding: 2.4rem 0 0;
+            border: none;
+
+            + .box{
+                margin-top: 0;
+            }
+
+            &::after{
+                content: '';
+                display: block;
+                margin: 2.4rem -2rem 0;
+                width: calc(100% + 4rem);
+                height: 0.6rem;
+                background-color: var(--color-gray-2);
+            }
+        }
+        &:last-of-type{
+            .box{
+                &:last-of-type{
+                    padding-bottom: 2.4rem;
+                    &::after{
+                        display: none;
+                    }
+                }
+            }
+        }
+
         .box-con{
             .product-list{
                 .img-wrap{
@@ -1213,12 +1314,19 @@ section{
 
     .info-box {
         .box {
-            padding: 6.67vw;
-            border-radius: 2.78vw;
-            border-width: 0.28vw;
-        
-            + .box, + .btn-wrap {
-                margin-top: 5.56vw;
+            padding-top: 6.67vw;
+
+            &::after{
+                margin: 6.67vw -6.67vw 0;
+                width: calc(100% + 11.11vw);
+                height: 1.67vw;
+            }
+        }
+        &:last-of-type{
+            .box{
+                &:last-of-type{
+                    padding-bottom: 2.4rem;
+                }
             }
         }
         
@@ -1265,7 +1373,7 @@ section{
                     margin-left: 2.22vw;
             
                     .desc {
-                    font-size: 3.33vw;
+                        font-size: 3.33vw;
                     }
                 }
             }
@@ -1296,7 +1404,7 @@ section{
                 margin: 3.33vw 0;
             }
         
-            .address-info {
+            .txt-info {
                 .tit-wrap {
                     gap: 1.11vw;
                     height: 8.89vw;
@@ -1340,12 +1448,65 @@ section{
                         margin-top: 4.44vw;
                     }
                 }
+
+                &.line{
+                    margin-top: 5.56vw;
+                    padding-top: 5.56vw;
+                    border-top-width: 0.28vw;
+                }
             }
         
             .total {
-                margin-bottom: 6.67vw;
                 font-size: 5.56vw;
+
+                + .btn-wrap{
+                    margin-top: 6.67vw;
+                }
             }
+
+            .product-check-list {
+                .item {
+                    margin-top: 4.44vw;
+                    padding-left: 7.78vw;
+                
+                    .product-info {
+                        gap: 2.22vw;
+                        padding-top: 0.83vw;
+                        padding-left: 1.11vw;
+                
+                        .img-wrap {
+                            width: 27.78vw;
+                        }
+                
+                        .txt-wrap {
+                            .tit {
+                                font-size: 4.44vw;
+                            }
+                    
+                            .list {
+                                li {
+                                    margin-top: 2.22vw;
+                                    padding: 3.33vw 4.44vw;
+                        
+                                    .txt {
+                                        font-size: 3.89vw;
+                        
+                                        strong {
+                                            margin-left: 1.11vw;
+                                        }
+                                    }
+                        
+                                    .btn-del {
+                                        width: 4.44vw;
+                                        height: 4.44vw;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+              
         }
     }
 }

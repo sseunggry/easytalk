@@ -9,6 +9,9 @@
     &.gap-lagre{
         gap: 2.4rem;
     }
+    &.gap-xlagre{
+        gap: 3rem;
+    }
 }
 
 /* input */
@@ -56,6 +59,15 @@
             }
         }
     }
+    .input-tit{
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        .label-txt{
+            margin-bottom: 0;
+        }
+    }
     .input{
         display: flex;
         align-items: center;
@@ -69,8 +81,13 @@
         background-color: var(--input-bg);
         border: 0.2rem solid var(--input-color-border);
 
-        &:focus-within{
+        &:focus-within:not(:read-only){
             border-color: var(--input-color-border-active);
+        }
+        &.disabled{
+            color: var(--color-gray-6);
+            background-color: var(--color-gray-3);
+            border-color: var(--color-gray-3);
         }
 
         input[type="text"], input[type="tel"]{
@@ -111,6 +128,12 @@
                 height: 1.4rem;
                 @include bg('icon/ico-error.png');
             }
+        }
+    }
+
+    &:not(.flex){
+        .input + .input{
+            margin-top: 1rem;
         }
     }
 
@@ -173,6 +196,9 @@
         &.gap-lagre{
             gap: 6.67vw;
         }
+        &.gap-xlagre{
+            gap: 8.33vw;
+        }
     }
     
     /* input */
@@ -199,6 +225,9 @@
         .input{
             border-width: 0.56vw;
         }
+        .input-tit{
+            margin-bottom: 2.78vw;
+        }
         &.error{
             .error-msg{
                 margin-top: 1.67vw;
@@ -209,6 +238,12 @@
                     width: 3.89vw;
                     height: 3.89vw;
                 }
+            }
+        }
+
+        &:not(.flex){
+            .input + .input{
+                margin-top: 2.78vw;
             }
         }
     

@@ -19,6 +19,7 @@ $(function () {
             uiCommon.aniCounter();
             uiCommon.tabInit();
             uiCommon.tabBtnClick();
+            uiCommon.inputDisabled();
 
             // let number = $('.ani-counter').text().replace(/\D/g, '');
             // $('.ani-counter').rollingNum({
@@ -299,6 +300,11 @@ $(function () {
                 tabFn(e.target);
              });
         },
+        inputDisabled: () => {
+            $('.input input:disabled').each((idx, el) => {
+                $(el).parents('.input').addClass('disabled');
+            });
+        }
     }
 
     //실행
@@ -327,5 +333,4 @@ function tabFn(target){
 
     tab.addClass('active').siblings().removeClass('active');
     tabPnls.eq(tabIdx).addClass('show').siblings().removeClass('show');
-
 }

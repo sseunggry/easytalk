@@ -55,6 +55,7 @@
     --btn-color-line: var(--color-black);
     --btn-color-line-gray: var(--color-gray-3);
     --btn-color-line-gray2: var(--color-gray-3-2);
+    --btn-color-line-green: var(--color-green-1);
     --btn-bg-primary: var(--color-yellow-3);
     --btn-bg-secondary: var(--color-yellow-2);
     --btn-bg-black: var(--color-black);
@@ -115,9 +116,16 @@
         font-size: var(--btn-fz-large);
         border-radius: var(--btn-border-radius-large);
     }
+    &.full{
+        width: 100%;
+    }
 
     // color
     &.primary{
+        color: var(--btn-color-text-black);
+        background-color: var(--btn-bg-primary);
+    }
+    &.primary2{
         color: var(--btn-color-text-black);
         background-color: var(--btn-bg-primary);
     }
@@ -147,6 +155,10 @@
         }
         &.gray2{
             border-color: var(--btn-color-line-gray2);
+        }
+        &.green{
+            color: var(--btn-color-line-green);
+            border-color: var(--btn-color-line-green);
         }
     }
     &.kakao{
@@ -184,6 +196,11 @@
     &:disabled{
         color: var(--btn-color-text-disabled);
         background-color: var(--btn-bg-disabled);
+
+        &.primary2{
+            opacity: 0.5;
+            background-color: var(--btn-bg-primary);
+        }
     }
 }
 
@@ -228,6 +245,7 @@
         --btn-height-small: 10.00vw;
         --btn-height-medium: 13.33vw;
         --btn-height-large: 15.56vw;
+        --btn-border-radius-xxsmall: 1.67vw;
         --btn-border-radius-xsmall: 1.67vw;
         --btn-border-radius-small: 1.67vw;
         --btn-border-radius-medium: 1.67vw;

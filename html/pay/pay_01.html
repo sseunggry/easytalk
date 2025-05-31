@@ -11,7 +11,7 @@
         <link rel="icon" type="image/png" sizes="512x512" href="../../assets/img/favicon_512.png" />
         <link rel="icon" type="image/png" sizes="192x192" href="../../assets/img/favicon_192.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon_32.png" />
-        <title>결제기 &gt; 이지톡</title>
+        <title>결제하기 &gt; 이지톡</title>
         <!-- css -->
         <link href="../../assets/css/swiper-bundle.min.css" type="text/css" rel="stylesheet" />
         <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
@@ -103,7 +103,7 @@
                                 <div class="info-box">
                                     <div class="box">
                                         <div class="box-top line">
-                                            <p class="tit">주문 상품 정보 <span class="c-gray">3개</span></p>
+                                            <p class="tit">주문 상품 정보 <span class="c-gray2">3개</span></p>
                                         </div>
                                         <div class="box-con">
                                             <ul class="product-list">
@@ -171,7 +171,7 @@
                                             <button type="button" class="btn line gray2 xxsmall">수정하기</button>
                                         </div>
                                         <div class="box-con">
-                                            <div class="address-info">
+                                            <div class="txt-info">
                                                 <div class="tit-wrap"><strong class="tit">홍길동</strong></div>
                                                 <ul class="desc">
                                                     <li>010-0000-0000</li>
@@ -206,13 +206,13 @@
                                                 </div>
                                                 <div class="tab-pnls">
                                                     <div class="tab-pnl">
-                                                        <div class="address-list">
-                                                            <div class="item">
+                                                        <ul class="address-list">
+                                                            <li class="item">
                                                                 <div class="radio2">
                                                                     <input type="radio" id="radio1" name="payRadio">
                                                                     <label for="radio1"><span class="blind">홍길동</span></label>
                                                                 </div>
-                                                                <div class="address-info">
+                                                                <div class="txt-info">
                                                                     <div class="tit-wrap">
                                                                         <strong class="tit">홍길동</strong>
                                                                         <span class="badge-wrap">
@@ -228,16 +228,16 @@
                                                                     </ul>
                                                                     <div class="btn-wrap">
                                                                         <button type="button" class="btn line gray2 xxsmall">수정</button>
-                                                                        <button type="button" class="btn line gray2 xxsmall">삭제</button>
+                                                                        <button type="button" class="btn line gray2 xxsmall" data-modal="modalAddressDelete">삭제</button>
                                                                     </div>
                                                                 </div>
-                                                            </div> 
-                                                            <div class="item">
+                                                            </li> 
+                                                            <li class="item">
                                                                 <div class="radio2">
                                                                     <input type="radio" id="radio2" name="payRadio">
                                                                     <label for="radio2"><span class="blind">회사</span></label>
                                                                 </div>
-                                                                <div class="address-info">
+                                                                <div class="txt-info">
                                                                     <div class="tit-wrap">
                                                                         <strong class="tit">회사</strong>
                                                                         <span class="badge-wrap">
@@ -252,11 +252,11 @@
                                                                     </ul>
                                                                     <div class="btn-wrap">
                                                                         <button type="button" class="btn line gray2 xxsmall">수정</button>
-                                                                        <button type="button" class="btn line gray2 xxsmall">삭제</button>
+                                                                        <button type="button" class="btn line gray2 xxsmall" data-modal="modalAddressDelete">삭제</button>
                                                                     </div>
                                                                 </div>
-                                                            </div> 
-                                                        </div>
+                                                            </li> 
+                                                        </ul>
                                                     </div>
                                                     <div class="tab-pnl">
                                                         <div class="check">
@@ -377,7 +377,7 @@
                                             <div class="check-top">
                                                 <div class="check">
                                                     <input type="checkbox" id="allAgree" name="allAgree">
-                                                    <label for="allAgree">전체동의 <span class="c-gray">만 14세 이상입니다.</span></label>
+                                                    <label for="allAgree">전체동의 <span class="c-gray2">만 14세 이상입니다.</span></label>
                                                 </div>
                                             </div>
                                             <div class="check-sub">
@@ -389,17 +389,36 @@
                                         </div>
                                     </div>
 
-                                    <div class="btn-wrap">
-                                        <button type="button" class="btn large primary" disabled>
+                                    <span class="btn-wrap pc-only">
+                                        <button type="button" class="btn large primary2" disabled>
                                             <strong>800,000원</strong> &nbsp;결제하기
                                         </button>
-                                    </div>
+                                    </span>
                                 </div>
                             </div>
                         </div>
                     </section>
+                    <div class="btn-wrap btn-fixed btn-scroll mob-only">
+                        <button type="button" class="btn large primary2" disabled>
+                            <strong>800,000원</strong> &nbsp;결제하기
+                        </button>
+                    </div>
                 </div>
                 <!--//컨텐츠 영역 -->
+            </div>
+
+            <div class="modal alert center" id="modalAddressDelete">
+                <div class="dimd"></div>
+                <div class="modal-content">
+                    <div class="txt-wrap">
+                        <p class="sub-tit">배송지를 삭제하시겠습니까?</p>
+                    </div>
+                    <div class="btn-wrap">
+                        <button type="button" class="btn large black">네, 삭제할래요</button>
+                        <button type="button" class="btn large primary" onclick="modalClose(this)">아니오</button>
+                    </div>
+                    <button type="button" class="btn-close"></button>
+                </div>
             </div>
         </div>
     </body>

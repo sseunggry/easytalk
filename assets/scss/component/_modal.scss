@@ -79,6 +79,8 @@
             transform: translate(-50%, -50%);
             padding: 6rem 4rem;
             width: fit-content;
+            min-width: 42rem;
+            max-height: 80%;
             border-radius: 2.4rem;
         }
 
@@ -91,6 +93,11 @@
                 font-size: 2.4rem;
                 font-weight: 700;
             }
+            .sub-tit{
+                font-size: 2rem;
+                font-weight: 500;
+                color: var(--color-black);
+            }
             .desc{
                 margin-top: 1.6rem;
                 font-size: 1.8rem;
@@ -101,7 +108,6 @@
                 margin-top: 3.5rem;
             }
         }
-
         .btn-close{
             position: absolute;
             top: 2rem;
@@ -109,6 +115,13 @@
             width: 2.4rem;
             height: 2.4rem;
             @include bg('icon/ico-close.png');
+        }
+        &.center{
+            .btn-wrap{
+                .btn{
+                    min-width: 13.6rem;
+                }
+            }
         }
     }
 }
@@ -161,9 +174,21 @@
                     bottom: initial;
                     transform: translate(-50%, -50%);
                     padding: 6rem 4rem;
-                    width: fit-content;
-                    min-width: 30rem;
+                    width: calc(100% - 40px);
+                    min-width: auto;
                     border-radius: 2.4rem;
+                }
+            }
+            &.full{
+                .modal-content{
+                    max-height: 100%;
+                    height: 100%;
+                    min-width: 100%;
+                    border-radius: 0;
+                    transition: none;
+                }
+                .btn-close{
+                    display: block;
                 }
             }
         }
@@ -195,6 +220,9 @@
                     font-size: 5.56vw;
                     word-break: keep-all;
                 }
+                .sub-tit{
+                    font-size: 5.56vw;
+                }
                 .desc{
                     margin-top: 4.44vw;
                     font-size: 4.44vw;
@@ -210,15 +238,21 @@
                 right: 5.56vw;
                 width: 6.67vw;
                 height: 6.67vw;
+                display: none;
             }
 
             &.center{
                 .modal-content{
                     padding: 11.11vw 5.56vw 8.33vw;
                     border-radius: 5.56vw;
-                    padding: 16.67vw 11.11vw;
-                    min-width: 83.33vw;
+                    padding: 8.33vw 5.56vw 5.56vw;
+                    width: calc(100% - 11.11vw);
                     border-radius: 6.67vw;
+                }
+                .btn-wrap{
+                    .btn{
+                        min-width: 37.78vw;
+                    }
                 }
             }
         }
