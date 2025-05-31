@@ -23,9 +23,10 @@
     --input-text-size: 1.6rem;
     --input-text-button-gap: 0.6rem;
     --input-padding: 0 1.6rem;
-    --input-height: 5.5rem;
+    --input-height: 5.6rem;
     --input-border-radius: 1.2rem;
-    --input-color-border: var(--color-white);
+    --input-color-border: var(--color-gray-1);
+    // --input-color-border: var(--color-white);
     --input-color-border-active: var(--color-yellow-3);
     --input-color-border-error: var(--color-red);
 
@@ -182,7 +183,7 @@
         --input-text-size: 4.44vw;
         --input-text-button-gap: 1.67vw;
         --input-padding: 0 4.44vw;
-        --input-height: 15.28vw;
+        --input-height: 15.56vw;
         --input-border-radius: 3.33vw;
     
         .label-txt{
