@@ -33,6 +33,10 @@
         }
     }
 }
+.check-sub{
+    margin-top: 1.2rem;
+    padding-left: 2rem;
+}
 /* checkbox */
 .checkbox, .radio{
     --check-label-gap: 1.6rem;
@@ -147,6 +151,25 @@
 }
 
 @media screen and (max-width: 360px) {
+    .check{
+        label{
+            gap: 1.11vw;
+            font-size: 4.44vw;
+    
+            &::before{
+                margin: 0.83vw;
+                width: 5.00vw;
+                height: 5.00vw;
+                border-radius: 1.39vw;
+                border-width: 0.56vw;
+            }
+        }
+    }
+    .check-sub{
+        margin-top: 3.33vw;
+        padding-left: 5.56vw;
+    }
+
     .checkbox, .radio{
         --check-label-gap: 4.44vw;
         --check-label-padding: 0 6.11vw;

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/favicon_180.png" />
+        <link rel="icon" type="image/png" sizes="512x512" href="../../assets/img/favicon_512.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="../../assets/img/favicon_192.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon_32.png" />
+        <title>결제기 &gt; 이지톡</title>
+        <!-- css -->
+        <link href="../../assets/css/swiper-bundle.min.css" type="text/css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
+        <link href="../../assets/css/common.css" type="text/css" rel="stylesheet" />
+        <link href="../../assets/css/style.css" type="text/css" rel="stylesheet" />
+        <!-- script -->
+        <script defer src="../../assets/js/jquery-2.2.4.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script defer src="../../assets/js/common.js"></script>
+    </head>
+
+    <body>
+        <div class="wrap pay">
+            <div class="container">
+                <!-- 상단고정배너 영역 -->
+                <div class="fixed-top-banner">
+                    <div class="inner">
+                        <p class="pc-only">쉽고 간편하게 온라인으로 결제 후 전화진료 및 택배 배송이 가능합니다.</p>
+                        <p class="mob-only">내원이 어려우시면 전화 진료 후 택배 배송 가능합니다.</p>
+                        <div class="btn-wrap">
+                            <a href="#!" class="btn xsmall black">맞춤 처방 진료 예약하기 <i class="ico-arrow"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 상단고정배너 영역 -->
+
+                <!-- 헤더 영역 -->
+                <header class="header"><!-- [D] 비활성화일 경우, gray 클래스 추가 -->
+                    <div class="inner">
+                        <button type="button" class="btn-menu"><span class="blind">메뉴</span></button>
+                        <h1 class="logo">
+                            <a href="#!"><span class="blind">EASY TALK</span></a>
+                        </h1>
+                        <ul class="nav">
+                            <li class="active"><a href="#sec01">STORY</a></li>
+                            <li><a href="../shop/shop_01.html">SHOP</a></li>
+                        </ul>
+                        <ul class="util">
+                            <li><a href="#!">Login</a></li>
+                            <li><a href="#!">Cart <span class="cart-count">1</span></a></li>
+                            <li><a href="#!">My page</a></li>
+                        </ul>
+                    </div>
+                    <div class="inner">
+                        <button type="button" class="btn-back"><span class="blind">백버튼</span></button>
+                        <p class="h-tit">사전 문진</p>
+                    </div>
+
+                    <div class="mob-menu">
+                        <div class="dimd"></div>
+                        <div class="menu-cont">
+                            <!-- [D] 로그인 전(s) -->
+                            <div class="menu-top">
+                                <p class="desc">로그인이 필요합니다.</p>
+                                <button type="button" class="btn-login">로그인</button>
+                            </div>
+                            <!-- // [D] 로그인 전(e) -->
+    
+                            <!-- [D] 로그인 후(s) -->
+                            <!-- <div class="menu-top">
+                                <p class="name"><strong>송효진</strong>님</p>
+                            </div> -->
+                            <!-- // [D] 로그인 후(e) -->
+    
+                            <ul class="mob-nav">
+                                <li><a href="#sec01">STORY</a></li>
+                                <li><a href="#!">SHOP</a></li>
+                            </ul>
+                            <ul class="mob-util">
+                                <li><a href="#!">Login</a></li>
+                                <li><a href="#!">Cart</a></li>
+                                <li><a href="#!">My page</a></li>
+                            </ul>
+                        </div>
+                        <button type="button" class="btn-close"></button>
+                    </div>
+                </header>
+                <!-- //헤더 영역 -->
+
+                <!-- 컨텐츠 영역 -->
+                <div class="contents">
+                    <section class="sec-kv">
+                        <div class="inner">
+                            <div class="page-tit">
+                                <h2 class="tit">결제하기</h2>
+                            </div>
+                            <div class="info-box-wrap flex">
+                                <div class="info-box">
+                                    <div class="box">
+                                        <div class="box-top line">
+                                            <p class="tit">주문 상품 정보 <span class="c-gray">3개</span></p>
+                                        </div>
+                                        <div class="box-con">
+                                            <ul class="product-list">
+                                                <li>
+                                                    <div class="img-wrap">
+                                                        <img src="../../assets/img/content/shop-intro-thumb1.jpg" alt="" />
+                                                    </div>
+                                                    <div class="txt-wrap">
+                                                        <p class="tit">이지톡 베이직</p>
+                                                        <p class="desc">이지톡 베이직 4주 (3통 23만원) <strong class="count">1개</strong></p>
+                                                        <p class="desc">배송비 무료 <strong class="price">230,000원</strong></p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="img-wrap">
+                                                        <img src="../../assets/img/content/shop-intro-thumb2.jpg" alt="" />
+                                                    </div>
+                                                    <div class="txt-wrap">
+                                                        <p class="tit">이지톡 프리미엄</p>
+                                                        <p class="desc">이지톡 프리미엄 4주 (3통 33만원) <strong class="count">1개</strong></p>
+                                                        <p class="desc">배송비 무료 <strong class="price">330,000원</strong></p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="img-wrap">
+                                                        <img src="../../assets/img/content/shop-intro-thumb1.jpg" alt="" />
+                                                    </div>
+                                                    <div class="txt-wrap">
+                                                        <p class="tit">이지톡 프리미엄</p>
+                                                        <p class="desc">이지톡 프리미엄 8주 (6통 31.3만원) <strong class="count">1개</strong></p>
+                                                        <p class="desc">배송비 무료 <strong class="price">313,000원</strong></p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="box">
+                                        <div class="box-top line">
+                                            <p class="tit">주문자 정보</p>
+                                            <button type="button" class="btn line gray2 xxsmall">수정하기</button>
+                                        </div>
+                                        <div class="box-con">
+                                            <p class="tit bold">홍길동</p>
+                                            <p class="desc">010-0000-0000</p>
+                                        </div>
+                                        <!-- [D] 주문자 정보 수정하기 -->
+                                        <div class="box-con">
+                                            <div class="input-wrap flex">
+                                                <div class="input">
+                                                    <input type="text" id="inpName" placeholder="" value="홍길동">
+                                                </div>
+                                                <div class="input">
+                                                    <input type="tel" id="inpPhone" placeholder="" value="010-0000-0000">
+                                                </div>
+                                                <button type="button" class="btn black large">수정완료</button>
+                                            </div>
+                                        </div>
+                                        <!-- //[D] 주문자 정보 수정하기 -->
+                                    </div>
+
+                                    <div class="box">
+                                        <div class="box-top line">
+                                            <p class="tit">배송 정보</p>
+                                            <button type="button" class="btn line gray2 xxsmall">수정하기</button>
+                                        </div>
+                                        <div class="box-con">
+                                            <div class="address-info">
+                                                <div class="tit-wrap"><strong class="tit">홍길동</strong></div>
+                                                <ul class="desc">
+                                                    <li>010-0000-0000</li>
+                                                    <li>서울 영등포구 양평로1길 00-0 (양평동3가)</li>
+                                                    <li>101동 102호</li>
+                                                    <li>(00000)</li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="input-wrap mt-3">
+                                                <p class="label-txt">배송메모</p>
+                                                <div class="select">
+                                                    <select name="" id="" aria-label="옵션 선택" aria-expanded="false">
+                                                        <option value="" class="placeholder">배송메모를 선택해 주세요.</option>
+                                                        <option value="value1">배송 전에 미리 연락 바랍니다.</option>
+                                                        <option value="value2">부재시 경비실에 맡겨주세요.</option>
+                                                        <option value="value3">부재시 전화나 문자 남겨주세요.</option>
+                                                        <option value="value4" data-visible="write">직접입력</option>
+                                                    </select>
+                                                </div>
+                                                <div class="input write">
+                                                    <input type="text" id="inpName" placeholder="" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- [D] 배송 정보 수정하기 -->
+                                        <div class="box-con">
+                                            <div class="tab">
+                                                <div class="tab-btns" role="tablist">
+                                                    <a href="javascript:void(0)" class="tab-btn active">배송지 선택</a>
+                                                    <a href="javascript:void(0)" class="tab-btn">신규 입력</a>
+                                                </div>
+                                                <div class="tab-pnls">
+                                                    <div class="tab-pnl">
+                                                        <div class="address-list">
+                                                            <div class="item">
+                                                                <div class="radio2">
+                                                                    <input type="radio" id="radio1" name="payRadio">
+                                                                    <label for="radio1"><span class="blind">홍길동</span></label>
+                                                                </div>
+                                                                <div class="address-info">
+                                                                    <div class="tit-wrap">
+                                                                        <strong class="tit">홍길동</strong>
+                                                                        <span class="badge-wrap">
+                                                                            <span class="badge bg-red">기본</span>
+                                                                            <span class="badge bg-green">최근</span>
+                                                                        </span>
+                                                                    </div>
+                                                                    <ul class="desc">
+                                                                        <li>010-0000-0000</li>
+                                                                        <li>서울 영등포구 양평로1길 00-0 (양평동3가)</li>
+                                                                        <li>101동 102호</li>
+                                                                        <li>(00000)</li>
+                                                                    </ul>
+                                                                    <div class="btn-wrap">
+                                                                        <button type="button" class="btn line gray2 xxsmall">수정</button>
+                                                                        <button type="button" class="btn line gray2 xxsmall">삭제</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div> 
+                                                            <div class="item">
+                                                                <div class="radio2">
+                                                                    <input type="radio" id="radio2" name="payRadio">
+                                                                    <label for="radio2"><span class="blind">회사</span></label>
+                                                                </div>
+                                                                <div class="address-info">
+                                                                    <div class="tit-wrap">
+                                                                        <strong class="tit">회사</strong>
+                                                                        <span class="badge-wrap">
+                                                                            <span class="badge bg-green">최근</span>
+                                                                        </span>
+                                                                    </div>
+                                                                    <ul class="desc">
+                                                                        <li>010-0000-0000</li>
+                                                                        <li>서울 영등포구 양평로1길 00-0 (양평동3가)</li>
+                                                                        <li>101동 102호</li>
+                                                                        <li>(00000)</li>
+                                                                    </ul>
+                                                                    <div class="btn-wrap">
+                                                                        <button type="button" class="btn line gray2 xxsmall">수정</button>
+                                                                        <button type="button" class="btn line gray2 xxsmall">삭제</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div> 
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pnl">
+                                                        <div class="check">
+                                                            <input type="checkbox" id="checkAddress1" name="checkAddress">
+                                                            <label for="checkAddress1">주문자 정보와 동일</label>
+                                                        </div>
+                                                        <div class="input-list">
+                                                            <div class="input-wrap flex">
+                                                                <div class="input">
+                                                                    <input type="text" id="inpName" placeholder="" value="홍길동">
+                                                                </div>
+                                                                <div class="input">
+                                                                    <input type="tel" id="inpPhone" placeholder="" value="010-0000-0000">
+                                                                </div>
+                                                            </div>
+                                                            <div class="input-wrap flex address-find">
+                                                                <div class="input w-small">
+                                                                    <input type="text" id="inpName" placeholder="" value="00000">
+                                                                </div>
+                                                                <div class="btn-wrap">
+                                                                    <button type="button" class="btn black large">주소찾기</button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="input-wrap">
+                                                                <div class="input">
+                                                                    <input type="text" id="inpName" placeholder="주소 입력" value="서울 영등포구 양평로12가길 14(양평동4가, 르네상스 한강 오피스텔)">
+                                                                </div>
+                                                            </div>
+                                                            <div class="input-wrap">
+                                                                <div class="input">
+                                                                    <input type="text" id="inpName" placeholder="상세 주소 입력" value="1024호">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="check">
+                                                            <input type="checkbox" id="checkAddress2" name="checkAddress2">
+                                                            <label for="checkAddress2">배송지 목록에 추가</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="input-wrap mt-3">
+                                                <p class="label-txt">배송메모</p>
+                                                <div class="select">
+                                                    <select name="" id="" aria-label="옵션 선택" aria-expanded="false">
+                                                        <option value="" class="placeholder">배송메모를 선택해 주세요.</option>
+                                                        <option value="value1">배송 전에 미리 연락 바랍니다.</option>
+                                                        <option value="value2">부재시 경비실에 맡겨주세요.</option>
+                                                        <option value="value3">부재시 전화나 문자 남겨주세요.</option>
+                                                        <option value="value4" data-visible="write">직접입력</option>
+                                                    </select>
+                                                </div>
+                                                <div class="input write">
+                                                    <input type="text" id="inpName" placeholder="" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //[D] 배송 정보 수정하기 -->
+                                    </div>
+                                </div>
+
+                                <div class="info-box">
+                                    <div class="box">
+                                        <div class="box-top">
+                                            <p class="tit">결제 금액</p>
+                                        </div>
+                                        <div class="box-con">
+                                            <ul class="summary-list">
+                                                <li>
+                                                    <strong>수량</strong>
+                                                    <span>3개</span>
+                                                </li>
+                                                <li>
+                                                    <strong>상품금액</strong>
+                                                    <span>800,000원</span>
+                                                </li>
+                                                <li>
+                                                    <strong>배송비</strong>
+                                                    <span>무료</span>
+                                                </li>
+                                            </ul>
+                                            <div class="total">
+                                                <p>총 결제 금액</p>
+                                                <p>800,000원</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="box">
+                                        <div class="box-top">
+                                            <p class="tit">결제수단</p>
+                                        </div>
+                                        <div class="box-con">
+                                            <div class="radio-wrap grid col">
+                                                <div class="radio2">
+                                                    <input type="radio" id="radio1" name="payRadio">
+                                                    <label for="radio1">신용카드</label>
+                                                </div>
+                                                <div class="radio2">
+                                                    <input type="radio" id="radio2" name="payRadio">
+                                                    <label for="radio2">가상계좌</label>
+                                                </div>
+                                                <div class="radio2">
+                                                    <input type="radio" id="radio3" name="payRadio">
+                                                    <label for="radio3">실시간계좌이체</label>
+                                                </div>
+                                                <div class="radio2">
+                                                    <input type="radio" id="radio4" name="payRadio">
+                                                    <label for="radio4">무통장입금</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="box">
+                                        <div class="box-con">
+                                            <div class="check-top">
+                                                <div class="check">
+                                                    <input type="checkbox" id="allAgree" name="allAgree">
+                                                    <label for="allAgree">전체동의 <span class="c-gray">만 14세 이상입니다.</span></label>
+                                                </div>
+                                            </div>
+                                            <div class="check-sub">
+                                                <div class="check">
+                                                    <input type="checkbox" id="agree1" name="agree1">
+                                                    <label for="agree1">구매조건 확인 및 결제진행에 동의</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn-wrap">
+                                        <button type="button" class="btn large primary" disabled>
+                                            <strong>800,000원</strong> &nbsp;결제하기
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!--//컨텐츠 영역 -->
+            </div>
+        </div>
+    </body>
+</html>
+ 

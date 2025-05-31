@@ -17,6 +17,8 @@ $(function () {
             uiCommon.modalOpen();
             uiCommon.modalClose();
             uiCommon.aniCounter();
+            uiCommon.tabInit();
+            uiCommon.tabBtnClick();
 
             // let number = $('.ani-counter').text().replace(/\D/g, '');
             // $('.ani-counter').rollingNum({
@@ -287,8 +289,17 @@ $(function () {
                 }
             }
         },
+        tabInit: () => {
+            $('.tab .tab-btns .tab-btn.active').each((idx, el) => {
+                tabFn(el);
+            });
+        },
+        tabBtnClick: () => {
+            $('.tab .tab-btns .tab-btn').on('click', (e) => {
+                tabFn(e.target);
+             });
+        },
     }
-
 
     //실행
     uiCommon.init();
@@ -307,4 +318,14 @@ function modalClose(el){
 
     modal.removeClass('open');
     $('html').css('overflow', '');
+}
+
+function tabFn(target){
+    const tab = $(target);
+    const tabIdx = tab.index();
+    const tabPnls = tab.parents('.tab').find('.tab-pnls .tab-pnl');
+
+    tab.addClass('active').siblings().removeClass('active');
+    tabPnls.eq(tabIdx).addClass('show').siblings().removeClass('show');
+
 }
