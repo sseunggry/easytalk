@@ -293,3 +293,18 @@ $(function () {
     //실행
     uiCommon.init();
 });
+
+function modalOpen(modal) {
+    if(modal){
+        $(`#${modal}`).addClass('open');
+        $('html').css('overflow', 'hidden');
+    }
+}
+
+function modalClose(el){
+    const target = $(el);
+    const modal = target.parents('.modal');
+
+    modal.removeClass('open');
+    $('html').css('overflow', '');
+}

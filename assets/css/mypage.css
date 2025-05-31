@@ -33,6 +33,9 @@
 .order-list .order-table tbody td.dispatch dl dt span{display: block; margin-top: 0.4rem;}
 .order-list .order-table tbody td.dispatch dl dd button{width: 6.9rem; height: 3.2rem; font-size: 1.4rem; font-weight: 500; background-color: var(--color-gray-0); border: 0.1rem solid var(--color-gray-3-2); border-radius: 0.6rem;}
 
+#modalUserWithdraw .modal-content{width: 420px;}
+
+#modalUserInfo .modal-content{width: 420px;}
 
 @media screen and (max-width: 1200px) {
     .order-list .order-table thead th{padding: 1rem 0; font-size: 1.4rem;}

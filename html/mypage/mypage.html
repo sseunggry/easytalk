@@ -104,7 +104,7 @@
                                 <ul class="menu-list">
                                     <li class="active"><a href="#">주문/배송 조회</a></li>
                                     <li><a href="#">정보 수정</a></li>
-                                    <li><a href="#">회원탈퇴</a></li>
+                                    <li><a href="javascript:;" onclick="modalOpen('modalUserWithdraw')">회원탈퇴</a></li>
                                 </ul>
 
                                 <!-- 컨텐츠 영역 -->
@@ -332,5 +332,89 @@
                 <!--//컨텐츠 영역 -->
             </div>
         </div>
+
+        <!--//정보수정 -->
+        <div class="modal alert center open" id="modalUserInfo">
+            <div class="dimd"></div>
+            <div class="modal-content">
+                <div class="txt-wrap">
+                    <p class="tit">정보수정</p>
+
+                    <div class="form-list">
+                        <div class="input-wrap">
+                            <div class="input">
+                                <input type="text" id="inpEmail" value="abc123@kakao.com">
+                            </div>
+                        </div>
+                        <div class="input-wrap">
+                            <label for="inpName" class="label-txt">이름</label>
+                            <div class="input">
+                                <input type="text" id="inpName" placeholder="" value="홍길동">
+                            </div>
+                        </div> 
+                        <div class="input-wrap">
+                            <label for="inpPhone" class="label-txt">휴대폰 번호</label>
+                            <div class="input">
+                                <input type="text" id="inpPhone" placeholder="" value="010-0000-0000">
+                            </div>
+                        </div>
+                        <div class="input-wrap">
+                            <label for="inpAddr01" class="label-txt">휴대폰 번호</label>
+                            <div class="input">
+                                <input type="text" id="inpAddr01" placeholder="" value="서울 마포구 와우산로3길 2">
+                            </div>
+                            <div class="input">
+                                <input type="text" id="inpAddr02" placeholder="" value="와우빌딩 2층">
+                            </div>
+                        </div>
+                        <div class="input-wrap">
+                            <label for="inpBirth" class="label-txt">생년월일</label>
+                            <div class="input">
+                                <input type="text" id="inpBirth" placeholder="" value="2000.00.00">
+                            </div>
+                        </div>
+                        <div class="input-wrap">
+                            <label class="label-txt">개인정보 제 3자 제공 동의</label>
+                            <div class="input">
+                                
+                            </div>
+                        </div>
+                        <div class="input-wrap">
+                            <label class="label-txt">이벤트/혜택 소식 수신 여부</label>
+                            <div class="input">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-wrap flex-column">
+                    <button type="button" class="btn large kakao">카카오 연결하기</button>
+                    <button type="button" class="btn large naver">네이버 연결하기</button>
+                </div>
+                <button type="button" class="btn-close"></button>
+            </div>
+        </div>
+        <!--//정보수정 -->
+
+        <!--//회원탈퇴 -->
+        <div class="modal alert center" id="modalUserWithdraw">
+            <div class="dimd"></div>
+            <div class="modal-content">
+                <div class="txt-wrap">
+                    <p class="tit">회원탈퇴</p>
+                    <p class="desc">
+                        가입된 회원정보가 모두 삭제됩니다.<br/>
+                        작성하신 게시물은 삭제되지 않습니다.<br/>
+                        회원 탈퇴를 진행하시겠습니까?
+                    </p>
+                </div>
+                <div class="btn-wrap flex">
+                    <button type="button" class="btn large black">탈퇴하기</button>
+                    <button type="button" class="btn large primary" onclick="modalClose(this)">취소</button>
+                </div>
+                <button type="button" class="btn-close"></button>
+            </div>
+        </div>
+        <!--//회원탈퇴 -->
     </body>
 </html>
