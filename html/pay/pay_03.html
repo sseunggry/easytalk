@@ -146,10 +146,19 @@
                                             <p class="tit">주문자 정보</p>
                                             <button type="button" class="btn line gray2 xxsmall">수정하기</button>
                                         </div>
+                                        <!-- [D] 주문자 정보 수정하기 -->
                                         <div class="box-con">
-                                            <p class="tit bold">홍길동</p>
-                                            <p class="desc">010-0000-0000</p>
+                                            <div class="input-wrap flex">
+                                                <div class="input">
+                                                    <input type="text" id="inpName" placeholder="" value="홍길동">
+                                                </div>
+                                                <div class="input">
+                                                    <input type="tel" id="inpPhone" placeholder="" value="010-0000-0000">
+                                                </div>
+                                                <button type="button" class="btn black large">수정완료</button>
+                                            </div>
                                         </div>
+                                        <!-- //[D] 주문자 정보 수정하기 -->
                                     </div>
 
                                     <div class="box">
@@ -157,15 +166,106 @@
                                             <p class="tit">배송 정보</p>
                                             <button type="button" class="btn line gray2 xxsmall">수정하기</button>
                                         </div>
+                                        <!-- [D] 배송 정보 수정하기 -->
                                         <div class="box-con">
-                                            <div class="txt-info">
-                                                <div class="tit-wrap"><strong class="tit">홍길동</strong></div>
-                                                <ul class="desc">
-                                                    <li>010-0000-0000</li>
-                                                    <li>서울 영등포구 양평로1길 00-0 (양평동3가)</li>
-                                                    <li>101동 102호</li>
-                                                    <li>(00000)</li>
-                                                </ul>
+                                            <div class="tab">
+                                                <div class="tab-btns" role="tablist">
+                                                    <a href="javascript:void(0)" class="tab-btn">배송지 선택</a>
+                                                    <a href="javascript:void(0)" class="tab-btn active">신규 입력</a>
+                                                </div>
+                                                <div class="tab-pnls">
+                                                    <div class="tab-pnl">
+                                                        <ul class="address-list">
+                                                            <li class="item">
+                                                                <div class="radio2">
+                                                                    <input type="radio" id="infoRadio1" name="infoRadio">
+                                                                    <label for="infoRadio1"><span class="blind">홍길동</span></label>
+                                                                </div>
+                                                                <div class="txt-info">
+                                                                    <div class="tit-wrap">
+                                                                        <strong class="tit">홍길동</strong>
+                                                                        <span class="badge-wrap">
+                                                                            <span class="badge bg-red">기본</span>
+                                                                            <span class="badge bg-green">최근</span>
+                                                                        </span>
+                                                                    </div>
+                                                                    <ul class="desc">
+                                                                        <li>010-0000-0000</li>
+                                                                        <li>서울 영등포구 양평로1길 00-0 (양평동3가)</li>
+                                                                        <li>101동 102호</li>
+                                                                        <li>(00000)</li>
+                                                                    </ul>
+                                                                    <div class="btn-wrap">
+                                                                        <button type="button" class="btn line gray2 xxsmall">수정</button>
+                                                                        <button type="button" class="btn line gray2 xxsmall" data-modal="modalAddressDelete">삭제</button>
+                                                                    </div>
+                                                                </div>
+                                                            </li> 
+                                                            <li class="item">
+                                                                <div class="radio2">
+                                                                    <input type="radio" id="infoRadio2" name="infoRadio">
+                                                                    <label for="infoRadio2"><span class="blind">회사</span></label>
+                                                                </div>
+                                                                <div class="txt-info">
+                                                                    <div class="tit-wrap">
+                                                                        <strong class="tit">회사</strong>
+                                                                        <span class="badge-wrap">
+                                                                            <span class="badge bg-green">최근</span>
+                                                                        </span>
+                                                                    </div>
+                                                                    <ul class="desc">
+                                                                        <li>010-0000-0000</li>
+                                                                        <li>서울 영등포구 양평로1길 00-0 (양평동3가)</li>
+                                                                        <li>101동 102호</li>
+                                                                        <li>(00000)</li>
+                                                                    </ul>
+                                                                    <div class="btn-wrap">
+                                                                        <button type="button" class="btn line gray2 xxsmall">수정</button>
+                                                                        <button type="button" class="btn line gray2 xxsmall" data-modal="modalAddressDelete">삭제</button>
+                                                                    </div>
+                                                                </div>
+                                                            </li> 
+                                                        </ul>
+                                                    </div>
+                                                    <div class="tab-pnl">
+                                                        <div class="check">
+                                                            <input type="checkbox" id="checkAddress1" name="checkAddress">
+                                                            <label for="checkAddress1">주문자 정보와 동일</label>
+                                                        </div>
+                                                        <div class="input-list">
+                                                            <div class="input-wrap flex">
+                                                                <div class="input">
+                                                                    <input type="text" id="inpName" placeholder="" value="홍길동">
+                                                                </div>
+                                                                <div class="input">
+                                                                    <input type="tel" id="inpPhone" placeholder="" value="010-0000-0000">
+                                                                </div>
+                                                            </div>
+                                                            <div class="input-wrap flex address-find">
+                                                                <div class="input w-small">
+                                                                    <input type="text" id="inpName" placeholder="" value="00000">
+                                                                </div>
+                                                                <div class="btn-wrap">
+                                                                    <button type="button" class="btn black large" data-modal="modalAddressFind">주소찾기</button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="input-wrap">
+                                                                <div class="input">
+                                                                    <input type="text" id="inpName" placeholder="주소 입력" value="서울 영등포구 양평로12가길 14(양평동4가, 르네상스 한강 오피스텔)">
+                                                                </div>
+                                                            </div>
+                                                            <div class="input-wrap">
+                                                                <div class="input">
+                                                                    <input type="text" id="inpName" placeholder="상세 주소 입력" value="1024호">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="check">
+                                                            <input type="checkbox" id="checkAddress2" name="checkAddress2">
+                                                            <label for="checkAddress2">배송지 목록에 추가</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
 
                                             <div class="input-wrap mt-3">
@@ -179,11 +279,12 @@
                                                         <option value="value4" data-visible="write">직접입력</option>
                                                     </select>
                                                 </div>
-                                                <div class="input write visible">
+                                                <div class="input write">
                                                     <input type="text" id="inpName" placeholder="" value="">
                                                 </div>
                                             </div>
                                         </div>
+                                        <!-- //[D] 배송 정보 수정하기 -->
                                     </div>
                                 </div>
 

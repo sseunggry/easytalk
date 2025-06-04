@@ -1002,10 +1002,6 @@
         }
     }
 
-    &.pay{
-        
-    }
-
     @media screen and (max-width: 960px) {
         &.shop-detail{
             .sec-kv{
@@ -2117,4 +2113,9 @@
     }
 }
 
+// 주소찾기 팝업
+#modalAddressFind .modal-content .location{height: 50rem;}
 
+@media screen and (max-width: 360px) {
+    #modalAddressFind .modal-content .location{height: calc(100vh - 19.18vw);}
+}

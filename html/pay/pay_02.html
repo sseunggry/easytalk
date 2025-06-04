@@ -97,62 +97,14 @@
                     <section class="sec-kv">
                         <div class="inner">
                             <div class="page-tit">
-                                <p class="sub-tit">주문이 정상적으로 완료되었습니다.</p>
-                                <p class="desc">
-                                    <strong>2025.00.00</strong> 주문하신 상품의 <br/>
-                                    주문번호는 <strong class="c-green">123456789</strong> 입니다.
-                                </p>
+                                <h2 class="tit">결제하기</h2>
                             </div>
                             <div class="info-box-wrap flex">
                                 <div class="info-box">
                                     <div class="box">
-                                        <div class="box-top">
-                                            <p class="tit">주문번호</p>
-                                            <p class="desc ml-auto">12456789</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="box">
                                         <div class="box-top line">
-                                            <p class="tit">배송 정보</p>
+                                            <p class="tit">주문 상품 정보 <span class="c-gray2">3개</span></p>
                                         </div>
-                                        <div class="box-con">
-                                            <div class="txt-info">
-                                                <div class="tit-wrap"><strong class="tit">홍길동</strong></div>
-                                                <ul class="desc">
-                                                    <li>010-0000-0000</li>
-                                                    <li>서울 영등포구 양평로1길 00-0 (양평동3가)</li>
-                                                    <li>101동 102호</li>
-                                                    <li>(00000)</li>
-                                                </ul>
-                                            </div>
-
-                                            <div class="input-wrap mt-3">
-                                                <p class="label-txt">배송메모</p>
-                                                <p class="input-txt">공동현관 비밀번호 #1234입니다. 문앞에 놔주세요.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="box">
-                                        <div class="box-top line">
-                                            <p class="tit">결제정보</p>
-                                        </div>
-                                        <div class="box-con">
-                                            <div class="txt-info">
-                                                <div class="tit-wrap"><strong class="tit">신용카드</strong></div>
-                                                <ul class="desc">
-                                                    <li>0000-0000-0000-0000</li>
-                                                    <li>일시불</li>
-                                                    <li>승인일시: 2025.00.00 12:00</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="info-box">
-                                    <div class="box">
                                         <div class="box-con">
                                             <ul class="product-list">
                                                 <li>
@@ -186,7 +138,161 @@
                                                     </div>
                                                 </li>
                                             </ul>
-                                            <ul class="summary-list line">
+                                        </div>
+                                    </div>
+
+                                    <div class="box">
+                                        <div class="box-top line">
+                                            <p class="tit">주문자 정보</p>
+                                        </div>
+                                        <!-- [D] 주문자 정보 수정하기 -->
+                                        <div class="box-con">
+                                            <div class="input-wrap flex">
+                                                <div class="input">
+                                                    <input type="text" id="inpName" placeholder="" value="홍길동">
+                                                </div>
+                                                <div class="input">
+                                                    <input type="tel" id="inpPhone" placeholder="" value="010-0000-0000">
+                                                </div>
+                                                <button type="button" class="btn black large">수정완료</button>
+                                            </div>
+                                        </div>
+                                        <!-- //[D] 주문자 정보 수정하기 -->
+                                    </div>
+
+                                    <div class="box">
+                                        <div class="box-top line">
+                                            <p class="tit">배송 정보</p>
+                                        </div>
+                                        <!-- [D] 배송 정보 수정하기 -->
+                                        <div class="box-con">
+                                            <div class="tab">
+                                                <div class="tab-btns" role="tablist">
+                                                    <a href="javascript:void(0)" class="tab-btn active">배송지 선택</a>
+                                                    <a href="javascript:void(0)" class="tab-btn">신규 입력</a>
+                                                </div>
+                                                <div class="tab-pnls">
+                                                    <div class="tab-pnl">
+                                                        <ul class="address-list">
+                                                            <li class="item">
+                                                                <div class="radio2">
+                                                                    <input type="radio" id="infoRadio1" name="infoRadio">
+                                                                    <label for="infoRadio1"><span class="blind">홍길동</span></label>
+                                                                </div>
+                                                                <div class="txt-info">
+                                                                    <div class="tit-wrap">
+                                                                        <strong class="tit">홍길동</strong>
+                                                                        <span class="badge-wrap">
+                                                                            <span class="badge bg-red">기본</span>
+                                                                            <span class="badge bg-green">최근</span>
+                                                                        </span>
+                                                                    </div>
+                                                                    <ul class="desc">
+                                                                        <li>010-0000-0000</li>
+                                                                        <li>서울 영등포구 양평로1길 00-0 (양평동3가)</li>
+                                                                        <li>101동 102호</li>
+                                                                        <li>(00000)</li>
+                                                                    </ul>
+                                                                    <div class="btn-wrap">
+                                                                        <button type="button" class="btn line gray2 xxsmall">수정</button>
+                                                                        <button type="button" class="btn line gray2 xxsmall" data-modal="modalAddressDelete">삭제</button>
+                                                                    </div>
+                                                                </div>
+                                                            </li> 
+                                                            <li class="item">
+                                                                <div class="radio2">
+                                                                    <input type="radio" id="infoRadio2" name="infoRadio">
+                                                                    <label for="infoRadio2"><span class="blind">회사</span></label>
+                                                                </div>
+                                                                <div class="txt-info">
+                                                                    <div class="tit-wrap">
+                                                                        <strong class="tit">회사</strong>
+                                                                        <span class="badge-wrap">
+                                                                            <span class="badge bg-green">최근</span>
+                                                                        </span>
+                                                                    </div>
+                                                                    <ul class="desc">
+                                                                        <li>010-0000-0000</li>
+                                                                        <li>서울 영등포구 양평로1길 00-0 (양평동3가)</li>
+                                                                        <li>101동 102호</li>
+                                                                        <li>(00000)</li>
+                                                                    </ul>
+                                                                    <div class="btn-wrap">
+                                                                        <button type="button" class="btn line gray2 xxsmall">수정</button>
+                                                                        <button type="button" class="btn line gray2 xxsmall" data-modal="modalAddressDelete">삭제</button>
+                                                                    </div>
+                                                                </div>
+                                                            </li> 
+                                                        </ul>
+                                                    </div>
+                                                    <div class="tab-pnl">
+                                                        <div class="check">
+                                                            <input type="checkbox" id="checkAddress1" name="checkAddress">
+                                                            <label for="checkAddress1">주문자 정보와 동일</label>
+                                                        </div>
+                                                        <div class="input-list">
+                                                            <div class="input-wrap flex">
+                                                                <div class="input">
+                                                                    <input type="text" id="inpName" placeholder="" value="홍길동">
+                                                                </div>
+                                                                <div class="input">
+                                                                    <input type="tel" id="inpPhone" placeholder="" value="010-0000-0000">
+                                                                </div>
+                                                            </div>
+                                                            <div class="input-wrap flex address-find">
+                                                                <div class="input w-small">
+                                                                    <input type="text" id="inpName" placeholder="" value="00000">
+                                                                </div>
+                                                                <div class="btn-wrap">
+                                                                    <button type="button" class="btn black large" data-modal="modalAddressFind">주소찾기</button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="input-wrap">
+                                                                <div class="input">
+                                                                    <input type="text" id="inpName" placeholder="주소 입력" value="서울 영등포구 양평로12가길 14(양평동4가, 르네상스 한강 오피스텔)">
+                                                                </div>
+                                                            </div>
+                                                            <div class="input-wrap">
+                                                                <div class="input">
+                                                                    <input type="text" id="inpName" placeholder="상세 주소 입력" value="1024호">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="check">
+                                                            <input type="checkbox" id="checkAddress2" name="checkAddress2">
+                                                            <label for="checkAddress2">배송지 목록에 추가</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="input-wrap mt-3">
+                                                <p class="label-txt">배송메모</p>
+                                                <div class="select">
+                                                    <select name="" id="" aria-label="옵션 선택" aria-expanded="false">
+                                                        <option value="" class="placeholder">배송메모를 선택해 주세요.</option>
+                                                        <option value="value1">배송 전에 미리 연락 바랍니다.</option>
+                                                        <option value="value2">부재시 경비실에 맡겨주세요.</option>
+                                                        <option value="value3">부재시 전화나 문자 남겨주세요.</option>
+                                                        <option value="value4" data-visible="write">직접입력</option>
+                                                    </select>
+                                                </div>
+                                                <div class="input write">
+                                                    <input type="text" id="inpName" placeholder="" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //[D] 배송 정보 수정하기 -->
+                                    </div>
+                                </div>
+
+                                <div class="info-box">
+                                    <div class="box">
+                                        <div class="box-top">
+                                            <p class="tit">결제 금액</p>
+                                        </div>
+                                        <div class="box-con">
+                                            <ul class="summary-list">
                                                 <li>
                                                     <strong>수량</strong>
                                                     <span>3개</span>
@@ -206,18 +312,102 @@
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div class="box">
+                                        <div class="box-top">
+                                            <p class="tit">결제수단</p>
+                                        </div>
+                                        <div class="box-con">
+                                            <div class="radio-wrap grid col">
+                                                <div class="radio2">
+                                                    <input type="radio" id="radio1" name="payRadio">
+                                                    <label for="radio1">신용카드</label>
+                                                </div>
+                                                <div class="radio2">
+                                                    <input type="radio" id="radio2" name="payRadio">
+                                                    <label for="radio2">가상계좌</label>
+                                                </div>
+                                                <div class="radio2">
+                                                    <input type="radio" id="radio3" name="payRadio">
+                                                    <label for="radio3">실시간계좌이체</label>
+                                                </div>
+                                                <div class="radio2">
+                                                    <input type="radio" id="radio4" name="payRadio">
+                                                    <label for="radio4">무통장입금</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="box">
+                                        <div class="box-con">
+                                            <div class="check-top">
+                                                <div class="check">
+                                                    <input type="checkbox" id="allAgree" name="allAgree">
+                                                    <label for="allAgree">전체동의 <span class="c-gray2">만 14세 이상입니다.</span></label>
+                                                </div>
+                                            </div>
+                                            <div class="check-sub">
+                                                <div class="check">
+                                                    <input type="checkbox" id="agree1" name="agree1">
+                                                    <label for="agree1">구매조건 확인 및 결제진행에 동의</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <span class="btn-wrap pc-only">
-                                        <a href="#!" class="btn large primary">홈으로 이동</a>
+                                        <button type="button" class="btn large primary2" disabled>
+                                            <strong>800,000원</strong> &nbsp;결제하기
+                                        </button>
                                     </span>
                                 </div>
                             </div>
                         </div>
                     </section>
-                    <div class="btn-wrap btn-fixed btn-scroll mob-only"><a href="#!" class="btn large primary">홈으로 이동</a></div>
+                    <div class="btn-wrap btn-fixed btn-scroll mob-only">
+                        <button type="button" class="btn large primary2" disabled>
+                            <strong>800,000원</strong> &nbsp;결제하기
+                        </button>
+                    </div>
                 </div>
                 <!--//컨텐츠 영역 -->
             </div>
 
+            <!-- [D] 팝업 - 배송지 삭제 -->
+            <div class="modal alert center" id="modalAddressDelete">
+                <div class="dimd"></div>
+                <div class="modal-content">
+                    <div class="txt-wrap">
+                        <p class="sub-tit">배송지를 삭제하시겠습니까?</p>
+                    </div>
+                    <div class="btn-wrap">
+                        <button type="button" class="btn large black">네, 삭제할래요</button>
+                        <button type="button" class="btn large primary" onclick="modalClose(this)">아니오</button>
+                    </div>
+                    <button type="button" class="btn-close"></button>
+                </div>
+            </div>
+            <!-- //[D] 팝업 - 배송지 삭제 -->
+
+            <!-- [D] 팝업 - 주소 찾기 -->
+            <div class="modal alert full" id="modalAddressFind">
+                <div class="dimd"></div>
+                <div class="modal-content">
+                    <div class="modal-tit">
+                        <h2>주소찾기</h2>
+                    </div>
+
+                    <!-- 주소 찾기 -->
+                    <div class="location">
+                        
+                    </div>
+                    <!-- 주소 찾기 -->
+
+                    <button type="button" class="btn-close"></button>
+                </div>
+            </div>
+            <!-- //[D] 팝업 - 주소 찾기 -->
         </div>
     </body>
 </html>
